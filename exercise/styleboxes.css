@@ -73,7 +73,7 @@ border: 5px solid white;
     background-color:#E76E34;
     display: inline-block;
 }
-@media (min-width: 1000px){
+@media (max-width: 768px){
     #box1,
     #box2,
     #box3,
@@ -83,6 +83,7 @@ border: 5px solid white;
     #box7,
     #box8,
     #box9{
-        display: inline-block;
+        display: block;
+        width:100%;
     }
 }
