@@ -2,8 +2,9 @@
 
 
 
-   var counter1= document.form
-counter1.addEventListener('submit', function(event){
+
+     var counter1= document.form
+    counter1.addEventListener('submit', function(event){
     event.preventDefault()
     var subtotal= counter1.number1.value * 5
     var subtotal1=counter1.number2.value * 7
@@ -12,7 +13,23 @@ counter1.addEventListener('submit', function(event){
     var total = Number(subtotal)+Number(subtotal1)+Number(subtotal2)
     
 document.getElementById('btn').textContent = total
+
+   
 })
+    var reset = document.getElementById('reset')
+   reset.addEventListener('click', function function1(){ 
+    counter1.number1.value = "enter"
+    counter1.number2.value = "enter"
+    counter1.number3.value = "enter"
+    document.getElementById('btn').textContent = 0
+})
+         
+
+
+
+
+
+
 
 /*
 var counter2= document.form

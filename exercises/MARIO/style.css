@@ -74,7 +74,7 @@ img{
      top: -145px;
      left:675px;
      height:30px;
-     background-color:lightcoral
+     background-color:lightseagreen;
    }
 
     input{
@@ -97,8 +97,17 @@ img{
       }
 
         button{
-          
              position:relative;
              top:200px;
-            ;
+            
            }
+
+           
+           #reset{
+            position: relative;
+            top: -131px;
+            left: 653px;
+            height: 30px;
+            background-color: lightcoral;
+        }
+            
