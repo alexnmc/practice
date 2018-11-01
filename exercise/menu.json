@@ -1,0 +1,49 @@
+
+
+
+
+
+
+
+{
+"appetizers" :[
+   { "name" : "pasta",
+     "ingredients" : [ "salt", "tomatoes", "cheese"],
+     "description" : "a delicious fettuccine"
+    },
+    { "name" : "tomato mozzarella",
+      "ingredients" : ["tomato","cheese","olive oil","balsamic vinegar"],
+      "description" :  "I don't know"
+    }
+],
+
+"cold sandwiches": [
+    {"name" : "blt",
+    "ingredients":["bacon", "lettuce", "tomatoes"],
+    "description" : "amazing sandwich"
+    }, 
+    {"name" : "tuna salad",
+     "ingredients":["bread", "tuna", "salt"],
+     "description": "good tuna"
+    } ,
+    {"name":"ham and cheese",
+     "ingredients": ["ham","cheese","bread"],
+      "description": " fresh"
+    }
+
+],
+
+
+
+"hot sandwiches" : ["grilled chicken", "philly cheese" , "reuben"],
+
+
+
+"desserts":["cheese cake"],
+
+
+
+
+"drinks" : ["soda", "juice"]
+}
+

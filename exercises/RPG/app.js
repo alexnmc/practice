@@ -8,7 +8,7 @@ function Player(name, hp, ){
     this.hp = hp
     this.attack = function(){
         console.log("You started the ATTACK !!!\n\n")
-        return Math.floor(Math.random() * (50 - 30) + 30)}
+        return Math.floor(Math.random() * (50 - 15) + 10)}
     this.inventory = []
     
 }
@@ -17,7 +17,7 @@ function Enemy(type, hp, inv){
     this.type = type
     this.hp = hp
     this.attack  = function(){
-        return Math.floor(Math.random() * (50 - 20) + 20)
+        return Math.floor(Math.random() * (50 - 10) + 10)
     }
     this.inventory = inv
 }
@@ -69,35 +69,47 @@ function underAttack(){
                 player1.inventory.push(currentEnemy.inventory) ; player1.hp += 25 ; console.log("YESSS !!!  You KILLED him !!!\n\n  Your health was increased by 25 and you took his item :)\n\n" )
                     if(player1.inventory.length === 3){
                         player1.hp = 0 ; console.log("YOU HAVE 3 ITEMS YOU WON !!!GAME OVER!")
-                    } 
-            }                                                                                   // add winning condition before this curly bracket, if (the inventory contains all the 3 items){ console.log("you won")} ...                         
+                    } // add winning condition before this curly bracket, if (the inventory contains all the 3 items){ console.log("you won")} ...       
+                }                  
     }else if(defenseAction === 1 ){
-                             
-             var run = Math.floor(Math.random()*(1 - 3) + 3)
+            var run = Math.floor(Math.random()*(1 - 3) + 3)
             if( run  === 1 && runaway === false){ 
                    runaway = true ;
                    console.log("You can't escape, you have to fight!!!!") 
             }else if( run === 2 && runaway === false){ 
                 runaway = true;
-                currentEnemy.hp = 0 ;console.log("Good job, you escaped...")
+                currentEnemy.hp = 0 ;console.log("Good job, you escaped...\n\n")
             }else if((run === 1 || run === 2)&&(runaway === true)){
                 console.log("You can't run this time")
             }
         
-    }else if(defenseAction === -1){console.log("You can't quit now..you have to do something:")
-    
-}}
-    
+    }else if(defenseAction === -1){console.log("You can't quit now..you have to do something: ")
+  } }   
 }                             
 
 //START GAME
 
   console.log("HELLO PLAYER !\n")
  var newName = ask.question("What's your name? \n\n")
- console.log(`Thank you ${newName.toUpperCase()}, let's start the game!`)
+ console.log(`Thank you ${newName.toUpperCase()}, let's START the game!\n\n`)
  player1 = new Player(newName, 100)
  while(player1.hp >0){
-     var startAction = ["Start Walikng", 'Inventory']
+   var answer = ask.keyIn("PRESS w TO START WALKING OR i TO SEE YOUR INVENTORY : \n\n", {limit:'wi'})
+    if(answer === "w"){
+              walk()
+    }else{ 
+        if(player1.inventory.length === 0 ){
+            console.log("Your inventory is EMPTY\n\n")
+        }else{
+            console.log(`Your inventory items are: ${player1.inventory} \n\n`)
+        }
+    }
+ }
+    
+ 
+ 
+ 
+ /* var startAction = ["Start Walikng", 'Inventory']
      var choice = ask.keyInSelect(startAction, "What would you like to do? \n\n")
         if(choice === 0){
              walk()
@@ -110,4 +122,4 @@ function underAttack(){
         }else if(choice === -1){ 
             console.log("You quit...TRY AGAIN"); player1.hp = 0
         }
- }
+    */
