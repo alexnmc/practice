@@ -1,0 +1,110 @@
+
+
+#container{
+    display : flex;
+    justify-content: center;
+}
+
+
+
+#box1{
+    height : 100px;
+    width : 100px;
+    background-color : salmon;
+    margin : auto ;
+    border: 1px solid sandybrown;
+    border-radius : 10%;
+    transition: all 1s ease-in-out .5s;
+
+  }
+
+  #box2{
+    height : 100px;
+    width : 100px;
+    background-color : aqua;
+    margin : auto ;
+    border: 1px solid sandybrown;
+    border-radius : 10%;
+    transition: all 1s ease-in-out .5s;
+
+  }
+
+  #box3{
+    height : 100px;
+    width : 100px;
+    background-color : green;
+    margin : auto ;
+    border: 1px solid sandybrown;
+    border-radius : 10%;
+    transition: all 3s ease-in-out 0.5s;
+
+  
+  }
+  
+  #box4{
+    height : 100px;
+    width : 100px;
+    background-color :purple;
+    margin : auto ;
+    border: 1px solid sandybrown;
+    border-radius : 10%;
+    transition: all 3s ease-in-out .5s;
+
+  }
+  
+  #box5{
+    height : 100px;
+    width : 100px;
+    background-color :coral;
+    margin : auto ;
+    border: 1px solid sandybrown;
+    border-radius : 10%;
+    transition: all 2s ease-in-out .5s;
+
+  }
+
+  #box6{
+    height : 100px;
+    width : 100px;
+    background-color : green;
+    margin : auto ;
+    border: 1px solid sandybrown;
+    border-radius : 10%;
+    transition: all 1s ease-in-out .5s;
+
+  
+  }
+  
+  
+  #box6:hover{
+      box-shadow: none;
+      border-radius: 0;
+      background-color: red;
+}
+
+
+   #box5:hover{
+       box-shadow: none;
+       border-radius: 0;
+       background-color:mediumaquamarine;
+}
+
+
+
+#box4:hover{
+    box-shadow: none;
+    border-radius: 0;
+    background-color:mediumaquamarine;
+    height: 200px;
+    width: 200px;
+}
+
+#box3:hover{
+    box-shadow: none;
+    border-radius: 0;
+    background-color:mediumaquamarine;
+    height: 500px;
+    width : 1000px;
+    
+}
+
