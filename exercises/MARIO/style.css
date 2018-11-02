@@ -8,7 +8,8 @@
     
 
  }
-#div1{
+
+ #div1{
     height : 150px;
     width : 100%;
     background-color:  blanchedalmond;
@@ -41,7 +42,8 @@ img{
     top:9px;
     left: 20px;
 }
- h2{
+
+h2{
      position: relative;
      left:171px;
      top: -105px;
@@ -49,35 +51,35 @@ img{
 }
 
 
-  #btn{
+#btn{
         width:150px;
         height:65px;
         position: relative;
         left:655px;
         top:-130px;
         font-size: 40px;
-  }
+}
 
-   #total{
+#total{
 
      text-align: center;
      position: relative;
      left: -165px;
      top: -65px;
     
-   }
+}
 
 
-   #buton{
+#buton{
      
      position:relative;
      top: -145px;
      left:675px;
      height:30px;
      background-color:lightseagreen;
-   }
+}
 
-    input{
+input{
           width:80px;
            height: 35px;
           position:relative;
@@ -86,28 +88,27 @@ img{
           font-size: 22px;
           background-color: aliceblue;
           
-    }
+}
 
-      body{
+body{
        background-color: aliceblue;
-      }
+}
 
-      p{
+p{
     text-align: center;
-      }
+}
 
-        button{
+button{
              position:relative;
              top:200px;
-            
-           }
+}
 
            
-           #reset{
+#reset{
             position: relative;
             top: -131px;
             left: 653px;
             height: 30px;
             background-color: lightcoral;
-        }
+}
             

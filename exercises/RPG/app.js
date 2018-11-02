@@ -7,7 +7,7 @@ function Player(name, hp, ){
     this.name = name
     this.hp = hp
     this.attack = function(){
-        console.log("You started the ATTACK !!!\n\n")
+        console.log("\n\nYou started the ATTACK !!!\n\n")
         return Math.floor(Math.random() * (50 - 20) + 20)}
     this.inventory = []
     
@@ -17,7 +17,7 @@ function Enemy(type, hp, inv){
     this.type = type
     this.hp = hp
     this.attack  = function(){
-        return Math.floor(Math.random() * (50 - 10) + 10)
+        return Math.floor(Math.random() * (30 - 10) + 10)
     }
     this.inventory = inv
 }
