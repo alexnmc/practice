@@ -6,6 +6,7 @@ xhr.onreadystatechange = function () {
         var jsonData = xhr.responseText;
         var data = JSON.parse(jsonData);
         myFunctionDoSomethingWithData(data)
+        
     }
 };
 
@@ -13,11 +14,11 @@ xhr.open("GET", "https://vschool-cors.herokuapp.com?url=http://api.vschool.io/po
 xhr.send()
 
   function  myFunctionDoSomethingWithData(data){
-    
-    var pokemon = data.objects[0].pokemon
-    console.log(pokemon[0])
-    document.getElementById("box").innerHTML = pokemon
+     
+     for(let i = 0; i<data.objects[0].pokemon.length;i++){
+       names =   data.objects[0].pokemon[i].name.toUpperCase()
+       document.getElementById("box").innerHTML += names+', '
 
-  }
+  }}
 
 
