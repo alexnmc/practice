@@ -16,28 +16,32 @@ function listTodos(arr){
         var price = document.createElement('h3')
         var description = document.createElement('h4')
         var completed = document.createElement("h4")
+       
         var checkbox = document.createElement("input")
-        var img = document.createElement('img')
-        img.setAttribute('src', arr[i].imgUrl)
-        img.setAttribute('width', '100px')
-        img.setAttribute('height', '100px')
+            checkbox.type = "checkbox"
+            checkbox.id = "box"
+    
+        var image = document.createElement('img')
+            image.setAttribute('src', arr[i].image)
+            image.setAttribute('width', '100px')
+            image.setAttribute('height', '100px')
         
-        checkbox.type = "checkbox"
-        checkbox.id = "box"
+        
        
         title.textContent = arr[i].title
         price.textContent = "Price: " + arr[i].price+" $"
         description.textContent = "Description: " + arr[i].description
         completed.textContent = "Completed: " + arr[i].completed
-        
+        button.textContent = "Delete"
+
         todoContainer.appendChild(title)
         todoContainer.appendChild(price)
         todoContainer.appendChild(completed)
         todoContainer.appendChild(checkbox)
         todoContainer.appendChild(description)
-        todoContainer.appendChild(img)
+        todoContainer.appendChild(image)
         todoContainer.appendChild(button)
-        button.textContent = "Delete"
+        
 
         button.todoId = todoId
         
@@ -48,15 +52,15 @@ function listTodos(arr){
         axios.delete(`https://api.vschool.io/alex/todo/${this.todoId}`).then(function(response){})
       
                                         })
-        
+        checkbox.todoId = todoId
         
         var complete = arr[i].completed
         document.getElementById("box").addEventListener("click", function(){
-        axios.put(`https://api.vschool.io/alex/todo/${todoId}`, {completed: !complete} ).then(function(response){
+        axios.put(`https://api.vschool.io/alex/todo/${this.todoId}`, {completed: !complete} ).then(function(response){
 
         })
                                            
-        })
+        }) 
     
     }
 }
@@ -72,13 +76,15 @@ todoForm.addEventListener("submit", function(event){
     var title = todoForm.title.value
     var price = todoForm.price.value || 0  
     var description = todoForm.description.value
-    var img = todoForm.image.value
+    var image = todoForm.image.value
+    
     var newTodo = {}
     newTodo.title = title
     newTodo.price = price
     newTodo.description = description
-    newTodo.completed = completed
-    newTodo.imgUrl = img
+    newTodo.image = image
+    
+
     axios.post('https://api.vschool.io/alex/todo', newTodo).then(function(response){
         console.log(response.data) 
         
