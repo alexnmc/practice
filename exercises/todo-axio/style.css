@@ -2,16 +2,19 @@
     border: 1px solid black;
     margin: 5px 0;
     padding: 5px;
+    background-color:whitesmoke;
+    
 }
 
 #list-container {
-
-    width:250px
+ width:220px;
+ height: 200px;
+    
 }
 
 body{
 
-    background-color: bisque;
+    background-color:lightgray;
     
 }
 
@@ -21,4 +24,8 @@ button{
 
  #btn{
      background-color: aquamarine;
+ }
+
+ .strikethrough{
+     text-decoration: line-through;
  }
