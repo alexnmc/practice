@@ -19,7 +19,7 @@ class Player{
       }else if(this.status === "Big"){
           this.status = "Small"
       }else if(this.status === "Small"){
-           this.status = "Dead"
+           this.status = "Dead" ;
            this.gameActive = false
       }
      }
@@ -30,13 +30,13 @@ class Player{
         }else if(this.status === "Big"){
             this.status = "Powered Up"
         }else if(this.status === "Powered Up"){
-            this.hasStarr = true
+            this.hasStar = true
         }
      }
 
      
      addCoin(){
-          totalCoins++
+          this.totalCoins += 1    
      }
 
      print(){
@@ -44,19 +44,30 @@ class Player{
      }
 
 }
+      let player1 = new Player(0, "Powered Up", false)
+      player1.setName("Mario")
 
-
-function randomRange(){
-    let num = Math.floor(Math.random()*(0-3)+3)
+    function randomRange(){
+    let num = Math.floor(Math.random()*3)
     if(num === 0){
-        gotHit()
+        player1.gotHit()
     }else if(num === 1){
-        gotPowerup()
-    }else{
-        addCoin()
+        player1.gotPowerup()
+    }else if(num === 2){
+        player1.addCoin()
+    }
+    player1.print()
+    endGame()
+
+}
+
+function endGame() {
+    if(player1.gameActive === false){
+        clearInterval(setInt)
     }
 }
-     
-    
+
+let setInt = setInterval(randomRange, 1000)
+
 
  
