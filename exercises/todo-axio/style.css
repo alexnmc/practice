@@ -29,3 +29,26 @@ button{
  .strikethrough{
      text-decoration: line-through;
  }
+
+ #id{
+     position:relative;
+     top: -307px;
+     height:20px;
+     width: 80%
+ }
+
+ #id2{
+     position:relative;
+     top: -296px;
+     height:20px;
+     width :80%
+ }
+
+ #id3{
+     position: relative;
+     top: -199px;
+     height: 20px;
+     width: 80%;
+ }
+
+      /* #list-container > div > input {} */
