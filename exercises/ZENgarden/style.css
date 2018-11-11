@@ -1,0 +1,89 @@
+
+
+body {
+    color: #325050;
+    background: #fff;
+    font-family: 'Libre Baskerville', sans-serif;
+    font-size: 0.8em;
+    font-weight: 50;
+
+}
+
+
+#container{
+   display: grid;
+   grid-template-columns: 1fr;
+}
+
+#toptrim {
+        background-color: rgba(19, 67, 71, 1);
+        padding-top: 10px;
+        width: 100%
+    }
+    
+    
+
+
+
+p { border: none;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
+}
+
+h3 {
+    margin: 2em 0 0 0;
+    color: #2e484c;
+    font-size: 1.8em;
+    
+}
+
+#divtext2{
+        background-attachment: scroll, scroll, fixed;
+        background-color: rgba(138,188,159,0.5);
+        background-image: url(./Pictures/contours-opaque.png), url(./Pictures/gridlines-opaque.png), url(./Pictures/bamboo.png);
+        background-repeat: repeat, repeat, no-repeat;
+        background-size: auto, auto, cover;
+        
+}
+    
+
+header {
+    height: 230px;
+    padding: 20px 0 70px 0;
+    background: #2d6360 50% 0 url(./Pictures/huntington.jpg) no-repeat;
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(./Pictures/contours.png), url(./Pictures/noise.png), url(/Pictures/gridlines.png), url(/Pictures/huntington.jpg);
+    background-position: 0 0, 0 0, -5px -25px, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+    text-align: center;
+
+}
+
+p,h3{
+    margin: auto 100px;
+    margin-top: 10px;
+    line-height: 1.9;
+    font-family: juliusSansOneV5;
+    font-size: 13.5px;
+    color: rgba(1, 1, 1, 0.8);
+}
+
+
+ h1 {
+    color: white;
+    margin-top: 10p;
+    font-family: juliusSansOneV6, serif;
+    font-weight: lighter;
+    font-size: 29px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: juliusSansOneV5Italic;
+    font-size: 18px;
+    padding-top: 5px;
+    color: rgba(250, 250, 250, .6);
+}

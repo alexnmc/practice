@@ -7,19 +7,19 @@
 }
 
 #list-container {
- width:220px;
- height: 200px;
+    width:220px;
+    height: 200px;
     
 }
 
 body{
-
-    background-color:lightgray;
-    
-}
+    background-color:rgba(0, 0, 0, 0.817);
+    }
 
 button{
     background-color: red;
+    height:25px;
+
 }
 
  #btn{
@@ -32,23 +32,40 @@ button{
 
  #id{
      position:relative;
-     top: -307px;
-     height:20px;
-     width: 80%
+     width: 80%;
+     
  }
 
  #id2{
      position:relative;
-     top: -296px;
-     height:20px;
-     width :80%
+     width :80%;
+    
+     
  }
 
  #id3{
      position: relative;
-     top: -199px;
-     height: 20px;
      width: 80%;
+     
+
  }
+ #id4{
+    position: relative;
+    width: 80%;
+    
+}
+img[src=""] {
+    display: none;
+}
+#checkbox{
+    height:20px;
+    width: 25px;
+}
+h1{
+    color:lawngreen;
+    text-align: center
+    
+}
+
 
       /* #list-container > div > input {} */
