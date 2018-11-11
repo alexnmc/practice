@@ -10,7 +10,7 @@ function listTodos(arr){
          let todoId = arr[i]._id
          let todoContainer = document.createElement('div')
         
-             todoContainer.classList.add('todo')
+         todoContainer.classList.add('todo')
         
          let title = document.createElement('h3')
              title.textContent = arr[i].title
@@ -34,53 +34,64 @@ function listTodos(arr){
          let checkbox = document.createElement("input")
              checkbox.type = "checkbox"
              checkbox.todoId = todoId
+             checkbox.id = "checkbox"
             
-    
          let image = document.createElement('img')
              image.setAttribute('src', arr[i].imgUrl)
              image.setAttribute('width', '100px')
              image.setAttribute('height', '100px')
         
-        
          let editTitle = document.createElement('input')
              editTitle.id = "id"
-
+             editTitle.placeholder = "add new title:"
+            
          let editPrice = document.createElement("input")
              editPrice.id = "id2"
+             editPrice.placeholder = "add new price:"
 
          let editDescription = document.createElement("input")
-              editDescription.id = "id3"
-         
+             editDescription.id = "id3"
+             editDescription.placeholder = "add new description:"
+             
+         let editImage = document.createElement("input")
+             editImage.id = "id4"
+             editImage.placeholder = "add new image:"
+             editImage.setAttribute('src', arr[i].imgUrl)
+             editImage.setAttribute('width', '100px')
+             editImage.setAttribute('height', '100px')
+        
          let editButton = document.createElement('button')
              editButton.textContent = "Edit"
              editButton.todoId = todoId  
+         
              editButton.addEventListener("click", function(){
                 if(editButton.textContent === "Edit"){
                     todoContainer.appendChild(editTitle) 
                     todoContainer.appendChild(editPrice) 
                     todoContainer.appendChild(editDescription) 
-                        editButton.textContent = "Save"
+                    todoContainer.appendChild(editImage)
+                    editButton.textContent = "Save"
                 }else {
                    let editTodo = {}  
-                   editTodo.title = editTitle.value
-                   editTodo.description = editDescription.value
-                   editTodo.price = Number(editPrice.value)
-                   console.log(todoId)
-                axios.put(`https://api.vschool.io/alex/todo/${todoId}`, editTodo).then(function(response){
+                       editTodo.title = editTitle.value
+                       editTodo.description = editDescription.value
+                       editTodo.price = Number(editPrice.value)
+                       editTodo.imgUrl = editImage.value
+                 axios.put(`https://api.vschool.io/alex/todo/${todoId}`, editTodo).then(function(response){
                     console.log(response.data)
-                }) 
+                })  
                    todoContainer.removeChild(editTitle)
                    todoContainer.removeChild(editPrice)
                    todoContainer.removeChild(editDescription)
-                     editButton.textContent = "Edit" 
+                   todoContainer.removeChild(editImage)
+                   editButton.textContent = "Edit" 
                }  
             })
         document.getElementById('list-container').appendChild(todoContainer)
         button.addEventListener("click", function(){
         axios.delete(`https://api.vschool.io/alex/todo/${this.todoId}`).then(function(response){})
         })
-                                        
-        if(arr[i].completed){checkbox.checked = true}
+            if(arr[i].completed){checkbox.checked = true}
         checkbox.addEventListener("change", function(){
             let complete = {completed: this.checked}
         axios.put(`https://api.vschool.io/alex/todo/${this.todoId}`,complete).then(function(response){
@@ -89,32 +100,25 @@ function listTodos(arr){
         }) 
         todoContainer.appendChild(title)
         todoContainer.appendChild(price)
+        todoContainer.appendChild(description)
         todoContainer.appendChild(complete1)
         todoContainer.appendChild(checkbox)
-        todoContainer.appendChild(description)
         todoContainer.appendChild(image)
         todoContainer.appendChild(button)
         todoContainer.appendChild(editButton)
     }
 }
         let todoForm = document.TodoForm
-           todoForm.addEventListener("submit", function(event){
-           event.preventDefault()
-        let title = todoForm.title.value
-        let price = todoForm.price.value || 0  
-        let description = todoForm.description.value
-        let image = todoForm.image.value
-    
+            todoForm.addEventListener("submit", function(event){
+                 event.preventDefault()
         let newTodo = {}
-    
-        newTodo.title = title
-        newTodo.price = price
-        newTodo.description = description 
-        newTodo.imgUrl = image
+                newTodo.title = todoForm.title.value
+                newTodo.price = todoForm.price.value || 0
+                newTodo.description = todoForm.description.value
+                newTodo.imgUrl = todoForm.image.value
         axios.post('https://api.vschool.io/alex/todo', newTodo).then(function(response){
         console.log(response.data) 
     })
 })
-
-   getData()
+         getData()
 
