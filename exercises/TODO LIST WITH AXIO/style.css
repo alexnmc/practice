@@ -30,42 +30,37 @@ button{
      text-decoration: line-through;
  }
 
- #id{
+ #id,#id2,#id3,#id4{
      position:relative;
      width: 80%;
-     
+     height:30px;
+     font-size:17px;
  }
 
- #id2{
-     position:relative;
-     width :80%;
-    
-     
- }
 
- #id3{
-     position: relative;
-     width: 80%;
-     
-
- }
- #id4{
-    position: relative;
-    width: 80%;
-    
-}
-img[src=""] {
+ img[src=""] {
     display: none;
 }
 #checkbox{
     height:20px;
     width: 25px;
 }
+
 h1{
     color:lawngreen;
     text-align: center
     
 }
+ 
+form{
+    display: flex;
+    justify-content: center;
+}
+@media(max-width:700px){
 
+        form{
+        justify-content: flex-start;     
+        }
+}
 
       /* #list-container > div > input {} */
