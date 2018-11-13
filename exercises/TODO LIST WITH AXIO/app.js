@@ -40,7 +40,8 @@ function listTodos(arr){
              image.setAttribute('src', arr[i].imgUrl)
              image.setAttribute('width', '100px')
              image.setAttribute('height', '100px')
-        
+    
+             '…lkbv'
          let editTitle = document.createElement('input')
              editTitle.id = "id"
              editTitle.placeholder = "title: " + arr[i].title
@@ -55,7 +56,7 @@ function listTodos(arr){
              
          let editImage = document.createElement("input")
              editImage.id = "id4"
-             editImage.placeholder = "add new url:"
+             editImage.placeholder = "add new  url:"
              editImage.setAttribute('src', arr[i].imgUrl)
              editImage.setAttribute('width', '100px')
              editImage.setAttribute('height', '100px')
