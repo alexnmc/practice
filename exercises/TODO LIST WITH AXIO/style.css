@@ -19,11 +19,13 @@ body{
 button{
     background-color: red;
     height:25px;
+    margin: 3px;
 
 }
 
  #btn{
      background-color: aquamarine;
+     margin-left:5px;
  }
 
  .strikethrough{
@@ -35,6 +37,7 @@ button{
      width: 80%;
      height:30px;
      font-size:17px;
+     margin: 2px;
  }
 
 
@@ -52,15 +55,24 @@ h1{
     
 }
  
+input{
+    margin: 3px;
+    height:20px
+}
 form{
     display: flex;
     justify-content: center;
+    background-color: lightslategray;
+    margin: auto 300px;
+    height:50px;
+    border-top: solid 20px lightslategray;
 }
-@media(max-width:700px){
 
-        form{
-        justify-content: flex-start;     
-        }
-}
+
+
+
+
+
+
 
       /* #list-container > div > input {} */

@@ -1,0 +1,6 @@
+.nav{
+    background-color: aqua;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}

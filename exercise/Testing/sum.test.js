@@ -1,10 +1,8 @@
 
-  var sum = require('./sum')
+  var sum = require('./sum') 
 
   
-  
-  
-  describe("the sum function", function(){
+describe("the sum function", function(){
   
       it('should only receive numbers as inputs', function(){
           expect(sum('a', true)).toBe("Please enter two numbers")

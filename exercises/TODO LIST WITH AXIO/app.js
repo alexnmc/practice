@@ -41,7 +41,7 @@ function listTodos(arr){
              image.setAttribute('width', '100px')
              image.setAttribute('height', '100px')
     
-             '…lkbv'
+             
          let editTitle = document.createElement('input')
              editTitle.id = "id"
              editTitle.placeholder = "title: " + arr[i].title
@@ -67,8 +67,8 @@ function listTodos(arr){
          
              editButton.addEventListener("click", function(){
                 if(editButton.textContent === "Edit"){
-                    todoContainer.removeChild(title)
-                    todoContainer.removeChild(price)
+                    todoContainer.removeChild(title) // - or todoContainer.title.style.display = "none"
+                    todoContainer.removeChild(price)        
                     todoContainer.removeChild(description)
                     todoContainer.removeChild(checkbox)
                     todoContainer.removeChild(complete1)
@@ -93,7 +93,7 @@ function listTodos(arr){
                    todoContainer.removeChild(editDescription)
                    todoContainer.removeChild(editImage)
                    
-                   todoContainer.appendChild(title)
+                   todoContainer.appendChild(title) // - or todoContainer.title.style.display = "block"
                    todoContainer.appendChild(price)
                    todoContainer.appendChild(description)
                    todoContainer.appendChild(complete1)

@@ -8,22 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-<div id=container>
-    <h1> TODO LIST </h1>
-
-    <form name="TodoForm">
-        <input type ="text" name="title" placeholder="Title" required>
-        <input type ='number' name='price' placeholder="Price">
-        <input type = "text"  name = "description" placeholder="Description">
-        <input type = "text"  name = 'image' placeholder = "Image">
-        <button id = "btn">Add Todo</button>
-
-    </form>
+    <div id=container>
+        <h1> TODO LIST </h1>
+        <div id = "wrap">
+        <form name="TodoForm">
+            <input type ="text" name="title" placeholder="Title" required>
+            <input type ='number' name='price' placeholder="Price">
+            <input type = "text"  name = "description" placeholder="Description">
+            <input type = "text"  name = 'image' placeholder = "Image">
+            <button id = "btn">Add Todo</button>
+        </form>
+        </div>
     
-    <div id="list-container">
-
+        <div id="list-container">
+        </div>
     </div>
-</div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="app.js"></script>
