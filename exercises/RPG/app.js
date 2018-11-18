@@ -27,9 +27,9 @@ function Enemy(type, hp, inv){
 //functions
 
 function winner(){
-     var a = player1.inventory.includes("Coin")
-     var b = player1.inventory.includes("Bone")
-     var c = player1.inventory.includes("Stick")
+    var a = player1.inventory.includes("Coin")
+    var b = player1.inventory.includes("Bone")
+    var c = player1.inventory.includes("Stick")
         if(a === true && b === true && c === true){
              player1.hp = 0 ; console.log(" CONGRATULATIONS, NOW YOU HAVE A COIN, A BONE AND A STICK! YOU WON !!!GAME OVER!\n\n")
         } 
@@ -37,25 +37,25 @@ function winner(){
 
 
 function walk(){
-     console.log("You are walking....\n\n")
-     if(Math.floor(Math.random()*(1 - 4) + 4) === 1){
+    console.log("You are walking....\n\n")
+    if(Math.floor(Math.random()*(1 - 4) + 4) === 1){
          underAttack()
-     }
+    }
 }
 
 
 function generateEnemy(){
-     var rndEn = Math.floor(Math.random()*(1-4) + 4)
-     if(rndEn === 1){
+    var rndEn = Math.floor(Math.random()*(1-4) + 4)
+    if(rndEn === 1){
          var newEnemy = new Enemy("NINJA" , 100, "Stick")
-     }
-     else if(rndEn === 2){ 
+    }
+    else if(rndEn === 2){ 
          var newEnemy = new Enemy("LION", 50, "Bone")
-     }
-     else{ 
+    }
+    else{ 
          var newEnemy = new Enemy("BIRD", 75, "Coin")
-     }
-     return newEnemy
+    }
+        return newEnemy
 }
 
 
@@ -64,9 +64,9 @@ function underAttack(){
     var currentEnemy = generateEnemy()
     console.log(`WATCH OUT ${currentEnemy.type} !!! ...WHAT DO YOU WANT TO DO???:`)
     while(player1.hp>0 && currentEnemy.hp>0){
-    var defense = ["ATTACK", " RUN AWAY"]
-    var defenseAction = ask.keyInSelect(defense, 'WHAT DO YOU WANT TO DO ???\n\n')
-    if(defenseAction === 0 ){ 
+        var defense = ["ATTACK", " RUN AWAY"]
+        var defenseAction = ask.keyInSelect(defense, 'WHAT DO YOU WANT TO DO ???\n\n')
+        if(defenseAction === 0 ){ 
         currentEnemy.hp -=  player1.attack()
         console.log(`WOWW  You hit ${currentEnemy.type} his health is at ${currentEnemy.hp}\n\n`)
             if(currentEnemy.hp > 0){
@@ -80,8 +80,8 @@ function underAttack(){
                 player1.inventory.push(currentEnemy.inventory) ; player1.hp += 25 ; console.log("YESSS !!!  You KILLED him !!!\n\n  Your health was increased by 25 and you took his item :)\n\n" )
                                             winner()
             }                  
-    }else if(defenseAction === 1 ){
-        var run = Math.floor(Math.random()*(1 - 3) + 3)
+        }else if(defenseAction === 1 ){
+            var run = Math.floor(Math.random()*(1 - 3) + 3)
             if( run  === 1 && runaway === false){ 
                 runaway = true ;
                 console.log("You can't escape, you have to fight!!!!") 
@@ -90,8 +90,8 @@ function underAttack(){
                 currentEnemy.hp = 0 ;console.log("Good job, you escaped...\n\n")
             }else if((run === 1 || run === 2)&&(runaway === true)){
                 console.log("You can't run this time")
-            }
-    }else if(defenseAction === -1){
+        }
+        }else if(defenseAction === -1){
         console.log("You can't quit now..you have to do something: ")
     } 
     }   
@@ -105,7 +105,7 @@ function underAttack(){
  console.log(`\n\nThank you ${nAme}, let's START the game!\n\n You win if you collect 3 different items from your enemies!\n\n Good luck!\n\n`)
  player1 = new Player(newName, 100)
  while(player1.hp >0){
-   var answer = ask.keyIn("PRESS w TO START WALKING \nPRESS i TO SEE YOUR INVENTORY \nPRESS p TO SEE YOUR INFO\n\n", {limit:'wip'})
+    var answer = ask.keyIn("PRESS w TO START WALKING \nPRESS i TO SEE YOUR INVENTORY \nPRESS p TO SEE YOUR INFO\n\n", {limit:'wip'})
     if(answer === "w"){
               walk()
     }else if(answer === "i"){ 

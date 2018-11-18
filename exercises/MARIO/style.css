@@ -1,22 +1,16 @@
 
 
- h1{
+h1{
+    text-align: center ;
+    font-size: 50px;
+    color: grey;
+}
 
-     text-align: center ;
-     font-size: 50px;
-     color: grey;
-    
-
- }
-
- #div1{
+#div1{
     height : 150px;
     width : 100%;
     background-color:  blanchedalmond;
-    display: inline-block;
-    
-
-}
+    display: inline-block;}
 
 
 #div2{
@@ -44,56 +38,53 @@ img{
 }
 
 h2{
-     position: relative;
-     left:171px;
-     top: -105px;
+    position: relative;
+    left:171px;
+    top: -105px;
 
 }
 
-
 #btn{
-        width: 120px;
-        height:50px;
-        font-size: 40px;
-        border: 1px solid black;
-        position: relative;
-        left: 640px;
-        top: -123px;
-        background-color:lightcyan;
+    width: 120px;
+    height:50px;
+    font-size: 40px;
+    border: 1px solid black;
+    position: relative;
+    left: 640px;
+    top: -123px;
+    background-color:lightcyan;
+    text-align: center;
 }
 
 #total{
-
-     text-align: center;
-     position: relative;
-     left: -165px;
-     top: -65px;
+    text-align: center;
+    position: relative;
+    left: -165px;
+    top: -65px;
     
 }
 
-
 #buton{
-     
-     position:relative;
-     top: -101px;
-     left:716px;
-     height:30px;
-     background-color:lightseagreen;
+    position:relative;
+    top: -101px;
+    left:716px;
+    height:30px;
+    background-color:lightseagreen;
 }
 
 input{
-          width:80px;
-           height: 35px;
-          position:relative;
-          top:  -145px;
-          left: 1195px;
-          font-size: 22px;
-          background-color: aliceblue;
+    width:80px;
+    height: 35px;
+    position:relative;
+    top:  -145px;
+    left: 1195px;
+    font-size: 22px;
+    background-color: aliceblue;
           
 }
 
 body{
-       background-color: aliceblue;
+    background-color: aliceblue;
 }
 
 p{
@@ -101,16 +92,15 @@ p{
 }
 
 button{
-             position:relative;
-             top:200px;
+    position:relative;
+    top:200px;
 }
 
-           
 #reset{
-            position: relative;
-            top: -131px;
-            left: 653px;
-            height: 30px;
-            background-color: lightcoral;
+    position: relative;
+    top: -131px;
+    left: 653px;
+    height: 30px;
+    background-color: lightcoral;
 }
             
