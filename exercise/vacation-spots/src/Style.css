@@ -1,0 +1,30 @@
+
+
+.hello{
+    border: 1px solid black;
+    margin: 5px 0;
+    padding: 5px;
+    background-color:yellow;
+    
+}
+.winter{
+    border: 1px solid black;
+    margin: 5px 0;
+    padding: 5px;
+    background-color:blue;
+}
+
+.spring{
+    background-color: greenyellow;
+    border: 1px solid black;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.fall{
+    background-color: grey;
+    border: 1px solid black;
+    margin: 5px 0;
+    padding: 5px;
+
+}
