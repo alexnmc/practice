@@ -12,9 +12,7 @@ const VacationSpots = props => {
         )
     })
 
-
-
-    return(
+        return(
         <div>
         {mapVacSpots}
         </div>
