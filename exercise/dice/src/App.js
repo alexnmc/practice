@@ -8,23 +8,21 @@ class App extends Component{
         super()
 
         this.state = {
-            number1: 0,
-            number2: 0,
-            number3: 0,
-            number4: 0,
-            number5: 0,
+            number1: 1,
+            number2: 1,
+            number3: 1,
+            number4: 1,
+            number5: 1,
         }
     }
     
-
     randomNum = () => {
         this.setState({
-            number1 : Math.floor(Math.random()*5)+1,
-            number2 : Math.floor(Math.random()*5)+1,
-            number2 : Math.floor(Math.random()*5)+1,
-            number3 : Math.floor(Math.random()*5)+1,
-            number4 : Math.floor(Math.random()*5)+1,
-            number5 : Math.floor(Math.random()*5)+1
+            number1 : Math.floor(Math.random()*6)+1,
+            number2 : Math.floor(Math.random()*6)+1,
+            number3 : Math.floor(Math.random()*6)+1,
+            number4 : Math.floor(Math.random()*6)+1,
+            number5 : Math.floor(Math.random()*6)+1
         })
     }
      render(){
