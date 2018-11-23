@@ -8,6 +8,7 @@ class App extends Component{
 
         this.state = {
             name:'',
+            lname:'',
             people: []
         
             
@@ -21,10 +22,10 @@ class App extends Component{
     
     handleSubmit = event => {
         event.preventDefault()
-        const newPeople = this.state.name
+        const newPeople = `${this.state.name}  ${this.state.lname}`
             
         this.setState(prevState => {
-            return {
+                return {
                 people : [...prevState.people, newPeople]
                 
             }
@@ -33,22 +34,35 @@ class App extends Component{
     
     resetFunction = event => {
         event.preventDefault()
-    this.setState(prevState => {
-        return {
+        this.setState(prevState => {
+            return {
                 people: prevState.people.splice(1)
             }
         
     })
     } 
 
+    deleteFunction = e => {
+        e.preventDefault()
+        this.setState( () => {
+            return {
+                name : '',
+                lname : '',
+                people : []
+            
+        }
+        
+     })
+    }
+
     
     
     render(){
           
         const mapNewPeople = this.state.people.map((item) => {
-            return(
-                <li>{item}</li>
-            )
+                    return(
+                            <li>{item}</li>
+                    )
         })
 
             return(
@@ -59,16 +73,20 @@ class App extends Component{
                         onChange = {this.handleChange} 
                         value = {this.state.name}
                         name = 'name' /> 
+                    <input type = 'text'
+                        placeholder = 'Last Name'
+                        onChange = {this.handleChange}
+                        value = {this.state.lname}
+                        name = 'lname' />
                      <button  onClick = {this.handleSubmit}  >Submit</button>
                      <button onClick = {this.resetFunction}>Delete</button>
-                     <h1>{this.state.name}</h1>
+                     <button onClick = {this.deleteFunction}>Reset</button>
+                     <h1>{this.state.name} {this.state.lname}</h1>
                      <ul>{mapNewPeople}</ul>
                      
                 </form>
                      
             )
-        
-        
     }
 
 }
