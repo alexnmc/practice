@@ -4,9 +4,9 @@ const Name = (props) => {
 
     return (
         
-        <div className={props.color}>
-            <p className = 'top'>Badge: </p>
-            <p>Name: {props.name}</p    >
+        <div className = {props.color}>
+            <p className = 'top'>Badge: {props.name} </p>
+            <p>Name: {props.name}</p>
             <p>Last name: {props.lname}</p>
             <p>Phone: {props.phone}</p>
             <p>Email: {props.email}</p>
