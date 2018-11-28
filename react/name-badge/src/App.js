@@ -50,7 +50,7 @@ class App extends Component{
                 return {
                     people : [...prevState.people ,newPeople],
                     name:'',
-                    lname:'',
+                    lname: '',
                     email: '',
                     favfood: '',
                     phone: '',
@@ -86,7 +86,7 @@ class App extends Component{
                <div>
                 <Forms
                  name={this.state.name}
-                 lname={this.state.lightsaber}
+                 lname={this.state.lname}
                  email={this.state.email}
                  favfood = {this.state.favfood}
                  phone = {this.state.phone}

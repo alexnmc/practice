@@ -1,0 +1,27 @@
+
+
+body{
+    background-color: aliceblue;
+    display:flex;
+    align-items: flex-start;
+    margin: 100px;
+    
+   
+}
+
+
+.class{
+    display:flex;
+    margin: 30px;
+    
+    
+}
+
+
+
+
+a{
+   font-size: 20px;
+   }
+
+  
