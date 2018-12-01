@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:  #6cbd58ce;
+    border: 20px solid black;
+    font-size: 40px;
+    font-family:'Times New Roman';
+    font-weight: bolder
+}
+
+.navbar a {
+
+    text-decoration: none;
+    color: white;
+    
+}
+
+.navbar a:hover{
+      color: rgb(255, 0, 64);
+}
+    
+
+
+.home,
+.about,
+.exchange {
+    height: 680px;
+    width: 100vw;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.home {
+    background: url('http://www.gccexchange.com/images/gcc-exchange-rates.jpg') no-repeat;
+    background-size: 100% 100%;
+
+    -webkit-filter: brightness(300%); /* Safari */
+    filter: brightness(300%);
+    -webkit-filter: contrast(70%); /* Safari */
+    filter: contrast(80%);
+    display:block;
+    text-align: center
+    
+}
+
+.about {
+    background-color:white;
+    margin:20px;
+    
+   
+}
+
+.exchange {
+    background-color: white;
+    height: 100px;
+}
+
+.footer {
+    background-color:rgba(18, 18, 74, 0.838);
+    border: 8px solid black;
+    height: 45px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px
+    
+}
+
+ h2{
+     color:rgb(252, 38, 38);
+ }
+
+ h3{
+     color: red;
+ }
+
+ form{
+     display: flex;
+     justify-content: center ;
+     
+ }
+
+  input{
+     height:40px;
+     width: 100px;
+     font-size: 30px;
+     margin-top: 100px;
+     border:4px solid black;
+     border-radius: 5px
+ }
+ button{
+     width:70px;
+     height:40px;
+     margin-top: 100px;
+     margin-left: 3px;
+     font-size: 15px;
+     font-weight: bolder;
+     background-color: greenyellow;
+     border-radius: 7px;
+     border:2px solid black;
+ }
+
+ .msg{
+     text-align: center;
+     margin-top:30px;
+     font-size: 50px;
+     
+ }
+.excList{
+    background-color: white;
+}
+
+h4{
+    color: rgb(20, 20, 27);
+}
+ 

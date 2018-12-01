@@ -1,5 +1,5 @@
 import React from 'react'
-import Header form './Header'
+import Header from './Header'
 
 
 const App = () => {
@@ -9,8 +9,6 @@ const App = () => {
         </div>
     )
 }
-
-
 
 
 export default App

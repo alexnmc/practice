@@ -1,18 +1,18 @@
 import React from 'react'
-import { Consumer } from './index'
+import { withTheme} from './ThemeProvider'
 
 
 const Header = props => {
     return (
-     <Consumer>
-     { value =>
-        
-        <div className = {`${value.theme}-header`}>
-      <h1> My context</h1>
+        <div className = {`${props.theme}-header`}>
+           <h1> My context</h1>
+           <button onClick={props.toggleTheme}>
+                {props.theme === "dark" ? "Switch to Light" : "Switch to Dark"}
+          </button>
         </div>
-     }
-    </Consumer>
+     
+
     )
 }
 
-export default Header
+export default withTheme(Header)

@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <div className="footer">
-            <h3>www.plumbing.com</h3>
+            <h3>LIVE CURRENCY UPDATE</h3>
         </div>
     )
 }
