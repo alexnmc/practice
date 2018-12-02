@@ -10,14 +10,11 @@ const Exchange = props =>{
         
         
         <div className = "exchange">
-         
-       
-            
-            <h4> 1 EUR = {props.val} {props.cur} </h4>
-        
-    
-            
+         <div className = 'textcont'>
+        <h4 className = 'exchangeText'> 1 EUR = {props.val} {props.cur} </h4>
         </div>
+         </div>
+    
     )
     }
    

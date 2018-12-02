@@ -22,21 +22,22 @@ class App extends Component {
         
     componentDidMount(){
                 
-            axios.get(`http://data.fixer.io/api/latest?access_key=4d7a09c2820310947ad3da41736dc6e7`).then(response => {
-                var obj = response.data.rates
-                var arr = []
+        axios.get(`http://data.fixer.io/api/latest?access_key=4d7a09c2820310947ad3da41736dc6e7`).then(response => {
+            var obj = response.data.rates
+            var arr = []
                 for(let i in obj){
                     const obj2 = {
                         key: i,
                         value: obj[i]
                     }
-                arr.push(obj2)}
+                
+                        arr.push(obj2)
+                }
     
                 this.setState({
                     currency: arr
                     
                 })
-                
             })
         }
     
@@ -61,29 +62,28 @@ class App extends Component {
                 this.setState( prevState => {
             
                     return {
-                    
                     newItem: newElement,
                     inputValue: '',
-                    
-    
                     }
+                    
              })
             :
-            alert('Enter 3 letters')
+            alert('CURRENCY NAME SHOULD BE 3 LETTERS ONLY\n\n Example: for $ enter USD')
+            currValue !== newElement.key && alert('CURRENCY NOT FOUND\n\n PLEASE ENTER VALID CURRENCY CODE ')
         }
+               
         
-render(){
-    const mapCur = this.state.currency.map(item =>{
-        return(
-            <Exchange  
-            cur = {item.key}
-            val = {item.value}
-             />
-        )
-    })
+    render(){
+        const mapCur = this.state.currency.map(item =>{
+            return(
+                <Exchange  
+                    cur = {item.key}
+                    val = {item.value}
+                />
+            )
+        })
     
-   
-      return(
+        return(
            
             <div>
                 
@@ -98,8 +98,8 @@ render(){
                 
             </div>
         )
-        }
     }
+}
 
 
 export default App

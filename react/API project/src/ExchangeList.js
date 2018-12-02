@@ -17,12 +17,12 @@ const ExchangeList = props => {
                      onChange = {props.handleChange} 
                      value = {props.inputValue}
                      name = 'inputValue' /> 
-                <button>Search</button>
+                    <button>Search</button>
             </form>
-               <h1 className = 'msg'>
-              <h3>{props.newItem.key && "Today's rate:"}</h3>
-              {props.newItem.key && '1 EUR ='}  {props.newItem.value} {props.newItem.key }
-              </h1> 
+              <div className = 'msg'>
+              <h3 className = 'search'>{props.newItem.key && "Today's rate:"}</h3>
+                 {props.newItem.key && '1 EUR ='}  {props.newItem.value} {props.newItem.key }
+              </div> 
                                      {/* unary operator */}
              
             {props.mapCur}
