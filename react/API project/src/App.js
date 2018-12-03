@@ -15,7 +15,11 @@ class App extends Component {
             this.state = {
                 currency: [],
                 inputValue: '',
-                newItem: {}
+                inputValue2: '',
+                conversion: null,
+                input1: '',
+                input2: ''
+    
             }
         }
         
@@ -50,27 +54,50 @@ class App extends Component {
     
         handleSubmit = event => {
             event.preventDefault()
+            let num1 = 0
+            let num2 = 0
+            let name1 = ''
+            let name2 = ''
+            let currValue = this.state.inputValue.toUpperCase()
+            let currValue2 = this.state.inputValue2.toUpperCase()
             
-            let  newElement = {}
-            const currValue = this.state.inputValue.toUpperCase()
             this.state.currency.forEach(function(item){
                 if(item.key === currValue){
-                     newElement = item
+                     num1 = item.value
+                     name1 = item.key
+                
+                } 
+                if(item.key === currValue2){
+                     num2 = item.value
+                     name2 = item.key
                 }
+                
             })
-                currValue.length  === 3 ?
+               
+            let result = num2/num1
+         
+             
+            
+            name1 && name2  ?
                 this.setState( prevState => {
             
                     return {
-                    newItem: newElement,
-                    inputValue: '',
+                        conversion: result,
+                        inputValue: '',
+                        inputValue2: '',
+                        input1: prevState.inputValue,
+                        input2: prevState.inputValue2
+                       
                     }
-                    
-             })
+                })
+            
+
             :
-            alert('CURRENCY NAME SHOULD BE 3 LETTERS ONLY\n\n Example: for $ enter USD')
-            currValue !== newElement.key && alert('CURRENCY NOT FOUND\n\n PLEASE ENTER VALID CURRENCY CODE ')
-        }
+                
+                alert('CURRENCY NOT FOUND\n\nCURRENCY NAME SHOULD BE 3 LETTERS ONLY\n\n Example: for $ enter usd')
+            }
+
+
                
         
     render(){
@@ -88,10 +115,11 @@ class App extends Component {
             <div>
                 
                 <Navbar />
+                
                 <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/exchange"  render={props => <ExchangeList {...props} mapCur={mapCur} handleChange = {this.handleChange} handleSubmit = {this.handleSubmit} newItem = {this.state.newItem}/>}/>
+                    <Route exact path="/" component = {Home}/>
+                    <Route path="/about" component = {About}/>
+                    <Route path="/exchange"  render = {props => <ExchangeList {...props} mapCur={mapCur} handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}  conversion = {this.state.conversion} inputValue = {this.state.inputValue}  inputValue2= {this.state.inputValue2} input1 = {this.state.input1} input2 = {this.state.input2}/>}/>
                 </Switch>
                 
                 <Footer />
