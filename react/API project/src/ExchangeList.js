@@ -1,4 +1,5 @@
 import React from 'react'
+import{withEx} from './ExProvider'
 
 
     
@@ -27,13 +28,11 @@ const ExchangeList = props => {
                 <button>Convert</button>
                     
             </form>
-              <div className = 'msg'>
-              <h3 className = 'search'>  { props.conversion && "Today's rate:"  }</h3>
-              <p>{props.conversion && `1${props.input1.toUpperCase()} = ${props.conversion} ${props.input2.toUpperCase()}`}</p>
-
-
-              </div> 
-                                     {/* unary operator */}
+            <div className = 'msg'>
+                <h3 className = 'search'>  { props.conversion && "Today's rate:"  }</h3>
+                 <p>{props.conversion && `1${props.input1.toUpperCase()} = ${props.conversion} ${props.input2.toUpperCase()}`}</p>
+            </div> 
+                                     
              
             {props.mapCur}
         </div>
@@ -42,4 +41,4 @@ const ExchangeList = props => {
     }
    
 
-export default ExchangeList
+export default withEx(ExchangeList)

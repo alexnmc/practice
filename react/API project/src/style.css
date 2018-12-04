@@ -4,9 +4,6 @@
     
 }
 
-
-
-
 .navbar {
     width: 100%;
     height: 100px;
@@ -44,8 +41,8 @@
 }
 
 .home {
-    background: url('http://www.gccexchange.com/images/gcc-exchange-rates.jpg') no-repeat ;
-    background-size: 100% 100%;
+    background: url('http://www.gccexchange.com/images/gcc-exchange-rates.jpg')  no-repeat ;
+    background-size: 100% 100% ;
     -webkit-filter: brightness(300%);
     filter: brightness(300%);
     -webkit-filter: contrast(70%); 
@@ -200,11 +197,15 @@
 
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
     
     .about {
         display:block;
-        font-size: 25px;
+        font-size: 23px;
+    }
+
+    .redh2{
+        margin: 20px;
     }
 
     .navbar,
@@ -242,5 +243,9 @@
     .to,
     .convert{
         font-size:20px;
+    }
+
+    .home{
+        background-size: 770px 100%;
     }
 }
