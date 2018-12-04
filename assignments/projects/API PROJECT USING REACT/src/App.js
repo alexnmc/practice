@@ -17,7 +17,7 @@ class App extends Component {
     }
     render(){
         const mapCur = this.props.currency.map( item =>{ 
-            console.log(item.id)
+            console.log("id number = " + item.id)
             return(
                 <Exchange  
                     cur = {item.key}

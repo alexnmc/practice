@@ -27,7 +27,7 @@ function myString(str1,str2){
 
      myFunction("hello world")  */
 
-       var str = "Hello my name is Albert"
+       var str = "Hello my name is Ali"
      function myString(str){ 
    
       var newStr = str.split(" ")
