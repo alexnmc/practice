@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:  #44b65ee0;
+    background-color:  #44b648e0; ;
     border: 20px solid black;
     font-size: 45px;
     font-family:'Times New Roman';
@@ -109,7 +109,7 @@
      width: 120px;
      font-size: 25px;
      color: rgb(123, 255, 0);
-     border: 10px solid  #58bd70d6;
+     border: 9px solid  #44b648e0;;
      border-radius: 5px;
      background-color: rgb(58, 56, 56);
      text-align: center;
@@ -125,7 +125,7 @@
      font-size: 13px;
      color: yellow;
      font-weight: bolder;
-     background-color: green;
+     background-color: #44b648e0;;
      border-radius: 5px;
      border: 2px solid black;
      
@@ -156,7 +156,7 @@
      height:50px;
      width: 550px;
      background-color: black;
-     border: 4px solid  #58bd70d6;
+     border: 4px solid #44b648e0; 
      transition: all 0.7s ease-in-out 0.1s;
 
 }
