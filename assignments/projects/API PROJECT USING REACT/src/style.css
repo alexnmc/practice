@@ -6,11 +6,11 @@
 
 .navbar {
     width: 100%;
-    height: 100px;
+    height: 117px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:  #44b648e0; ;
+    background-color:  #44b648ec; ;
     border: 20px solid black;
     font-size: 45px;
     font-family:'Times New Roman';
@@ -32,7 +32,7 @@
 .home,
 .about,
 .exchange {
-    height: 680px;
+    height: 670px;
     width: 100vw;
     display: flex;
     font-size: 30px;
@@ -64,7 +64,7 @@
     background-color: white;
     width: 550px;
     margin: auto ;
-    border: 15px solid rgb(14, 65, 27);
+    border: 15px solid rgb(12, 51, 21);
     transition: all 0.5s ease-in-out 0.1s;
     display: flex;
     justify-content: center;
@@ -109,7 +109,7 @@
      width: 120px;
      font-size: 25px;
      color: rgb(123, 255, 0);
-     border: 9px solid  #44b648e0;;
+     border: 9px solid  #39993c;;
      border-radius: 5px;
      background-color: rgb(58, 56, 56);
      text-align: center;
@@ -123,9 +123,9 @@
      height: 35px;
      margin-top: 32px;
      font-size: 13px;
-     color: yellow;
+     color: rgb(87, 216, 115);
      font-weight: bolder;
-     background-color: #44b648e0;;
+     background-color: #bb200ce0;;
      border-radius: 5px;
      border: 2px solid black;
      
@@ -156,7 +156,7 @@
      height:50px;
      width: 550px;
      background-color: black;
-     border: 4px solid #44b648e0; 
+     border: 4px solid #44b648; 
      transition: all 0.7s ease-in-out 0.1s;
 
 }
@@ -236,8 +236,8 @@
    
     .exchange:hover,
     .textcont:hover{
-        width:102%;
-        height: 60px;
+        width:100%;
+        height: 65px;
     }
 
     .to,

@@ -7,7 +7,7 @@ const About = props => {
         <div className={`${props.theme}-about`}>
             <h1>About to change theme...</h1>
             <button onClick={props.toggleTheme}>
-                {props.theme === "dark" ? "Switch to Pink" : "Switch to  Dark-Blue"}
+                {props.theme === "dark" ? "Switch to Pink" : "Switch to Dark-Blue"}
             </button>
         </div>
     )
