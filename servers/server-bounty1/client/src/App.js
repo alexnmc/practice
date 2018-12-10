@@ -1,28 +1,55 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import axios from 'axios'
+import './style.css'
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    constructor(){
+        super()
+        this.state = {
+            bounties : []
+        }
+    }
+
+    componentDidMount(){
+        axios.get('/bounties' ).then(response => {
+            console.log(response.data)
+            this.setState({bounties: response.data})
+        })
+        
+    }
+
+   
+
+   
+    render(){
+
+        let mapBounties = this.state.bounties.map(function(item){
+            
+        
+        return(
+            <div className = 'div1'>
+              <h1> First Name: {item.firstName}</h1>
+              <h1> Last Name: {item.lastName}</h1>
+              <h1> Living: {item.living}</h1>
+              <h1> Bounty: {item.bountyAmount}</h1>
+              <h1> Type:  {item.type} </h1>
+              <h1> Id: {item._id}</h1>
+            </div>
+       
+       )
+
+        })
+
+        return(
+            <div>
+                {mapBounties}
+            </div>
+        )
+
+           
+    }
+
 }
 
-export default App;
+export default App

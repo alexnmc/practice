@@ -1,18 +1,19 @@
 const express = require('express')
 const app = express()
 const uuid = require('uuid/v4')
+const cors = require('cors')
 
 let bounties = [
-    {   firstName: "Porky",
-        lastName: "TheGreat",
+    {   firstName: "Mike",
+        lastName: "Great",
         living: true,
         bountyAmount: 15,
         type : "Jedi ",
        _id: uuid()
         
     },
-    {  firstName: "Monkey",
-       lastName: "TheBig",
+    {  firstName: "David",
+       lastName: "Strong",
        living: true,
        bountyAmount: 17,
        type : "Jedi ",
