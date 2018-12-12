@@ -37,11 +37,10 @@ let bounties = [
         const newBounty = req.body
         newBounty._id = uuid()
         bounties.push(newBounty)
-        res.send(bounties)
+        res.send(newBounty)
     })
 
     app.put('/bounties/:id', (req, res) => {
-       
         const bountyId = req.params.id
         const bountyUpdates = req.body
         const updatedBounties = bounties.map(item => item._id === bountyId ? {...item, ...bountyUpdates} : item)

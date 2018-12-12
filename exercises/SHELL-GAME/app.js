@@ -44,16 +44,16 @@ function function1(){
        document.getElementById('score').innerHTML = `Your score: ${score}`
 
     }
-    box1.style.animation = false; 
-    box1.style.animationIterationCount = false; 
-    box2.style.animation = false; 
-    box2.style.animationIterationCount = false; 
-    box3.style.animation = false; 
-    box3.style.animationIterationCount = false; 
-}
+      box1.style.animation = false; 
+      box1.style.animationIterationCount = false; 
+      box2.style.animation = false; 
+      box2.style.animationIterationCount = false; 
+      box3.style.animation = false; 
+      box3.style.animationIterationCount = false; 
+   }
 
 function function2(){
-    if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
+   if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
        box2.innerHTML = '.'
        box1.innerHTML = ''
        box3.innerHTML = ''
@@ -67,7 +67,7 @@ function function2(){
        document.getElementById('score').innerHTML = `Your score: ${score}`
 
 
-    }else{
+   }else{
        box3.innerHTML = ''
        box2.innerHTML = ''
        box1.innerHTML = '.'
@@ -79,13 +79,13 @@ function function2(){
        h1.style.color =  "rgba(36, 26, 11, 0.877)"
        score--
        document.getElementById('score').innerHTML = `Your score: ${score}`
-    }
-    box1.style.animation = false; 
-    box1.style.animationIterationCount = false; 
-    box2.style.animation = false; 
-    box2.style.animationIterationCount = false; 
-    box3.style.animation = false; 
-    box3.style.animationIterationCount = false; 
+   }
+      box1.style.animation = false; 
+      box1.style.animationIterationCount = false; 
+      box2.style.animation = false; 
+      box2.style.animationIterationCount = false; 
+      box3.style.animation = false; 
+      box3.style.animationIterationCount = false; 
 }
 
 function function3(){
@@ -135,19 +135,16 @@ function function3(){
        h1.innerHTML = 'CHOOSE ONE:'
        h1wrap.style.backgroundColor = "rgba(36, 26, 11, 0.897)"
        h1.style.color = 'rgb(202, 143, 77)'
-       box1.style.animation = "shake 0.7s , move 2s" ;
-       //box1.style.animation = "move 2s ";
-       box1.style.animationIterationCount = 'infinite, 2';
-       //box1.style.animationIterationCount = 'infinite'; 
-       box2.style.animation = "shake 0.7s, move2 2s"; 
-      // box2.style.animation = "move2 2s ";
-       box2.style.animationIterationCount = 'infinite, 2';
-       //box2.style.animationIterationCount = 'infinite'; 
-       box3.style.animation = "shake 0.7s, move3 2s"; 
-      // box3.style.animation = "move3  2s  ";
-       box3.style.animationIterationCount = 'infinite, 2';
-      // box3.style.animationIterationCount = 'infinite'; 
        
+       box1.style.animation = "shake 0.9s , move 2.1s" ;
+       box1.style.animationIterationCount = 'infinite, 2';
+      
+       box2.style.animation = "shake 0.8s, move2 2.2s"; 
+       box2.style.animationIterationCount = 'infinite, 2';
+       
+       box3.style.animation = "shake 0.9s, move3 2.1s"; 
+       box3.style.animationIterationCount = 'infinite, 2';
+     
        
    }
 
