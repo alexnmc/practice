@@ -2,13 +2,13 @@ body {
     background-image: url('https://hometiptop.com/wp-content/uploads/2016/10/pine-texture.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 100px;
+    margin-top: 70px;
     display: flex;
     justify-content: center;
     background-color: rgba(245, 245, 245, 0.055)
     
-    
-  }
+}
+
   
   
 .container {
@@ -23,13 +23,13 @@ body {
    .box2,
    .box3 {
     margin-top: 30px;
-    background-color: rgba(105, 70, 26, 0.698);
-    border: 6px solid rgba(45, 23, 11, 0.918) ;
-    border-bottom: 15px solid  rgba(45, 23, 11, 0.897) ;
+    background-color: rgba(105, 70, 26, 0.548);
+    border: 6px solid rgba(58, 31, 16, 0.918) ;
+    border-bottom: 18px solid  rgba(37, 19, 10, 0.979) ;
     border-top-left-radius: 130px;
     border-top-right-radius: 130px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
     height: 270px;
     width: 250px;
     font-size: 300px;
@@ -44,119 +44,118 @@ body {
   .box1:hover{
      width: 270px;
      height: 310px;
-     border-top-left-radius: 120px;
-     border-top-right-radius: 120px;
-     border-bottom:30px solid rgba(45, 23, 11, 0.986) ;
+     border-top-left-radius: 122px;
+     border-top-right-radius: 122px;
+     border-bottom:25px solid rgba(45, 23, 11, 0.986) ;
      
   }
   .box2:hover{
      width: 270px;
      height: 310px;
-     border-top-left-radius: 120px;
-     border-top-right-radius: 120px;
-     border-bottom: 30px solid rgba(45, 23, 11, 0.986) ;
+     border-top-left-radius: 122px;
+     border-top-right-radius: 122px;
+     border-bottom:25px solid rgba(45, 23, 11, 0.986) ;
     
   }
 
   .box3:hover{
      width: 270px;
      height: 310px;
-     border-top-left-radius: 120px;
-     border-top-right-radius: 120px;
-     border-bottom: 30px solid rgba(45, 23, 11, 0.986) ;
+     border-top-left-radius: 122px;
+     border-top-right-radius: 122px;
+     border-bottom:25px solid rgba(45, 23, 11, 0.986) ;
 
   }
 
   
- .h1wrapper{ 
-  height: 60px;
-  width:  auto;
-  margin: 30px;
-  text-align: center;
-  transition: all 0.7s ease-in-out 0.5s;
-  background-color: rgba(105, 70, 26, 0.698);
-  border: 4px solid rgba(95, 63, 24, 0.781);
-  border-radius: 10px;
-  
+  .h1wrapper{ 
+    height: 60px;
+    width:  auto;
+    margin: 30px;
+    text-align: center;
+    transition: all 0.7s ease-in-out 0.5s;
+    background-color: rgba(78, 53, 22, 0.856);
+    border: 4px solid rgba(97, 64, 24, 0.863);
+    border-radius: 10px;
+    
 
-}
+  }
 
-h1{
-  color: rgb(202, 143, 71);
-  font-size: 35px
+  h1{
+    color: rgb(202, 143, 71);
+    font-size: 35px
 
-  
-}
+    
+  }
 
-.btn{
-  height: 50px;
-  font-size: 20px;
-  margin-top: 30px;
-  border: 5px solid  rgba(36, 26, 11, 0.877);
-  border-radius: 10px;
-  background-color: rgba(85, 53, 14, 0.694);
-  margin-left: 430px;
-  font-weight: bolder;
-  color:white;
-}
+  .btn{
+    height: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+    border: 5px solid  rgba(36, 26, 11, 0.877);
+    border-radius: 10px;
+    background-color: rgba(85, 53, 14, 0.694);
+    margin-left: 430px;
+    font-weight: bolder;
+    color:white;
+  }
 
-p{
-  font-size: 50px;
-  font-weight: bolder;
-  text-align:center;
-  color:rgba(51, 32, 4, 0.849);
-  margin-top:50px;
-}
+  p{
+    font-size: 50px;
+    font-weight: bolder;
+    text-align:center;
+    color:rgba(61, 38, 4, 0.849);
+    margin-top:50px;
+  }
 
 
-.score{
-
-  font-size: 30px;
-  color:  rgba(36, 26, 11, 0.877);
-  text-align: end;
-  margin-top: -40px;
-  margin-right: -120px;
-}
-
+  .score{
+    font-size: 30px;
+    color:  rgba(36, 26, 11, 0.877);
+    text-align: end;
+    margin-top: -40px;
+    margin-right: -120px;
+  }
 
 
 
-@keyframes shake {
-   0% { transform: translate(  1px, 1px) rotate(0deg); }
-  10% { transform: translate(-2px, -3px) rotate(-2deg); }
-  20% { transform: translate(-4px, 0px) rotate(2deg); }
-  30% { transform: translate(4px, 3px) rotate(0deg); }
-  40% { transform: translate(2px, -2px) rotate(2deg); }
-  50% { transform: translate(-2px, 3px) rotate(-2deg); }
-  60% { transform: translate(-4px, 2px) rotate(0deg); }
-  70% { transform: translate(4px, 2px) rotate(-2deg); }
-  80% { transform: translate(-2px, -2px) rotate(2deg); }
-  90% { transform: translate(2px, 3px) rotate(0deg); }
-  100% { transform: translate(2px, -3px) rotate(-2deg); }
-}
 
-@keyframes move {
-  0%   { left: 0px; top:0px;}
-  25%  { left: 0px; top:0px;}
-  50%  { left: 330px; top:0px;}
-  75%  { left: 330px; top:0px;}
-  100% { left: 0px; top:0px;}
-}
+  @keyframes shake {
+    0% { transform: translate(  1px, 1px) rotate(0deg); }
+    10% { transform: translate(-2px, -3px) rotate(-2deg); }
+    20% { transform: translate(-4px, 0px) rotate(2deg); }
+    30% { transform: translate(4px, 3px) rotate(0deg); }
+    40% { transform: translate(2px, -2px) rotate(2deg); }
+    50% { transform: translate(-2px, 3px) rotate(-2deg); }
+    60% { transform: translate(-4px, 2px) rotate(0deg); }
+    70% { transform: translate(4px, 2px) rotate(-2deg); }
+    80% { transform: translate(-2px, -2px) rotate(2deg); }
+    90% { transform: translate(2px, 3px) rotate(0deg); }
+    100% { transform: translate(2px, -3px) rotate(-2deg); }
+  }
 
-
-@keyframes move2 {
-  0%   { right: 0px; top:0px;}
-  25%  { right: 0px; top:0px;}
-  50%  { right: 0px; top:0px;}
-  75%  { right: 330px; top:0px;}
-  100% { right: 0px; top:0px;}
-}
+  @keyframes move {
+    0%   { left: 0px; top:0px;}
+    25%  { left: 0px; top:0px;}
+    50%  { left: 330px; top:0px;}
+    75%  { left: 330px; top:0px;}
+    100% { left: 0px; top:0px;}
+  }
 
 
-@keyframes move3 {
-  0%   { right:  0px; top:0px;}
-  25%  { right:  0px; top:0px;}
-  50%  { right:  0px; top:0px;}
-  75%  { right:  355px; top:0px;}
-  100% { right:  0px; top:0px;}
-}
+  @keyframes move2 {
+    0%   { right: 0px; top:0px;}
+    25%  { right: 0px; top:0px;}
+    50%  { right: 0px; top:0px;}
+    75%  { right: 330px; top:0px;}
+    100% { right: 0px; top:0px;}
+  }
+
+
+  @keyframes move3 {
+    0%   { right:  0px; top:0px;}
+    25%  { right:  0px; top:0px;}
+    50%  { right:  0px; top:0px;}
+    75%  { right:  355px; top:0px;}
+    100% { right:  0px; top:0px;}
+  }

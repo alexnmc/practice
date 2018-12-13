@@ -34,28 +34,36 @@ class App extends Component {
 
             h1wrapper: {
                 color: ''
-                
-            }
+            },
+
+            score: 0
+            
             
         }
     }
-
+            
     function1 = () => {
         if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
-            this.setState({
-                box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" , text: '.'},
-                box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.877)"},
-                h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)' }
+            this.setState( prevState => {
+                return {
+                    box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" , text: '.'},
+                    box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.877)"},
+                    h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)' },
+                    score: prevState.score + 1
+                }
             })
         } else {
-            this.setState({
-                box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box3: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
-                h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.877)"},
-                h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)' }
+            this.setState( prevState => {
+                return {
+                    box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box3: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
+                    h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.877)"},
+                    h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)'},
+                    score: prevState.score -1
+                }
 
             })
         }
@@ -63,20 +71,26 @@ class App extends Component {
 
     function2 = () => {
         if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
-            this.setState({
-                box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box2: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.' },
-                box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.877)"},
-                h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)' }
+            this.setState( prevState => {
+               return{
+                    box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box2: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.' },
+                    box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.877)"},
+                    h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)'},
+                    score: prevState.score +1
+                }
             })
         } else {
-            this.setState({
-                box1: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
-                box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.877)"},
-                h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)' }
+            this.setState( prevState => {
+                return{
+                    box1: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
+                    box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.877)"},
+                    h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)'},
+                    score: prevState.score -1
+                }
 
             })
         }
@@ -84,20 +98,26 @@ class App extends Component {
 
     function3 = () => {
         if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
-            this.setState({
-                box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box3: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
-                h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.877)"},
-                h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)' }
+            this.setState( prevState => {
+                return{
+                    box1: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box3: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
+                    h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.877)"},
+                    h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)'},
+                    score: prevState.score+1
+                }
             })
         } else {
-            this.setState({
-                box1: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
-                box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
-                h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.877)"},
-                h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)' }
+            this.setState(prevState => {
+                return{
+                    box1: { backgroundColor: "rgba(245, 245, 245, 0.055)", text: '.'},
+                    box2: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    box3: { backgroundColor: "rgba(245, 245, 245, 0.055)" },
+                    h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.877)"},
+                    h1wrapper: {backgroundColor: 'rgba(245, 245, 245, 0.055)'},
+                    score: prevState.score -1
+                }
 
             })
 
@@ -106,9 +126,9 @@ class App extends Component {
 
     function4 = () => {
             this.setState({
-                box1: { backgroundColor: "rgba(105, 70, 26, 0.698)", animation:"shake 1s , move 2.1s", animationIterationCount: 'infinite, 2' },
-                box2: { backgroundColor: "rgba(105, 70, 26, 0.698)", animation:"shake 1s , move2 2.1s", animationIterationCount: 'infinite, 2' },
-                box3: { backgroundColor: "rgba(105, 70, 26, 0.698)", animation:"shake 1s , move3 2.1s", animationIterationCount: 'infinite, 2' },
+                box1: { animation:"shake 1s , move 2.1s",  animationIterationCount: 'infinite, 2' },
+                box2: { animation:"shake 1s , move2 2.1s", animationIterationCount: 'infinite, 2' },
+                box3: { animation:"shake 1s , move3 2.1s", animationIterationCount: 'infinite, 2' },
                 h1:{text: 'CHOOSE ONE:', color: 'rgb(202, 143, 77)'},
                 h1wrapper: {backgroundColor: "rgba(36, 26, 11, 0.897)"}
       
