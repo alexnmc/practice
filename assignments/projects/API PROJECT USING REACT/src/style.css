@@ -10,7 +10,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color:  #44b648ec; ;
+    background-color:  #44b648d7; ;
     border: 20px solid black;
     font-size: 45px;
     font-family:'Times New Roman';
@@ -53,8 +53,8 @@
 }
 
 .about {
-    background-color: white;
-    border:  70px solid white ;
+    background-color: whitesmoke;
+    border:  70px solid whitesmoke ;
 }
 
 
@@ -78,7 +78,7 @@
 
 
 .footer {
-    background-color:rgba(18, 18, 74, 0.911);
+    background-color:rgba(18, 18, 74, 0.842);
     border: 8px solid black;
     height: 45px;
     text-align: center;
@@ -123,7 +123,7 @@
      height: 35px;
      margin-top: 32px;
      font-size: 13px;
-     color: rgb(87, 216, 115);
+     color:white;
      font-weight: bolder;
      background-color: #bb200ce0;;
      border-radius: 5px;
@@ -156,7 +156,7 @@
      height:50px;
      width: 550px;
      background-color: black;
-     border: 4px solid #44b648; 
+     border: 4px solid #2e772f; 
      transition: all 0.7s ease-in-out 0.1s;
 
 }
@@ -168,7 +168,7 @@
 }
 
 .exchangeText{
-    color: rgb(227, 252, 7);
+    color: rgba(229, 255, 0, 0.979);
     display: flex;
     justify-content: center;
     align-items: center;
