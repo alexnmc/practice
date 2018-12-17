@@ -1,5 +1,3 @@
-
-
 const express = require('express')
 const morgan = require('morgan')
 const mongoose = require('mongoose')
@@ -12,11 +10,11 @@ app.use(morgan('dev'))
 
 
 
-app.use('/bounties', require('./routes/bounty'))
+app.use('/players', require('./routes/player'))
 
 
 
-mongoose.connect('mongodb://localhost:27017/bounties', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://localhost:27017/players', {useNewUrlParser: true}, () => {
     console.log('connect to the db captain!')
 })
 
@@ -28,10 +26,6 @@ app.use((err, req, res, next) => {
 
 
 
-
 app.listen(PORT, () => {
     console.log(`Server is running on Port ${PORT} sir!`)
 })
-
-
-

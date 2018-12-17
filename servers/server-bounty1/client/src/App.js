@@ -39,18 +39,20 @@ class App extends Component {
 
                 this.setState(prevState => {
                     return {
-                        bounties: response.data
+                        bounties: prevState.bounties.filter(item => item._id !== id)
                     }
-                })
+                
             })
+        })        
     }
  
     handleEdit = (id, updates) => {
         axios.put(`/bounties/${id}`, updates).then(response => {
+            console.log(response.data)
             const updatedBounty = response.data
             this.setState(prevState => {
                 return {
-                    bounties: updatedBounty
+                    bounties: prevState.bounties.map(item => item._id === id ? updatedBounty : item )
                 }
             })
             
@@ -62,16 +64,16 @@ class App extends Component {
         e.preventDefault()
         
         const newBounty = {
-             firstName: this.state.firstName ,
-             lastName: this.state.lastName ,
-             living: this.state.living ,
-             bountyAmount: this.state.bountyAmount ,
-             type: this.state.type  
+              firstName: this.state.firstName ,
+              lastName: this.state.lastName ,
+              living: this.state.living ,
+              bountyAmount: this.state.bountyAmount ,
+              type: this.state.type  
                 
         }
-        
         axios.post('/bounties', newBounty)
             .then(response => {
+                console.log(response.data)
                 this.setState(prevState => {
                     return {
                         bounties: [...prevState.bounties, response.data],
@@ -90,7 +92,7 @@ class App extends Component {
       
         let mapBounties = this.state.bounties.map(item => 
         
-                     <Bounty
+                    <Bounty
                         firstName = {item.firstName}
                         lastName = {item.lastName}
                         living = {item.living}
@@ -99,12 +101,13 @@ class App extends Component {
                         _id = {item._id}
                         handleDelete = {this.handleDelete}  
                         handleEdit = {this.handleEdit}
+                        bounties =  {this.state.bounties}
                     />)
-                 
+        
 
         return(
-            <div>
-                <form onSubmit= {this.handleSubmit} >
+            <div >
+                <form  onSubmit= {this.handleSubmit} >
             <input 
                 type="text" 
                 name="firstName" 
@@ -145,9 +148,7 @@ class App extends Component {
                 placeholder= "type"
             />
 
-
-
-             <button>Add Bounty</button>
+            <button>Add Bounty</button>
 
         </form>
         
@@ -155,7 +156,6 @@ class App extends Component {
             </div>
         )
 
-           
     }
 
 }

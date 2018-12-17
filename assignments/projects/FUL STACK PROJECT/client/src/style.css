@@ -5,8 +5,7 @@ body {
     margin-top: 70px;
     display: flex;
     justify-content: center;
-    background-color: rgba(245, 245, 245, 0.055)
-    
+   
 }
 
   
@@ -14,7 +13,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 100px;
+    grid-gap: 130px;
     
     
   }
@@ -23,27 +22,29 @@ body {
    .box2,
    .box3 {
     margin-top: 30px;
-    background-color: rgba(105, 70, 26, 0.548);
+    background-color: rgba(105, 70, 26, 0.555);
     border: 6px solid rgba(58, 31, 16, 0.918) ;
-    border-bottom: 18px solid  rgba(37, 19, 10, 0.979) ;
+    border-bottom: 18px solid  rgba(58, 31, 16, 0.918) ;
     border-top-left-radius: 130px;
     border-top-right-radius: 130px;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
-    height: 270px;
-    width: 250px;
-    font-size: 300px;
-    text-align: center;
-    color: rgba(91, 63, 21, 0.735);
+    height: 250px;
+    width: 240px;
+    font-size: 350px;
+    color: rgb(179, 0, 0);
     transition: all 0.7s ease-in-out 0.2s;
     position: relative;
-    
+    display: flex;
+    align-items:center;
+    justify-content: center;
+   
   }
 
  
   .box1:hover{
      width: 270px;
-     height: 310px;
+     height: 300px;
      border-top-left-radius: 122px;
      border-top-right-radius: 122px;
      border-bottom:25px solid rgba(45, 23, 11, 0.986) ;
@@ -51,7 +52,7 @@ body {
   }
   .box2:hover{
      width: 270px;
-     height: 310px;
+     height: 300px;
      border-top-left-radius: 122px;
      border-top-right-radius: 122px;
      border-bottom:25px solid rgba(45, 23, 11, 0.986) ;
@@ -60,7 +61,7 @@ body {
 
   .box3:hover{
      width: 270px;
-     height: 310px;
+     height: 300px;
      border-top-left-radius: 122px;
      border-top-right-radius: 122px;
      border-bottom:25px solid rgba(45, 23, 11, 0.986) ;
@@ -69,6 +70,9 @@ body {
 
   
   .h1wrapper{ 
+    display:flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     width:  auto;
     margin: 30px;
@@ -77,27 +81,31 @@ body {
     background-color: rgba(78, 53, 22, 0.856);
     border: 4px solid rgba(97, 64, 24, 0.863);
     border-radius: 10px;
-    
-
+    box-shadow: 18px 18px 14px rgba(128, 128, 128, 0.568);
+   
   }
 
   h1{
     color: rgb(202, 143, 71);
-    font-size: 35px
-
-    
+    /* font-size: 35px; */
+    animation: mymove 3s infinite; 
+   
   }
 
   .btn{
     height: 50px;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 65px;
     border: 5px solid  rgba(36, 26, 11, 0.877);
     border-radius: 10px;
     background-color: rgba(85, 53, 14, 0.694);
-    margin-left: 430px;
+    margin:auto;
+    margin-top: 50px;
+    display:flex;
+    align-items: center;
     font-weight: bolder;
     color:white;
+    box-shadow: 14px 14px 10px rgba(49, 48, 48, 0.363);
   }
 
   p{
@@ -106,39 +114,58 @@ body {
     text-align:center;
     color:rgba(61, 38, 4, 0.849);
     margin-top:50px;
+    
+   
   }
 
-
-  .score{
+  .name{
     font-size: 30px;
     color:  rgba(36, 26, 11, 0.877);
     text-align: end;
     margin-top: -40px;
-    margin-right: -120px;
+    margin-right: -100px;
+    margin-bottom: 30px;
   }
 
+
+
+  .score {
+    font-size: 30px;
+    color:  rgba(36, 26, 11, 0.877);
+    text-align: end;
+    margin-top: -40px;
+    margin-right: -130px;
+    margin-bottom: 30px;
+  }
+ 
+ 
+ 
+  @keyframes mymove {
+    from {font-size: 30px;}
+    to {font-size: 50px;}
+  }
 
 
 
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-1deg); }
-    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    10% { transform: translate(-1px, -2px) rotate(-2deg); }
+    20% { transform: translate(-3px, 0px) rotate(2deg); }
     30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(1deg); }
-    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    40% { transform: translate(1px, -1px) rotate(2deg); }
+    50% { transform: translate(-1px, 2px) rotate(-2deg); }
     60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-1deg); }
-    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    70% { transform: translate(3px, 1px) rotate(-2deg); }
+    80% { transform: translate(-1px, -1px) rotate(2deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    100% { transform: translate(1px, -2px) rotate(-2deg); }
   }
 
   @keyframes move {
     0%   { left: 0px; top:0px;}
     25%  { left: 0px; top:0px;}
-    50%  { left: 330px; top:0px;}
-    75%  { left: 330px; top:0px;}
+    50%  { left: 350px; top:0px;}
+    75%  { left: 350px; top:0px;}
     100% { left: 0px; top:0px;}
   }
 
@@ -147,7 +174,7 @@ body {
     0%   { right: 0px; top:0px;}
     25%  { right: 0px; top:0px;}
     50%  { right: 0px; top:0px;}
-    75%  { right: 330px; top:0px;}
+    75%  { right: 350px; top:0px;}
     100% { right: 0px; top:0px;}
   }
 
@@ -156,6 +183,68 @@ body {
     0%   { right:  0px; top:0px;}
     25%  { right:  0px; top:0px;}
     50%  { right:  0px; top:0px;}
-    75%  { right:  355px; top:0px;}
+    75%  { right:  380px; top:0px;}
     100% { right:  0px; top:0px;}
+  }
+    
+  
+   .navbar{
+       margin-top: -50px;
+    }
+
+
+
+   .link{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'roman';
+    text-decoration: none;
+    margin: 20px;
+    color: rgba(99, 63, 0, 0.911);
+  }
+
+  .about{
+    margin-top:300px;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  
+  .form1{
+    border: 5px solid rgba(53, 36, 7, 0.849);
+    border-radius:10px;
+    margin:auto;
+    width:250px;
+    height: 350px;
+    text-align: center;
+    background-color:  rgba(78, 53, 22, 0.61);
+  }
+
+  input{
+    display:block;
+    margin: auto;
+    margin-top: 20px;
+    height: 27px;
+    width:170px;
+    background-color: rgba(226, 195, 160, 0.883);
+    color: rgb(61, 38, 4);
+    font-size: 23px;
+    
+  }
+
+  .btn1, .btn2{
+    height: 30px;
+    width: 80px;
+    margin:10px;
+    margin-top: 30px;
+    border-radius:5px;
+    background-color:  rgba(82, 55, 22, 0.863);
+    color:white;
+    font-size: 15px;
+    font-weight: bolder;
+    border:3px solid rgba(56, 38, 16, 0.911);
+  }
+
+  .home{
+    display:block;
   }

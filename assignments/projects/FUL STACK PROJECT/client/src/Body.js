@@ -1,12 +1,12 @@
 import React from 'react'
 
-
 const Body = (props) =>{
    
 
     return(
         <div className = 'wrap'>  
-            
+
+            <h2 className = 'name'>Name: {props.style.name}</h2>
             <h2 className = 'score'>Score: {props.style.score}</h2>
             <p>WHICH CUP HAS THE BALL?</p>
             

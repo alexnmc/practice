@@ -1,22 +1,25 @@
 import React, {Component, Fragment} from 'react'
-import axios from 'axios'
+
+
 
 class Bounty extends Component {
  
-    constructor(){
-
-        super()
+    constructor(props){
+        super(props)
+        let {firstName, lastName, living, bountyAmount, type} = this.props
+        console.log(props)
         this.state = {
-            firstName:'' ,
-            lastName:'' ,
-            living: '',
-            bountyAmount: '' ,
-            type:'',
+            firstName,  // this.props.firsName...
+            lastName,
+            living,
+            bountyAmount,
+            type,
             toggle: true
         }
     }
 
     editToggler = () => {
+       
         this.setState(prevState =>{
             return{
                 toggle: !prevState.toggle
@@ -24,8 +27,6 @@ class Bounty extends Component {
         })
     }
 
-
-    
 
     handleChange = event => {
         const {name, value} = event.target
@@ -35,6 +36,7 @@ class Bounty extends Component {
          })
     }
 
+    
     handleSubmit = event => {
         event.preventDefault()
         
@@ -45,10 +47,6 @@ class Bounty extends Component {
             bountyAmount : this.state.bountyAmount,
             type : this.state.type
         }
-
-        this.setState({
-            firstName: ''
-        })
         this.props.handleEdit(this.props._id, updates)
         this.editToggler()
         
