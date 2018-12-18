@@ -4,11 +4,12 @@ const Schema = mongoose.Schema
 const playerSchema = new Schema({
     name: {
         type: String
-        
     },
-     score: {
-        type: Number
-     }
+    score: {
+        type: Number,
+        default: 0
+    }
+     
 })
 
-module.exports = mongoose.model("Player", playerSchema)
+module.exports = mongoose.model("players", playerSchema)

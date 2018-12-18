@@ -2,6 +2,32 @@ const express = require('express')
 const playerRouter = express.Router()
 const Player = require("../models/player")
 
+playerRouter.get('/', (req, res) => {    // for testing only
+    
+    Player.find((err, data) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
+
+    })
+})
+
+
+
+
+playerRouter.delete('/', (req, res, next) => {
+    
+    Player.remove((err, data) => {  // deletes everything !
+        if (err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(202).send(` was succesfully deleted!`)
+    })
+})
+
 
 
 
@@ -30,9 +56,11 @@ playerRouter.post('/', (req, res, next) => {
     })
 })
 
+// axios.put('/player/inc/345345345')
+// axios.put('/player/dec/345345345')
 
 // update score after each round
-playerRouter.put('/:id', (req, res, next) => {
+playerRouter.put('/inc/:id', (req, res, next) => {
     Player.findOneAndUpdate(
         {_id: req.params.id},
         req.body,
@@ -46,6 +74,7 @@ playerRouter.put('/:id', (req, res, next) => {
     )
 })
 
+// playerRouter.put('/dec/:id')
 
 
 

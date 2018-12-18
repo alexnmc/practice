@@ -4,29 +4,31 @@ import { Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import About from  './About'
 import Navbar from './Navbar'
+import { withPlayer } from './PlayerProvider'
+
 
 
 
 class App extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
         this.state = {
             box1: {
-                backgroundColor: '',
+                background: '',
                 text: '',
                 animation: '', 
                 animationIterationCount: ''
      
             },
             box2: {
-                backgroundColor: '',
+                background: '',
                 text:'',
                 animation: '', 
                 animationIterationCount: ''
 
             },
             box3: {
-                backgroundColor: '',
+                background: '',
                 text: '',
                 animation: '', 
                 animationIterationCount: ''
@@ -34,39 +36,35 @@ class App extends Component {
 
             h1: {
                 text: '',
-                backgroundColor: ''
+                background: ''
             },
 
             h1wrapper: {
                 color: ''
             },
             
-            name: '',
-            
             score: 0,
-
             functionOn: false
 
         }
-
+        console.log(this.props.score)
     }
-    
     
     ballInCup1 = () => {
         this.setState({
-            box1: {text: '.', backgroundColor: "rgba(148, 105, 56, 0.200)"}
+            box1: {text: '.', background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
         })
     }
     
     ballInCup2 = () => {
         this.setState({
-            box2: {text: '.', backgroundColor: "rgba(148, 105, 56, 0.200)"}
+            box2: {text: '.', background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
         })
     }
 
     ballInCup3 = () => {
         this.setState({
-            box3: {text: '.', backgroundColor: "rgba(148, 105, 56, 0.200)"}
+            box3: {text: '.', background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
         })
     }
 
@@ -79,10 +77,10 @@ class App extends Component {
                
                 this.setState( prevState => {
                     return {
-                        box1: { backgroundColor: "rgba(148, 105, 56, 0.200)"},
-                        box2: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box3: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.800)"},
+                        box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
+                        box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        h1: {text: 'WINNER!' , color: "rgba(36, 26, 11, 0.800)"},
                         h1wrapper: {backgroundColor: "rgba(148, 105, 56, 0.200)"  },
                         score: prevState.score + 1,
                     }
@@ -91,10 +89,11 @@ class App extends Component {
             } else {
                 this.setState( prevState => {
                     return {
-                        box1: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box2: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box3: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.800)"},
+                        box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
+                        box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                       
+                        h1: {text: 'YOU LOST!' , color: "rgba(36, 26, 11, 0.800)"},
                         h1wrapper: {backgroundColor: "rgba(148, 105, 56, 0.200)" },
                         score: prevState.score -1,
                         
@@ -113,26 +112,24 @@ class App extends Component {
             if(Math.floor((Math.random() * 3) + 1)===1){
                 this.setState( prevState => {
                     return{
-                        box1: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box2: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box3: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        h1: { text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.800)"},
+                        box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
+                        box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        h1: { text: 'WINNER!' , color: "rgba(36, 26, 11, 0.800)"},
                         h1wrapper: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
                         score: prevState.score +1,
-                        
                     }
                 })
                         setTimeout(this.ballInCup2, 750)
             } else {
                 this.setState( prevState => {
                     return{
-                        box1: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box2: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box3: { backgroundColor: "rgba(148, 105, 56, 0.200)"},
-                        h1: { text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.800)"},
+                        box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
+                        box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        h1: { text: 'YOU LOST!' , color: "rgba(36, 26, 11, 0.800)"},
                         h1wrapper: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
                         score: prevState.score -1,
-                    
                     }
                 })
                         setTimeout(this.ballInCup1, 750)
@@ -148,26 +145,24 @@ class App extends Component {
             if(Math.floor((Math.random() * 3) + 1)===1){
                 this.setState( prevState => {
                     return{
-                        box1: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box2: { backgroundColor: "rgba(148, 105, 56, 0.200)"},
-                        box3: { backgroundColor: "rgba(148, 105, 56, 0.200)"},
-                        h1: {text: 'YOU WON!' , color: "rgba(36, 26, 11, 0.800)"},
-                        h1wrapper: {backgroundColor: "rgba(148, 105, 56, 0.200)" },
+                        box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
+                        box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        h1: {text: 'WINNER!' , color: "rgba(36, 26, 11, 0.800)"},
+                        h1wrapper: {background: "rgba(148, 105, 56, 0.200)" },
                         score: prevState.score+1,
-                        
                     }
                 })
                         setTimeout(this.ballInCup3, 750)
             } else {
                 this.setState(prevState => {
                     return{
-                        box1: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
-                        box2: { backgroundColor:  "rgba(148, 105, 56, 0.200)"},
-                        box3: { backgroundColor: "rgba(148, 105, 56, 0.200)"},
-                        h1: {text: 'LOOOSER!' , color: "rgba(36, 26, 11, 0.877)"},
-                        h1wrapper: {backgroundColor: "rgba(148, 105, 56, 0.200)" },
+                        box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
+                        box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
+                        h1: {text: 'YOU LOST!' , color: "rgba(36, 26, 11, 0.877)"},
+                        h1wrapper: {background: "rgba(148, 105, 56, 0.200)" },
                         score: prevState.score -1,
-                        
                     }
                 })
                         setTimeout(this.ballInCup1, 750)
@@ -183,15 +178,13 @@ class App extends Component {
     } 
     
     
-    
-    
-    function4 = () => {
+    function4 = () => {     // shuffle button
         
         this.setState({
                 
-                box1: { animation:"shake 1s , move  2.1s",  animationIterationCount: 'infinite, 2' },
-                box2: { animation:"shake 1.1s , move2 2.1s", animationIterationCount: 'infinite, 2' },
-                box3: { animation:"shake 1s , move3 2.1s", animationIterationCount: 'infinite, 2' },
+                box1: { animation:"shake 1s , move  2s",  animationIterationCount: 'infinite, 2' },
+                box2: { animation:"shake 1.1s , move2 2s", animationIterationCount: 'infinite, 2' },
+                box3: { animation:"shake 1s , move3 2s", animationIterationCount: 'infinite, 2' },
                 h1:{text: 'CHOOSE ONE:', color: 'rgb(202, 143, 77)'},
                 h1wrapper: { backgroundColor: 'rgba(58, 39, 17, 0.980)'},
                 
@@ -223,4 +216,4 @@ class App extends Component {
     }
 }
 
-export default App
+export default withPlayer(App)

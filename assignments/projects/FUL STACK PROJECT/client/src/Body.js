@@ -1,13 +1,17 @@
 import React from 'react'
+import { withPlayer } from './PlayerProvider'
+
 
 const Body = (props) =>{
    
 
     return(
         <div className = 'wrap'>  
-
-            <h2 className = 'name'>Name: {props.style.name}</h2>
-            <h2 className = 'score'>Score: {props.style.score}</h2>
+            <div className = "scoreDiv">
+                <h2 className = 'name'> Name: {props.user.name}</h2> 
+                <h2 className = 'score'>Score: {props.user.score}</h2>
+            </div>
+            
             <p>WHICH CUP HAS THE BALL?</p>
             
             <div className = 'h1wrapper' style = {props.style.h1wrapper}> 
@@ -22,10 +26,7 @@ const Body = (props) =>{
                 <button className = 'btn' onClick = {props.function4}>SHUFFLE</button>
         </div>
 
-            
-        )
-
-
+    )
 }
 
-        export default Body
+        export default withPlayer(Body)
