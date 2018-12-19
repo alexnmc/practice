@@ -14,7 +14,7 @@ app.use('/players', require('./routes/player'))
 
 
 
-mongoose.connect('mongodb://localhost:27017/players', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://localhost:27017/cups-game', {useNewUrlParser: true}, () => {
     console.log('connect to the db captain!')
 })
 

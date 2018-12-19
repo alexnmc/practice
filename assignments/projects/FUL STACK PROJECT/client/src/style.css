@@ -135,8 +135,7 @@ body {
   
   
   
-  
-  .name {
+.name {
     font-size: 30px;
     color:rgba(61, 38, 4, 0.849);
     text-align: end;
@@ -152,7 +151,7 @@ body {
  
  
   @keyframes mymove {
-    from {font-size: 30px;}
+    from {font-size: 20px;}
     to {font-size: 45px;}
   }
 
@@ -175,8 +174,8 @@ body {
   @keyframes move {
     0%   { left: 0px; top:0px;}
     25%  { left: 0px; top:0px;}
-    50%  { left: 370px; top:0px;}
-    75%  { left: 370px; top:0px;}
+    50%  { left: 360px; top:0px;}
+    75%  { left: 360px; top:0px;}
     100% { left: 0px; top:0px;}
   }
 
@@ -185,7 +184,7 @@ body {
     0%   { right: 0px; top:0px;}
     25%  { right: 0px; top:0px;}
     50%  { right: 0px; top:0px;}
-    75%  { right: 350px; top:0px;}
+    75%  { right: 340px; top:0px;}
     100% { right: 0px; top:0px;}
   }
 
@@ -194,7 +193,7 @@ body {
     0%   { right:  0px; top:0px;}
     25%  { right:  0px; top:0px;}
     50%  { right:  0px; top:0px;}
-    75%  { right:  400px; top:0px;}
+    75%  { right:  390px; top:0px;}
     100% { right:  0px; top:0px;}
   }
     

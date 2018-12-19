@@ -7,8 +7,9 @@ const Body = (props) =>{
 
     return(
         <div className = 'wrap'>  
+            
             <div className = "scoreDiv">
-                <h2 className = 'name'> Name: {props.user.name}</h2> 
+                <h2 className = 'name'> Name: {props.user.name && props.user.name.toUpperCase()}</h2> 
                 <h2 className = 'score'>Score: {props.user.score}</h2>
             </div>
             
@@ -24,6 +25,7 @@ const Body = (props) =>{
                 <div className = 'box3' onClick = {props.function3} style = {props.style.box3}> {props.style.box3.text}</div>
             </div>
                 <button className = 'btn' onClick = {props.function4}>SHUFFLE</button>
+        
         </div>
 
     )
