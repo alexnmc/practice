@@ -9,7 +9,7 @@ const Body = (props) =>{
         <div className = 'wrap'>  
             
             <div className = "scoreDiv">
-                <h2 className = 'name'> Name: {props.user.name && props.user.name.toUpperCase()}</h2> 
+                <h2 className = 'name'> Name: {props.user.name}</h2> 
                 <h2 className = 'score'>Score: {props.user.score}</h2>
             </div>
             

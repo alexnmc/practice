@@ -71,7 +71,7 @@ class App extends Component {
                 this.setState({
                     functionOn: false
                 })
-            if(Math.floor((Math.random() * 3) + 1)===1) {
+            if(Math.floor((Math.random() * 2) + 1)===1) {
                
                 this.setState( prevState => {
                     return {
@@ -108,7 +108,7 @@ class App extends Component {
             this.setState({
                 functionOn: false
             })
-            if(Math.floor((Math.random() * 3) + 1)===1) {
+            if(Math.floor((Math.random() * 2) + 1)===1) {
                 this.setState( prevState => {
                     return{
                         box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
@@ -143,7 +143,7 @@ class App extends Component {
             this.setState({
                 functionOn: false
             })
-            if(Math.floor((Math.random() * 3) + 1)===1) {
+            if(Math.floor((Math.random() * 2) + 1)===1) {
                 this.setState( prevState => {
                     return{
                         box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
@@ -190,9 +190,9 @@ class App extends Component {
         if(this.state.functionOff === false && this.state.functionOn === false){
         this.setState({
               
-                box1: { animation:"shake 1s , move  2s",  animationIterationCount: 'infinite, 2' },
-                box2: { animation:"shake 1.1s , move2 2s", animationIterationCount: 'infinite, 2' },
-                box3: { animation:"shake 1s , move3 2s", animationIterationCount: 'infinite, 2' },
+                box1: { animation:"shake 1.1s , move  2s",  animationIterationCount: 'infinite, 2' },
+                box2: { animation:"shake 1.2s , move2 2s", animationIterationCount: 'infinite, 2' },
+                box3: { animation:"shake 1.1s , move3 2s", animationIterationCount: 'infinite, 2' },
                 h1: { text: `${this.props.user.name ? this.props.user.name.toUpperCase() + ","  :  ' '} CHOOSE ONE:`, color: 'rgb(202, 143, 77)'},
                 h1wrapper: { backgroundColor: 'rgba(58, 39, 17, 0.980)'},
                 
@@ -212,7 +212,7 @@ class App extends Component {
         })
            
             setTimeout(this.resetBall, 1400)
-            setTimeout(this.reset2, 3200)
+            setTimeout(this.reset2, 3100)
            
         }
         
@@ -235,7 +235,7 @@ class App extends Component {
                     
         })
 
-            setTimeout(this.showBall, 900)
+            setTimeout(this.showBall, 700)
         }
 
     reset2 = () => {
