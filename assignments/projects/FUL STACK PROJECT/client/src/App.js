@@ -43,6 +43,10 @@ class App extends Component {
                 color: ''
             },
             
+            btn: {
+                color: 'rgb(75, 224, 75) '
+            },
+            
             functionOn: false,
             functionOff: false,
         }
@@ -67,7 +71,9 @@ class App extends Component {
     }
 
     function1 = () => {
+        
         if(this.state.functionOn === true) {
+                this.buttonLight()
                 this.setState({
                     functionOn: false
                 })
@@ -104,7 +110,9 @@ class App extends Component {
     }
 
     function2 = () => {
+        
         if(this.state.functionOn === true) {
+            this.buttonLight()
             this.setState({
                 functionOn: false
             })
@@ -139,7 +147,9 @@ class App extends Component {
     }
 
     function3 = () => {
+        
         if(this.state.functionOn === true) {
+            this.buttonLight()
             this.setState({
                 functionOn: false
             })
@@ -150,7 +160,7 @@ class App extends Component {
                         box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
                         box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
                         h1: { text: 'WINNER!' , color: "rgba(36, 26, 11, 0.800)"},
-                        h1wrapper: {background: "rgba(148, 105, 56, 0.200)" },
+                        h1wrapper: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
                         
                     }
                 })
@@ -163,7 +173,7 @@ class App extends Component {
                         box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))" },
                         box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.438))"},
                         h1: { text: 'YOU LOST!' , color: "rgba(36, 26, 11, 0.877)"},
-                        h1wrapper: {background: "rgba(148, 105, 56, 0.200)" },
+                        h1wrapper: { backgroundColor: "rgba(148, 105, 56, 0.200)" },
                         
                     }
                 })
@@ -188,9 +198,10 @@ class App extends Component {
     
     function4 = () => {     // shuffle button
         if(this.state.functionOff === false && this.state.functionOn === false){
+
         this.setState({
-              
-                box1: { animation:"shake 1.1s , move  2s",  animationIterationCount: 'infinite, 2' },
+                btn:  { color: 'rgb(255, 7, 7)'},
+                box1: { animation:"shake 1.1s , move  2s", animationIterationCount: 'infinite, 2' },
                 box2: { animation:"shake 1.2s , move2 2s", animationIterationCount: 'infinite, 2' },
                 box3: { animation:"shake 1.1s , move3 2s", animationIterationCount: 'infinite, 2' },
                 h1: { text: `${this.props.user.name ? this.props.user.name.toUpperCase() + ","  :  ' '} CHOOSE ONE:`, color: 'rgb(202, 143, 77)'},
@@ -199,7 +210,17 @@ class App extends Component {
             })
         }
                 setTimeout(this.disableShuffle, 4000)
-        }
+                
+    }
+
+
+    buttonLight = () => {
+       
+            this.setState({
+                btn: { color: 'rgb(75, 224, 75)'}
+            })
+        
+    }
 
         
     showBall = () => {
@@ -224,20 +245,26 @@ class App extends Component {
         })
     }
         
-    reset = () => {     
+    reset = () => {  // enter button on login page 
+           
         this.setState({
-                    
+            btn: { color: 'rgb(255, 7, 7)' },
             box1: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
             box2: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
             box3: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
             h1wrapper: { backgroundColor: 'rgba(78, 53, 22, 0.856)'},
-            h1: { text: ''}
+            h1: { text: ''},
+            functionOn: false
                     
         })
 
             setTimeout(this.showBall, 700)
+            setTimeout(this.buttonLight, 3500)
+            
+            
         }
 
+    
     reset2 = () => {
         this.setState({
                    
@@ -257,6 +284,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" render = {props => <Home {...props}
                                                                reset = {this.reset}
+                                                               style = {this.state}
                                                               />}/>
                     <Route path="/about" component = {About}/>
                     <Route path="/body"  render = {props => <Body {...props}

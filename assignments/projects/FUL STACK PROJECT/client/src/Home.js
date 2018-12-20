@@ -10,7 +10,6 @@ class Home extends Component {
             
             name: '',
          
-        
         }
     }
    
@@ -48,7 +47,7 @@ render() {
                        onChange={ this.handleChange } 
                        placeholder= "Enter Name" />
                 
-                <button className = 'btn1' onClick = {this.handleSubmit} >enter</button>
+                <button className = 'btn1'   onClick = {this.handleSubmit} >enter</button>
             </form>  
                 
         </div>

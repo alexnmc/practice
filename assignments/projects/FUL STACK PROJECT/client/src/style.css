@@ -37,7 +37,7 @@ body {
     height: 230px;
     width: 240px;
     font-size: 335px;
-    color: rgb(204, 0, 0);
+    color: rgba(204, 0, 0, 0.925);
     transition: all 0.8s ease-in-out 0.2s;
     position: relative;
     display: flex;
@@ -260,4 +260,7 @@ body {
 
   .home{
     display:block;
+    
   }
+
+

@@ -24,7 +24,7 @@ const Body = (props) =>{
                 <div className = 'box2' onClick = {props.function2} style = {props.style.box2}> {props.style.box2.text}</div>
                 <div className = 'box3' onClick = {props.function3} style = {props.style.box3}> {props.style.box3.text}</div>
             </div>
-                <button className = 'btn' onClick = {props.function4}>SHUFFLE</button>
+                <button className = 'btn' onClick = {props.function4} style = {props.style.btn} >SHUFFLE</button>
         
         </div>
 
