@@ -36,15 +36,15 @@ body {
     border-bottom-right-radius: 8px;
     height: 230px;
     width: 240px;
-    font-size: 340px;
-    color: rgb(179, 0, 0);
-    transition: all 0.7s ease-in-out 0.2s;
+    font-size: 335px;
+    color: rgba(179, 0, 0, 0.966);
+    transition: all 0.8s ease-in-out 0.2s;
     position: relative;
     display: flex;
     align-items:center;
     justify-content: center;
     background: radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89) );
-   
+    
   }
 
  
@@ -152,7 +152,7 @@ body {
  
   @keyframes mymove {
     from {font-size: 20px;}
-    to {font-size: 45px;}
+    to {font-size: 40px;}
   }
 
 

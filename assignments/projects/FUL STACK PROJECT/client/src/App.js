@@ -43,7 +43,8 @@ class App extends Component {
                 color: ''
             },
             
-            functionOn: false
+            functionOn: false,
+            functionOff: false,
         }
     }
     
@@ -179,11 +180,16 @@ class App extends Component {
        })
     } 
     
+    enableShuffle = () => {
+        this.setState({
+            functionOff: false
+        })
+    }
     
     function4 = () => {     // shuffle button
-        
+        if(this.state.functionOff === false && this.state.functionOn === false){
         this.setState({
-                
+              
                 box1: { animation:"shake 1s , move  2s",  animationIterationCount: 'infinite, 2' },
                 box2: { animation:"shake 1.1s , move2 2s", animationIterationCount: 'infinite, 2' },
                 box3: { animation:"shake 1s , move3 2s", animationIterationCount: 'infinite, 2' },
@@ -191,18 +197,67 @@ class App extends Component {
                 h1wrapper: { backgroundColor: 'rgba(58, 39, 17, 0.980)'},
                 
             })
-           
-                setTimeout(this.disableShuffle, 3500)
+        }
+                setTimeout(this.disableShuffle, 4000)
         }
 
+        
+    showBall = () => {
+        this.setState({
+                functionOff: true
+        })
+        this.setState ({
+                 box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))", text: '.', fontSize: "570px" }
+        
+        })
+           
+            setTimeout(this.resetBall, 1400)
+            setTimeout(this.reset2, 3200)
+           
+        }
+        
+    resetBall = () => {
+        this.setState({
+                   
+        box1: { text: ".", fontSize: "335px" , background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
+            
+        })
+    }
+        
+    reset = () => {     
+        this.setState({
+                    
+            box1: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
+            box2: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
+            box3: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
+            h1wrapper: { backgroundColor: 'rgba(78, 53, 22, 0.856)'},
+            h1: { text: ''}
+                    
+        })
+
+            setTimeout(this.showBall, 900)
+        }
+
+    reset2 = () => {
+        this.setState({
+                   
+            box1: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' }
+            
+        })
+
+        this.enableShuffle()
+    }
     
 
+    
     render(){
         return(
             <div> 
                 <Navbar/>
                 <Switch>
-                    <Route exact path="/" component = {Home}/>
+                    <Route exact path="/" render = {props => <Home {...props}
+                                                               reset = {this.reset}
+                                                              />}/>
                     <Route path="/about" component = {About}/>
                     <Route path="/body"  render = {props => <Body {...props}
                                                                     style = {this.state}

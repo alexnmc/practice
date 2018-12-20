@@ -61,6 +61,9 @@ class PlayerProvider extends Component {
     }
 
 
+    
+
+
     render(){
         return (
             <PlayerContext.Provider 
@@ -69,7 +72,8 @@ class PlayerProvider extends Component {
                     getPlayer: this.getPlayer,
                     addPlayer: this.addPlayer,
                     incrementScore: this.incrementScore,
-                    decrementScore: this.decrementScore
+                    decrementScore: this.decrementScore,
+                    
                 }}>
                     {this.props.children}
             </PlayerContext.Provider>

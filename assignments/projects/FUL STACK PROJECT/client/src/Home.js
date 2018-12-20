@@ -27,6 +27,7 @@ class Home extends Component {
     handleSubmit = event => {
         event.preventDefault()
         this.props.addPlayer(this.state)
+        this.props.reset()
         this.props.history.push('/body')
     }
    
