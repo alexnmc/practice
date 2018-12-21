@@ -71,11 +71,13 @@ class App extends Component {
     }
 
     function1 = () => {
-        
+        console.log(this.state.functionOn)
         if(this.state.functionOn === true) {
                 this.buttonLight()
                 this.setState({
                     functionOn: false
+                }, ()=>{
+                    console.log(this.state.functionOn)
                 })
             if(Math.floor((Math.random() * 2) + 1)===1) {
                
@@ -107,14 +109,17 @@ class App extends Component {
                         this.props.decrementScore(this.props.user._id, this.props.user.score)
             }    
         }
+       
     }
 
     function2 = () => {
-        
+        console.log(this.state.functionOn)
         if(this.state.functionOn === true) {
             this.buttonLight()
             this.setState({
                 functionOn: false
+            }, ()=>{
+                console.log(this.state.functionOn)
             })
             if(Math.floor((Math.random() * 2) + 1)===1) {
                 this.setState( prevState => {
@@ -144,14 +149,18 @@ class App extends Component {
                         this.props.decrementScore(this.props.user._id, this.props.user.score)
             }
         }
+        
     }
 
+    
     function3 = () => {
-        
+        console.log(this.state.functionOn)
         if(this.state.functionOn === true) {
             this.buttonLight()
             this.setState({
                 functionOn: false
+            }, ()=>{
+                console.log(this.state.functionOn)
             })
             if(Math.floor((Math.random() * 2) + 1)===1) {
                 this.setState( prevState => {
@@ -180,27 +189,19 @@ class App extends Component {
                         setTimeout(this.ballInCup1, 750)
                         this.props.decrementScore(this.props.user._id, this.props.user.score)
             }
-        }   
+        } 
+         
     }
 
     
-    disableShuffle = () => {    // triggers 6.4 seconds after function4 is called
-        this.setState({
-           functionOn: true
-       })
-    } 
-    
-    enableShuffle = () => {
-        this.setState({
-            functionOff: false
-        })
-    }
     
     function4 = () => {     // shuffle button
+        console.log(this.state.functionOn)
         if(this.state.functionOff === false && this.state.functionOn === false){
 
-        this.setState({
-                btn:  { color: 'rgb(255, 7, 7)'},
+            this.setState({
+                
+                btn:  { color: ' rgb(195, 28, 28) '}, //red
                 box1: { animation:"shake 1.1s , move  2s", animationIterationCount: 'infinite, 2' },
                 box2: { animation:"shake 1.2s , move2 2s", animationIterationCount: 'infinite, 2' },
                 box3: { animation:"shake 1.1s , move3 2s", animationIterationCount: 'infinite, 2' },
@@ -208,11 +209,11 @@ class App extends Component {
                 h1wrapper: { backgroundColor: 'rgba(58, 39, 17, 0.980)'},
                 
             })
+            setTimeout(this.disableShuffle, 4000)
         }
-                setTimeout(this.disableShuffle, 4000)
                 
     }
-
+            
 
     buttonLight = () => {
        
@@ -248,7 +249,7 @@ class App extends Component {
     reset = () => {  // enter button on login page 
            
         this.setState({
-            btn: { color: 'rgb(255, 7, 7)' },
+            btn: { color: 'rgb(195, 28, 28)' },//red
             box1: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
             box2: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
             box3: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' },
@@ -259,8 +260,7 @@ class App extends Component {
         })
 
             setTimeout(this.showBall, 700)
-            setTimeout(this.buttonLight, 3500)
-            
+            setTimeout(this.buttonLight, 3600)
             
         }
 
@@ -275,6 +275,18 @@ class App extends Component {
         this.enableShuffle()
     }
     
+
+    disableShuffle = () => {    // triggers 6.4 seconds after function4 is called
+        this.setState({
+           functionOn: true
+       })
+    } 
+    
+    enableShuffle = () => {
+        this.setState({
+            functionOff: false
+        })
+    }
 
     
     render(){
