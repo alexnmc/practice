@@ -10,7 +10,6 @@ class PlayerProvider extends Component {
             
             user: {},
             
-            
         }
     }
 
@@ -28,7 +27,7 @@ class PlayerProvider extends Component {
         axios.post(`/players/${newPlayer.name}`, newPlayer).then(response => {
             console.log(response.data)
             this.setState(prevState => ({
-                  user: response.data
+                user: response.data
 
             }))
         })
@@ -39,7 +38,7 @@ class PlayerProvider extends Component {
     incrementScore = (id, score) => {
         axios.put(`/players/inc/${id}`, score).then(response => {
             console.log(response.data)
-           this.setState(prevState => {
+            this.setState(prevState => {
                 return {
                     user: response.data
                 }
@@ -61,9 +60,6 @@ class PlayerProvider extends Component {
     }
 
 
-    
-
-
     render(){
         return (
             <PlayerContext.Provider 
@@ -73,7 +69,6 @@ class PlayerProvider extends Component {
                     addPlayer: this.addPlayer,
                     incrementScore: this.incrementScore,
                     decrementScore: this.decrementScore,
-                    
                 }}>
                     {this.props.children}
             </PlayerContext.Provider>

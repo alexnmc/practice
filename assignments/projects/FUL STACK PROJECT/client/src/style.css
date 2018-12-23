@@ -28,23 +28,23 @@ body {
     margin-top: 80px;
     margin-bottom: 50px;
     /* background-color: rgba(105, 70, 26, 0.555); */
-    border: 5px solid rgba(58, 31, 16, 0.74) ;
-    border-bottom: 10px solid  rgba(58, 31, 16, 0.918) ; 
+    border: 5px solid rgba(83, 43, 22, 0.979) ;
+    border-bottom: 7px solid  rgba(58, 31, 16, 0.747) ; 
     border-top-left-radius: 130px;
     border-top-right-radius: 130px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     height: 230px;
     width: 240px;
     font-size: 335px;
-    color: rgba(204, 0, 0, 0.925);
+    color: rgba(168, 26, 26, 0.925);
     transition: all 0.8s ease-in-out 0.2s;
     position: relative;
     display: flex;
     align-items:center;
     justify-content: center;
     background: radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.315), rgba(82, 45, 8, 0.924) );
-    
+    box-shadow: 14px 0px 10px rgba(65, 63, 63, 0.274);
   }
 
  
@@ -53,7 +53,7 @@ body {
      height: 260px;
      border-top-left-radius: 127px;
      border-top-right-radius: 127px;
-     border-bottom:13px solid rgba(45, 23, 11, 0.986) ;
+     border-bottom: 9px solid rgba(45, 23, 11, 0.986) ;
      
   }
   .box2:hover{
@@ -61,7 +61,7 @@ body {
      height: 260px;
      border-top-left-radius: 127px;
      border-top-right-radius: 127px;
-     border-bottom: 13px solid rgba(45, 23, 11, 0.986) ;
+     border-bottom: 9px solid rgba(45, 23, 11, 0.986) ;
     
   }
 
@@ -70,7 +70,7 @@ body {
      height: 260px;
      border-top-left-radius: 127px;
      border-top-right-radius: 127px;
-     border-bottom: 13px solid rgba(45, 23, 11, 0.986) ;
+     border-bottom: 9px solid rgba(45, 23, 11, 0.986) ;
 
   }
 
@@ -111,7 +111,7 @@ body {
     align-items: center;
     font-weight: bolder;
     color:white;
-    box-shadow: 14px 14px 10px rgba(49, 48, 48, 0.363);
+    box-shadow: 14px 14px 10px rgba(49, 48, 48, 0.26);
   }
 
   p{
@@ -128,7 +128,7 @@ body {
     color: rgba(61, 38, 4, 0.849); 
     text-align: end;
     margin-top: -28px;
-    width: 270px;
+    width: 255px;
     margin-left:1080px;
     text-align: left;
   }
@@ -140,7 +140,7 @@ body {
     color:rgba(61, 38, 4, 0.849);
     text-align: end;
     margin-top: -40px;
-    width: 270px;
+    width: 255px;
     margin-left:1080px;
     text-align: left;
   
@@ -150,14 +150,13 @@ body {
   
  
  
-  @keyframes mymove {
+@keyframes mymove {
     from {font-size: 20px;}
     to {font-size: 40px;}
   }
 
 
-
-  @keyframes shake {
+@keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -171,7 +170,7 @@ body {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-  @keyframes move {
+@keyframes move {
     0%   { left: 0px; top:0px;}
     25%  { left: 0px; top:0px;}
     50%  { left: 360px; top:0px;}
@@ -180,7 +179,7 @@ body {
   }
 
 
-  @keyframes move2 {
+@keyframes move2 {
     0%   { right: 0px; top:0px;}
     25%  { right: 0px; top:0px;}
     50%  { right: 0px; top:0px;}
@@ -189,7 +188,7 @@ body {
   }
 
 
-  @keyframes move3 {
+@keyframes move3 {
     0%   { right:  0px; top:0px;}
     25%  { right:  0px; top:0px;}
     50%  { right:  0px; top:0px;}
@@ -203,9 +202,7 @@ body {
        
     }
 
-
-
-   .link{
+  .link{
     font-size: 34px;
     font-weight: bolder;
     font-family: 'roman';
@@ -260,7 +257,14 @@ body {
 
   .home{
     display:block;
-    color: rgb(195, 28, 28);
   }
+
+ 
+ 
+         @media only screen and (max-width: 900px) {
+
+  
+
+          }
 
 

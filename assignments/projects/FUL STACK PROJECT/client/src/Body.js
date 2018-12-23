@@ -5,7 +5,7 @@ import { withPlayer } from './PlayerProvider'
 const Body = (props) =>{
    
 
-    return(
+    return (
         <div className = 'wrap'>  
             
             <div className = "scoreDiv">

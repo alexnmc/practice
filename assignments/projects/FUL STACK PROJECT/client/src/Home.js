@@ -34,7 +34,7 @@ class Home extends Component {
     
 render() {
     console.log(this.props)
-    return(     
+    return (     
    
         <div className="home">
             

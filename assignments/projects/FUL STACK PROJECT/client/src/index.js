@@ -9,7 +9,7 @@ import PlayerProvider from './PlayerProvider'
 
 
 
-ReactDOM.render(
+ReactDOM.render (
 
 <BrowserRouter>
 <PlayerProvider >
