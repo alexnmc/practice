@@ -11,7 +11,6 @@ body {
 }
 
   
-  
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -263,8 +262,139 @@ body {
  
          @media only screen and (max-width: 900px) {
 
-  
+          .link{
+            
+        font-size: 35px;
+        }
 
-          }
+
+       body{
+             height: 700px;
+          margin-left: 0px;
+          margin-right: 0px;
+          background-size: strech;
+        }
+
+        .wrap {
+
+          width:200px;
+        }
+
+        .h1wrapper {
+
+          width:  390px;
+          height: 30px;
+          
+        }
+
+        p{
+          font-size: 20px;
+          text-align: center;
+          margin-bottom: 40px;
+          margin-left: 0px;
+          margin-right: 0px;
+       
+          
+        }
+
+      .box1,
+      .box2,
+      .box3{
+        
+        height: 80px;
+        width: 80px;
+        font-size: 85px;
+        border:2px solid rgba(45, 23, 11, 0.986) ;
+
+
+      }
+
+       .name,
+       .score{
+         width:100px;
+         margin: 0px;
+         font-size:20px;
+       }
+
+      .about{
+        font-size:22px;
+      
+       
+       }
+  
+      .container{
+
+        grid-gap: 30px;
+        margin-left: 45px;
+      }
+
+      
+      .btn{
+        width:90px;
+        height: 40px;
+        font-size: 15px;
+        margin-left: 150px;
+      }
+      
+      
+      @keyframes move {
+        0%   { left: 0px; top:0px;}
+        25%  { left: 0px; top:0px;}
+        50%  { left: 150px; top:0px;}
+        75%  { left: 150px; top:0px;}
+        100% { left: 0px; top:0px;}
+      }
+    
+    
+    @keyframes move2 {
+        0%   { right: 0px; top:0px;}
+        25%  { right: 0px; top:0px;}
+        50%  { right: 0px; top:0px;}
+        75%  { right: 140px; top:0px;}
+        100% { right: 0px; top:0px;}
+      }
+    
+    
+    @keyframes move3 {
+        0%   { right:  0px; top:0px;}
+        25%  { right:  0px; top:0px;}
+        50%  { right:  0px; top:0px;}
+        75%  { right:  155px; top:0px;}
+        100% { right:  0px; top:0px;}
+      }
+    
+      @keyframes mymove {
+        from {font-size: 5px;}
+        to {font-size: 30px;}
+      }
+      
+      
+    .box1:hover{
+        width: 100px;
+        height: 100px;
+        border-top-left-radius: 127px;
+        border-top-right-radius: 127px;
+        border-bottom: 4px solid rgba(45, 23, 11, 0.986) ;
+        
+     }
+     .box2:hover{
+        width: 100px;
+        height: 100px;
+        border-top-left-radius: 127px;
+        border-top-right-radius: 127px;
+        border-bottom: 4px solid rgba(45, 23, 11, 0.986) ;
+       
+     }
+   
+     .box3:hover{
+        width: 100px;
+        height: 100px;
+        border-top-left-radius: 127px;
+        border-top-right-radius: 127px;
+        border-bottom: 4px solid rgba(45, 23, 11, 0.986) ;
+   
+     }
+    
+    }
 
 
