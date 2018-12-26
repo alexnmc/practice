@@ -175,7 +175,7 @@ class App extends Component {
         if( this.state.functionOff === false && this.state.functionOn === false) {
             this.setState({
                 
-                btn:  { color: ' rgb(195, 28, 28) '}, //red
+                btn:  { color: ' rgb(195, 28, 2) '}, //red
                 box1: { animation:"shake 1.1s , move  2s", animationIterationCount: 'infinite, 2' },
                 box2: { animation:"shake 1.2s , move2 2s", animationIterationCount: 'infinite, 2' },
                 box3: { animation:"shake 1.1s , move3 2s", animationIterationCount: 'infinite, 2' },
@@ -277,8 +277,7 @@ class App extends Component {
                 <Switch>
                     <Route exact path="/" render = {props => <Home {...props}
                                                                 reset = {this.reset}
-                                                                style = {this.state}
-                                                              />}/>
+                                                             />}/>
                     <Route path="/about" component = {About}/>
                     <Route path="/body"  render = {props => <Body {...props}
                                                                     style = {this.state}

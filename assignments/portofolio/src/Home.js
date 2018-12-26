@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Home = props => {
     return (
-        <div className="home" onClick={props.changeColor} >
+        <div className="home"  >
        
         <div className = "home1"> 
-        <p className = 'navbarP2' style = {props.style.navbarP2}>Alexander Nemechek</p>
+        <p className = 'navbarP2' style = {props.style.navbarP2} onClick={props.changeColor}>Alexander Nemechek </p>
         </div>
         <div className = "home2">
         
@@ -19,7 +20,13 @@ const Home = props => {
         I enjoy being challenged and engaging with projects that require me to work outside my comfort and knowledge set, 
         continuing to learn new languages and development techniques.
         </p>
+        
+        <Link className = 'linkedin1' to = "/https://www.linkedin.com/in/alexander-nemechek-10240a167/">
+        <div className = "linkedin"></div>
+        </Link>
+        
         </div>
+        
         </div>
             
         </div>

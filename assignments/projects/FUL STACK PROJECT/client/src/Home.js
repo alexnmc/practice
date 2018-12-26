@@ -47,7 +47,7 @@ render() {
                        onChange={ this.handleChange } 
                        placeholder= "Enter Name" />
                 
-                <button className = 'btn1'   onClick = {this.handleSubmit} >enter</button>
+                <button className = 'btn1'>enter</button>
             </form>  
                 
         </div>

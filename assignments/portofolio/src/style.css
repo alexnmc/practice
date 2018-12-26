@@ -28,19 +28,32 @@
 
 }
 
+
+
 .link:hover{
-    color: rgb(255, 115, 21); 
-}
+    color: rgb(255, 115, 21)}
+
 
 
 
 .home1{
   background-image: url( './Photos/portofolio2.jpg') ; 
-  height: 750px;
+  height: 710px;
   width: 100%;
-  border-bottom: 1px solid  rgba(179, 238, 16, 0.808);
+  border-bottom: 3px solid  rgba(255, 255, 255, 0.89);
   
-  
+}
+
+.linkedin{
+    background-image: url( './Photos/linkedin.png')  ; 
+    height: 100px;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
 }
 
 
@@ -51,6 +64,7 @@
     display:flex;
     align-items: center;
     justify-content: center;
+
    
 }
 
@@ -83,7 +97,7 @@
 
 
 .navbarP2{
-    color: rgba(179, 238, 16, 0.808); 
+    color: rgba(179, 238, 16, 0.685); 
     font-size: 40px;
     font-family: 'verdana';
     font-weight: 500;
@@ -100,14 +114,16 @@ h5{
     font-family: 'verdana';
     font-weight: 700;
     text-align: center;
-    margin-bottom: -80px;
+    margin-bottom: -100px;
     margin-top:8px;
+    border-bottom: 3px solid  rgba(255, 255, 255, 0.671);
 }
 
 .home3 {
     
     height: 550px;
     background-color: rgb(-23, -72, 18);
+    
 }
 
 .aboutP{
