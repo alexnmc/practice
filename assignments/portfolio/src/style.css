@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+body{
+    background-image:  url( './Photos/portofolio2.jpg') ; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
 
 
 .navbar {
@@ -16,14 +23,12 @@
 }
 
 .link{
-    font-size: 25px;
+    font-size: 23px;
     height: 40px;
     font-family: 'verdana';
     text-decoration: none;
     margin: 30px;
     color: rgba(179, 238, 16, 0.808); 
-    /* color:rgb(-23, -72, 18); */
-   
     font-weight: 500;
 
 }
@@ -33,11 +38,25 @@
 
 
 .home1{
-  background-image: url( './Photos/portofolio2.jpg') ; 
-  height: 680px;
-  width: 100%;
-  border-bottom:2px solid rgb(255, 115, 21);
+  
+  height: 400px;
+  border-bottom: 5px solid rgba(248, 248, 248, 0.103);
+  
 }
+
+
+.home2{ 
+    background-color: rgb(-23, -72, 18);
+    height: 100px;
+    position: relative;
+}  
+
+
+.home3 {
+    height: 650px;
+    background-color: rgb(-23, -72, 18);
+}
+ 
 
 .provide{
   display: flex;
@@ -58,8 +77,8 @@ li{
 
 .linkedin{
     background-image: url( './Photos/linkedin.png')  ; 
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     background-position: center;
     background-size: cover;
     display: inline-block;
@@ -68,8 +87,8 @@ li{
 
 .git{
     background-image: url( './Photos/git.png')  ; 
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
     background-position: center ;
     background-size: cover;
     display:inline-block;
@@ -101,55 +120,60 @@ li{
     align-items: center;
     justify-content: center;
    
-   
- }
+}
  
  
- .home2{ 
-   background-color: rgba(172, 172, 172, 0.815);
-   height: 600px;
-   
-  }  
-
 .navbarP{
-    color:rgb(-23, -72, 18);
+    color:rgba(172, 172, 172, 0.911);
     font-size: 40px;
     font-family: 'verdana';
     font-weight: 700;
     text-align: center;
+    padding-top: 4px;
+    width:auto;
     
 }
 
 
 .navbarP2{
     color: rgba(179, 238, 16, 0.685); 
-    font-size: 35px;
+    font-size: 31px;
     font-family: 'verdana';
     font-weight: 500;
     margin-top: 100px;
     width: 500px;
-    margin-left: 650px;
-    position:absolute
+    margin-left: 710px;
+    position:absolute;
+    transition: all 0.4s ease-in-out 0.1s;
    
 }
 
+.developer{
+    color: rgba(179, 238, 16, 0.685); 
+    font-size: 20px;
+    font-family: 'verdana';
+    font-weight: 500;
+    margin-top: 140px;
+    width: 500px;
+    margin-left: 775px;
+    position:absolute;
+
+}
+
 h5{
-    color:rgb(-23, -72, 18);
+    color:rgba(172, 172, 172, 0.911);
     font-size: 25px;
     font-family: 'verdana';
     font-weight: 700;
     text-align: center;
     margin-bottom: -100px;
-    margin-top:8px;
-    border-bottom: 3px solid rgba(179, 238, 16, 0.685); 
+    margin-top: 10px;
+    border-bottom: 60px solid rgba(248, 248, 248, 0.103); 
+   
+   
 }
 
-.home3 {
-    
-    height: 650px;
-    background-color: rgb(-23, -72, 18);
-    
-}
+
 
 .aboutP{
     font-size: 25px;
@@ -161,6 +185,8 @@ h5{
     text-align: center;
     border-top: 50px solid rgb(-23, -72, 18);
     margin: 100px;
+    
+   
 }
 
 .project{
