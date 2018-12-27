@@ -17,5 +17,4 @@ ReactDOM.render (
 </PlayerProvider>
 </BrowserRouter>,
 
-
 document.getElementById('root'))

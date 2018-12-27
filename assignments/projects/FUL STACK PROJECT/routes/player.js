@@ -19,7 +19,7 @@ playerRouter.get('/', (req, res) => {    // for testing only
 
 playerRouter.delete('/', (req, res, next) => {
     
-    Player.remove((err, data) => {      // deletes everything !
+    Player.remove((err, data) => {      // for testing, deletes everything !
         if (err) {
             res.status(500)
             return next(err)
@@ -30,7 +30,7 @@ playerRouter.delete('/', (req, res, next) => {
 
 
 
-// display player info on play page
+//  this route is useless, the post request handles everything..
 playerRouter.get('/:id', (req, res, next) => {
     Player.findOne({_id: req.params.id} , (err, player) => {
         if (err) {
@@ -42,7 +42,7 @@ playerRouter.get('/:id', (req, res, next) => {
 })
 
 
-// find player or add new player
+// find player or add new player, the response data from this route is the player info displayed on the play page(body)
 playerRouter.post('/:name', (req, res, next) => {
     Player.findOne({name: req.params.name}, (err, player) => {
         if (err) {
@@ -68,7 +68,7 @@ playerRouter.post('/:name', (req, res, next) => {
 })
 
 
-// update score after each round
+// update score after each round:
 playerRouter.put('/inc/:id', (req, res, next) => {
     Player.findOneAndUpdate(
         {_id: req.params.id},

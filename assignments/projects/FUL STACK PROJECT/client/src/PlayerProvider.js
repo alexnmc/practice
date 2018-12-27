@@ -13,7 +13,7 @@ class PlayerProvider extends Component {
         }
     }
 
-    getPlayer = () => {
+    getPlayer = () => {// I am not using this method, I don't know why I made it..the addPlayer method does it's job..
         axios.get('/players').then(response => {
             this.setState({
                 user: response.data
@@ -23,7 +23,7 @@ class PlayerProvider extends Component {
     }
 
     
-    addPlayer = (newPlayer) => {
+    addPlayer = (newPlayer) => { // this method checks for the players name, if the name is not in the database adds it and the response data is the players info displayed on the body component.
         axios.post(`/players/${newPlayer.name}`, newPlayer).then(response => {
             console.log(response.data)
             this.setState(prevState => ({
@@ -35,7 +35,7 @@ class PlayerProvider extends Component {
     }
 
     
-    incrementScore = (id, score) => {
+    incrementScore = (id, score) => { // the score change is done directly in the database, it updates state after each round, 
         axios.put(`/players/inc/${id}`, score).then(response => {
             console.log(response.data)
             this.setState(prevState => {
@@ -45,7 +45,6 @@ class PlayerProvider extends Component {
             })
         })
     }
-    
     
     
     decrementScore = (id, score) => {

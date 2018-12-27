@@ -20,9 +20,9 @@ const Body = (props) =>{
             </div>
         
             <div className ='container'>
-                <div className = 'box1' onClick = {props.function1} style = {props.style.box1}> {props.style.box1.text}</div>
-                <div className = 'box2' onClick = {props.function2} style = {props.style.box2}> {props.style.box2.text}</div>
-                <div className = 'box3' onClick = {props.function3} style = {props.style.box3}> {props.style.box3.text}</div>
+                <div className = 'box1' onClick = {props.function1} style = {props.style.box1}> {props.style.box1.text} </div>
+                <div className = 'box2' onClick = {props.function2} style = {props.style.box2}> {props.style.box2.text} </div>
+                <div className = 'box3' onClick = {props.function3} style = {props.style.box3}> {props.style.box3.text} </div>
             </div>
                 <button className = 'btn' onClick = {props.function4} style = {props.style.btn} >SHUFFLE</button>
         

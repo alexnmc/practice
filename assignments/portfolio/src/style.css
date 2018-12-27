@@ -28,32 +28,59 @@
 
 }
 
-
-
 .link:hover{
     color: rgb(255, 115, 21)}
 
 
-
-
 .home1{
   background-image: url( './Photos/portofolio2.jpg') ; 
-  height: 710px;
+  height: 680px;
   width: 100%;
-  border-bottom: 3px solid  rgba(255, 255, 255, 0.89);
-  
+  border-bottom:2px solid rgb(255, 115, 21);
+}
+
+.provide{
+  display: flex;
+}
+
+
+ul{
+    margin-left: 200px;
+}
+
+li{
+    color: rgb(172, 172, 172);
+    font-size: 22px;
+    font-family: 'verdana';
+    font-weight: 520;
+    
 }
 
 .linkedin{
     background-image: url( './Photos/linkedin.png')  ; 
-    height: 100px;
-    width: 100px;
+    height: 40px;
+    width: 40px;
     background-position: center;
     background-size: cover;
-    display:flex;
-    align-items: center;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.git{
+    background-image: url( './Photos/git.png')  ; 
+    height: 45px;
+    width: 45px;
+    background-position: center ;
+    background-size: cover;
+    display:inline-block;
+    margin-left: 10px;
+}
+
+.inline{
+    margin-top:100px;
+    display: flex;
     justify-content: center;
-    margin:auto;
+    align-items: flex-end;
 }
 
 
@@ -64,8 +91,6 @@
     display:flex;
     align-items: center;
     justify-content: center;
-
-   
 }
 
 
@@ -88,7 +113,7 @@
 
 .navbarP{
     color:rgb(-23, -72, 18);
-    font-size: 43px;
+    font-size: 40px;
     font-family: 'verdana';
     font-weight: 700;
     text-align: center;
@@ -98,13 +123,13 @@
 
 .navbarP2{
     color: rgba(179, 238, 16, 0.685); 
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'verdana';
     font-weight: 500;
     margin-top: 100px;
     width: 500px;
     margin-left: 650px;
-    position: fixed;
+    position:absolute
    
 }
 
@@ -116,12 +141,12 @@ h5{
     text-align: center;
     margin-bottom: -100px;
     margin-top:8px;
-    border-bottom: 3px solid  rgba(255, 255, 255, 0.671);
+    border-bottom: 3px solid rgba(179, 238, 16, 0.685); 
 }
 
 .home3 {
     
-    height: 550px;
+    height: 650px;
     background-color: rgb(-23, -72, 18);
     
 }

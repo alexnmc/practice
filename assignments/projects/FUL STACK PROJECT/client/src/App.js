@@ -53,7 +53,7 @@ class App extends Component {
 
     }
     
-   
+   //functions start here:
     function1 = () => {
         console.log(this.state.functionOn)
         if( this.state.functionOn === true) {
@@ -168,7 +168,6 @@ class App extends Component {
         } 
     }
 
-    
     
     function4 = () => {     // shuffle button
         console.log(this.state.functionOn)
