@@ -11,7 +11,7 @@ const Home = props => {
         </div>
        
         <div className = "home2">
-             <p  className = 'navbarP'>Welcome to my portfolio website</p>
+             <p  className = 'welcomeP'>Welcome to my portfolio website</p>
             <h5>this site was made with REACT</h5>
         </div>
         
