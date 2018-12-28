@@ -13,7 +13,7 @@ const Body = (props) =>{
                 <h2 className = 'score'>Score: {props.user.score}</h2>
             </div>
             
-            <p>WHICH CUP HAS THE BALL?</p>
+            <p className = "whichCup">WHICH CUP HAS THE BALL?</p>
             
             <div className = 'h1wrapper' style = {props.style.h1wrapper}> 
                 <h1 className = 'h1' style = {props.style.h1}>{props.style.h1.text}</h1>

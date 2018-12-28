@@ -23,7 +23,7 @@ class PlayerProvider extends Component {
     }
 
     
-    addPlayer = (newPlayer) => { // this method checks for the players name, if the name is not in the database adds it and the response data is the players info displayed on the body component.
+    addPlayer = (newPlayer) => { // this method checks for the player name, if the name is not in the database adds it and the response data is the players info displayed on the body component.
         axios.post(`/players/${newPlayer.name}`, newPlayer).then(response => {
             console.log(response.data)
             this.setState(prevState => ({

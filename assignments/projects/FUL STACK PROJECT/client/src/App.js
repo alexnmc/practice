@@ -226,29 +226,70 @@ class App extends Component {
             })
     }
 
+    //functions showing the ball after sign in:
     showBall = () => {
         this.setState({
             functionOff: true
         })
-        this.setState ({
-            box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))", text: '.', fontSize: "570px" }
-        
-        })
-            setTimeout(this.resetBall, 1400)
+        if( Math.floor((Math.random() * 3) + 1) === 1) {
+            this.setState ({
+                box1: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))", text: '.', fontSize: "570px" }
+            })
+            setTimeout(this.resetBall1, 1400)
+            setTimeout(this.reset1, 3100)
+        } else if ( Math.floor((Math.random() * 3) + 1) === 2) {
+            this.setState ({
+                box2: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))", text: '.', fontSize: "570px" }
+            })
+            setTimeout(this.resetBall2, 1400)
             setTimeout(this.reset2, 3100)
+        } else {
+            this.setState ({
+                box3: { background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))", text: '.', fontSize: "570px" }
+            })
+            setTimeout(this.resetBall3, 1400)
+            setTimeout(this.reset3, 3100)
         }
+            
+    }
         
     
-    resetBall = () => {
+    resetBall1 = () => {
         this.setState({
-            box1: { text: ".", fontSize: "335px" , background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
+            box1: { text: ".", fontSize: "340px" , background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
+        })
+    }
+
+    resetBall2 = () => {
+        this.setState({
+            box2: { text: ".", fontSize: "340px" , background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
+        })
+    }
+
+    resetBall3 = () => {
+        this.setState({
+            box3: { text: ".", fontSize: "340px" , background: "radial-gradient(circle at 100px 100px, rgba(173, 114, 43, 0.164), rgba(90, 51, 15, 0.400))"}
         })
     }
         
     
-    reset2 = () => {
+    reset1 = () => {
         this.setState({
             box1: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' }
+        })
+        this.enableShuffle()
+    }
+
+    reset2 = () => {
+        this.setState({
+            box2: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' }
+        })
+        this.enableShuffle()
+    }
+
+    reset3 = () => {
+        this.setState({
+            box3: { background: 'radial-gradient(circle at 100px 100px, rgba(153, 103, 42, 0.397), rgba(83, 47, 9, 0.89))' }
         })
         this.enableShuffle()
     }

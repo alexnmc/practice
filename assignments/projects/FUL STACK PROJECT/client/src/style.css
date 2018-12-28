@@ -19,17 +19,19 @@ body {
    .box1,
    .box2,
    .box3 {
-    margin-top: 80px;
+    margin-top: 100px;
     margin-bottom: 50px;
-    border: 4px solid rgba(83, 43, 22, 0.979) ;
+    border: 5px solid rgba(83, 43, 22, 0.979) ;
     border-bottom: 6px solid  rgba(58, 31, 16, 0.988) ; 
     border-top-left-radius: 130px;
     border-top-right-radius: 130px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    height: 225px;
-    width: 240px;
-    font-size: 335px;
+    padding-bottom: 22px;
+    box-sizing: border-box;
+    height: 220px;
+    width: 235px;
+    font-size: 340px;
     color: rgba(168, 26, 26, 0.925);
     transition: all 0.7s ease-in-out 0.2s;
     position: relative;
@@ -112,6 +114,7 @@ body {
     text-align:center;
     color:rgba(61, 38, 4, 0.849);
   }
+
   
   
   
@@ -251,27 +254,40 @@ body {
    @media only screen and (max-width: 900px) {
 
         .link{
-            
-        font-size: 35px;
+         
+         margin-bottom: 30px;   
+         font-size: 35px;
+       
         }
+
+        .navbar{
+
+          margin-bottom: 40px;
+        }
+
+        
 
 
        body{
-          height: 700px;
+          height: 670px;
           margin-left: 0px;
           margin-right: 0px;
-          background-size: strech;
+          margin-top:0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .wrap {
-
-          width:200px;
+         width:200px;
         }
 
         .h1wrapper {
 
-          width:  390px;
+          width:  360px;
           height: 30px;
+          margin:auto;
+          margin-top: 10px;
           
         }
 
@@ -281,8 +297,13 @@ body {
           margin-bottom: 40px;
           margin-left: 0px;
           margin-right: 0px;
-       
-          
+       }
+
+       .whichCup{
+        width: 370px;
+        font-size: 25px;
+        margin:auto;
+        margin-top:19px;
         }
 
       .box1,
@@ -298,9 +319,9 @@ body {
 
        .name,
        .score{
-         width:100px;
-         margin: 0px;
-         font-size:20px;
+         width:200px;
+         margin: 10px;
+         font-size:24px;
        }
 
       .about{
@@ -324,8 +345,8 @@ body {
     @keyframes move {
         0%   { left: 0px; top:0px;}
         25%  { left: 0px; top:0px;}
-        50%  { left: 150px; top:0px;}
-        75%  { left: 150px; top:0px;}
+        50%  { left: 100px; top:0px;}
+        75%  { left: 100px; top:0px;}
         100% { left: 0px; top:0px;}
       }
     
@@ -334,7 +355,7 @@ body {
         0%   { right: 0px; top:0px;}
         25%  { right: 0px; top:0px;}
         50%  { right: 0px; top:0px;}
-        75%  { right: 140px; top:0px;}
+        75%  { right: 130px; top:0px;}
         100% { right: 0px; top:0px;}
       }
     
@@ -343,13 +364,13 @@ body {
         0%   { right:  0px; top:0px;}
         25%  { right:  0px; top:0px;}
         50%  { right:  0px; top:0px;}
-        75%  { right:  155px; top:0px;}
+        75%  { right:  115px; top:0px;}
         100% { right:  0px; top:0px;}
       }
     
       @keyframes mymove {
         from {font-size: 5px;}
-        to {font-size: 30px;}
+        to {font-size: 27px;}
       }
       
       
