@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import './style.css'
-import PlayerProvider from './PlayerProvider'
+import PlayerProvider from './Context/PlayerProvider'
+import Game from './Context/GameProvider'
 
 
 
@@ -12,8 +13,10 @@ import PlayerProvider from './PlayerProvider'
 ReactDOM.render (
 
 <BrowserRouter>
-<PlayerProvider >
+<PlayerProvider>
+<Game>
 <App/>
+</Game>
 </PlayerProvider>
 </BrowserRouter>,
 

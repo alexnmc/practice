@@ -1,5 +1,6 @@
 import React from 'react'
-import { withPlayer } from './PlayerProvider'
+import { withPlayer } from './Context/PlayerProvider'
+import { withGame } from './Context/GameProvider'
 
 
 const Body = (props) =>{
@@ -15,7 +16,7 @@ const Body = (props) =>{
             
             <p className = "whichCup">WHICH CUP HAS THE BALL?</p>
             
-            <div className = 'h1wrapper' style = {props.style.h1wrapper}> 
+            <div className = "h1wrapper" style = {props.style.h1wrapper}> 
                 <h1 className = 'h1' style = {props.style.h1}>{props.style.h1.text}</h1>
             </div>
         
@@ -31,4 +32,4 @@ const Body = (props) =>{
     )
 }
 
-        export default withPlayer(Body)
+export default withGame(withPlayer(Body))

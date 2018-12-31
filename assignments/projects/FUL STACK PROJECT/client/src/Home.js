@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
-import { withPlayer } from './PlayerProvider'
+import { withPlayer } from './Context/PlayerProvider'
+import { withGame } from './Context/GameProvider'
 
 class Home extends Component {
     
@@ -54,4 +55,4 @@ render() {
    )}
 }
 
-export default withPlayer(Home)
+export default withGame(withPlayer(Home))
