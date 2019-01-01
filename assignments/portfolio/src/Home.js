@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 
 const Home = props => {
     return (
-        <div className="home"  onMouseMove={props.changeColor}>
+        <div className="home"  onMouseOver = {props.changeColor}>
         
             <div className = "home1"> 
                 <p className = 'navbarP2' style = {props.style.navbarP2} > Alexander Nemechek </p>
@@ -15,7 +15,7 @@ const Home = props => {
             <div className = "home2">
                 <p  className = 'welcomeP'>Welcome to my portfolio website</p>
                 <h5>this site was made with REACT</h5>
-                <div className = "react"></div>
+                <div className = "react1"></div>
                 
             </div>
         
@@ -55,6 +55,7 @@ const Home = props => {
                 </div>
 
                 <div className = "provide"> 
+                    
                     <ul>
                         <li>JavaScript (vanilla, React)</li>
                         <li>Responsive HTML/CSS</li>
@@ -68,13 +69,13 @@ const Home = props => {
                     <ul>
                         <li>Node.js</li>
                         <li>Npm</li>
-                        <li>API integration and development with express</li>
+                        <li>API integration and development with Express</li>
                         <li>Mongoose</li>
                         <li>Database arhitecture in MongoDB</li>
                         <li>Git</li>
                             
                     </ul>
-                    
+
                 </div>
                     
             </div>
