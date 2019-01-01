@@ -14,7 +14,7 @@ body{
 
 .navbar {
     width: 100%;
-    height: 0px;
+    height: 100px;
     display: flex;
     justify-content: flex-end;
     position: fixed;
@@ -23,19 +23,45 @@ body{
 }
 
 .link{
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 500;
-   
     font-family: 'verdana';
     text-decoration: none;
     margin: 30px;
+    margin-top: 30px;
     color: white;
-    
-
 }
+
 
 .link:hover{
     color: rgb(89, 225, 255)}
+
+
+
+.navbarP2{
+        color:rgb(89, 210, 237);
+        font-size: 25px;
+        font-family: 'verdana';
+        font-weight: 500;
+        margin-top: 50px;
+        width: 300px;
+        margin-left: 1070px;
+        position: absolute;
+        transition: all 0.4s ease-in-out 0.1s;
+    
+}
+    
+.developer{
+        color: white;
+        font-size: 18px;
+        font-family: 'verdana';
+        font-weight: 500;
+        margin-top: 85px;
+        width: 300px;
+        margin-left:1117px; 
+       
+    
+}
 
 
 .home1{
@@ -43,6 +69,7 @@ body{
  height: 300px;
  background-color:  rgba(255, 255, 255, 0.233);
  border-top: 90px solid rgba(7, 24, 28, 0.31);
+ 
    
  
 }
@@ -62,16 +89,18 @@ body{
 .home3 {
    
     background-color: rgba(16, 18, 31, 0.927);
-    height: 750px;
-    border: 50px solid rgba(10, 8, 21, 0.557);
-    border-radius: 3px;
+    height: 930px;
+    border: 100px solid rgba(10, 8, 21, 0.557);
+    border-left: 150px solid rgba(10, 8, 21, 0.557);
+    border-right: 150px solid rgba(10, 8, 21, 0.557);
+    border-radius: 5px;
 
 }
 
 
 .home4{  
     background-color:rgba(255, 255, 255, 0.158);
-    height: 300px;
+    height: 270px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,13 +115,13 @@ body{
     
     font-family: 'verdana';
     color: rgb(206, 199, 199);
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'verdana';
     font-weight: 520;
     text-align: center;
-    padding-top: 40px;
-    margin-left: 160px;
-    margin-right: 160px;
+    padding-top: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
     
     
 }
@@ -111,37 +140,39 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-color: rgba(1, 2, 11, 0.835);
-    height: 60px;
-    padding: 10px;
-    width: 150px;
+    background-color: rgba(1, 2, 11, 0.685);
+    height: 50px;
+    padding: 5px;
+    width: 160px;
     margin:auto;
     border-radius: 300px;
     /* border:2px solid rgb(89, 210, 237); */
     position: relative;
-    margin-top: 60px;
+    margin-top: 20px;
     
     
 }
 
 ul{
-    margin: auto;
-    margin-top: 30px;
+    margin: 100px;
+    margin-top: 20px;
+    
 }
 
 li{
     color: rgb(206, 199, 199);
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'verdana';
     font-weight: 520;
-    margin:auto;
+    margin: auto;
+
     
 }
 
 .linkedin{
     background-image: url( './Photos/linkedin.png')  ; 
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     background-position: center;
     background-size: cover;
     display: inline-block;
@@ -150,8 +181,8 @@ li{
 
 .git{
     background-image: url( './Photos/git.png')  ; 
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     background-position: center ;
     background-size: cover;
     display:inline-block;
@@ -172,8 +203,6 @@ li{
 
 
  
- 
- 
 .welcomeP{
     
     font-size: 33px;
@@ -187,7 +216,7 @@ li{
 
 h5{
     color: rgba(172, 172, 172, 0.911);
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'verdana';
     font-weight: 700;
     text-align: center;
@@ -200,35 +229,47 @@ h5{
     background-image: url( './Photos/react.png')  ; 
     background-position: center;
     background-size: cover;
-    height: 60px;
-    width: 60px;
+    height: 62px;
+    width: 55px;
     /* display: flex; */
     margin:auto;
 }
 
 .logos {
     display: flex;
-    width: 800px;
+    width: 850px;
     margin:auto;
 }
+
+.ID {
+    background-image: url( './Photos/portfolio.jpg')  ; 
+    background-position: center;
+    background-size: cover;
+    height: 140px;
+    width: 140px;
+    border: 6px solid rgb(17, 19, 36);
+    border-radius: 300px;
+    margin:auto;
+    margin-top: 30px;
+}
+   
 
 .javascript {
     background-image: url( './Photos/javascript.png')  ; 
     background-position: center;
     background-size: cover;
-    height: 140px;
-    width: 120px;
+    height: 150px;
+    width: 127px;
     margin:auto;
    
 
 }
 .node {
     background-image: url( './Photos/node.png')  ; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 140px;
-    width: 140px;
+    background-position: center ;
+    background-size: cover;
+    height: 65px;
+    width: 110px;
     margin:auto;
 
 }
@@ -238,8 +279,8 @@ h5{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 80px;
-    width: 90px;
+    height: 75px;
+    width: 80px;
     margin:auto;
 
 }
@@ -248,8 +289,8 @@ h5{
     background-image: url( './Photos/css.png')  ; 
     background-position: center;
     background-size: cover;
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 50px;
     margin:auto;
 }
 
@@ -257,40 +298,10 @@ h5{
     background-image: url( './Photos/mongo.png')  ; 
     background-position: center;
     background-size: cover;
-    height: 80px;
-    width: 80px;
+    height: 61px;
+    width: 61px;
     margin:auto;
 }
-
-
-
-
-.navbarP2{
-    color:rgb(89, 210, 237);
-    font-size: 30px;
-    font-family: 'verdana';
-    font-weight: 500;
-    margin-top: 100px;
-    width: 500px;
-    margin-left: 1070px;
-    position: absolute;
-    transition: all 0.4s ease-in-out 0.1s;
-
-   
-}
-
-.developer{
-    color: white;
-    font-size: 20px;
-    font-family: 'verdana';
-    font-weight: 500;
-    margin-top: 140px;
-    width: 500px;
-    margin-left:1140px;
-    position: absolute;
-
-}
-
 
 
 .project{
