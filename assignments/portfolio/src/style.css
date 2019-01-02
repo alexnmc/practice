@@ -4,10 +4,13 @@
 }
 
 body{
-    background: url('./Photos/binary.jpg') no-repeat fixed 0%  0%;
-    background-size: cover;
-    height: auto;
+    background: url('./Photos/binary.jpg') no-repeat fixed 30%  0%;
+    background-size: contain;
+    
+}
 
+.about{
+    height: auto;
 }
   
    
@@ -18,9 +21,8 @@ body{
     display: flex;
     justify-content: flex-end;
     position: fixed;
-    
-    
 }
+
 
 .link{
     font-size: 23px;
@@ -53,13 +55,13 @@ body{
 }
     
 .developer{
-        color: white;
+        color: rgb(8, 54, 139);
         font-size: 18px;
         font-family: 'verdana';
-        font-weight: 500;
+        font-weight: 600;
         margin-top: 85px;
         width: 300px;
-        margin-left:1117px; 
+        margin-left:1110px; 
        
     
 }
@@ -67,9 +69,9 @@ body{
 
 .home1{
   
- height: 300px;
- background-color:  rgba(32, 50, 83, 0.459);
- border-top: 90px solid rgba(10, 39, 63, 0.123);
+ height: 370px;
+ background-color:  rgba(32, 50, 83, 0.034);
+ border-top: 90px solid rgba(35, 35, 63, 0.651);
  
    
  
@@ -77,36 +79,32 @@ body{
 
 
 .home2{ 
-    background-color: rgba(42, 42, 59, 0.952);
+    background-color: rgba(35, 35, 63, 0.884);
     height: 140px;
     position: relative;
     padding: 10px;
     box-sizing: border-box;
-    border-top: 2px solid  rgba(89, 210, 237, 0.822);
-    border-bottom: 2px solid  rgba(89, 210, 237, 0.808);
+    border-top: 3px solid  rgb(0, 208, 255);
+    border-bottom: 3px solid  rgb(0, 208, 255);
 }  
 
 
 .home3 {
-   /* DON'T TOUCH THIS! */
-    background-color: rgba(26, 27, 46, 0.959);
-    height: 930px;
-    border: 100px solid  rgba(42, 42, 59, 0.52);
-    border-left: 140px solid  rgba(42, 42, 59, 0.787);
-    border-right: 140px solid  rgba(42, 42, 59, 0.787);
    
+    background-color: rgba(35, 35, 63, 0.925);
+    height: 850px;
+    padding: 50px;
 
 }
 
 
 .home4{  
-    background-color: rgba(32, 50, 83, 0.459);
-    height: 230px;
+    background-color: rgba(32, 50, 83, 0.068);
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 2px solid rgba(68, 196, 255, 0.548);
-    /* border-bottom:2px solid rgb(89, 210, 237); */
    
  }   
 
@@ -131,7 +129,8 @@ body{
 .provide{
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  height: 250px;
   
  
 }
@@ -156,13 +155,13 @@ body{
 
 ul{
     margin: 100px;
-    margin-top: 20px;
+    margin-top: 30px;
     
 }
 
 li{
-    color: rgb(206, 199, 199);
-    font-size: 17px;
+    color: rgb(250, 250, 250);
+    font-size: 19px;
     font-family: 'verdana';
     font-weight: 520;
     margin: auto;
@@ -177,7 +176,7 @@ li{
     background-position: center;
     background-size: cover;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 12px;
     
 }
 
@@ -188,16 +187,17 @@ li{
     background-position: center ;
     background-size: cover;
     display:inline-block;
-    margin-left: 15px;
+    margin-left: 12px;
 }
 
 
 
 
-.projects,
+
 .contact{
-    background-color: rgba(28, 28, 42, 0.81);
-    height: 850px;
+    background-color: rgba(35, 35, 63, 0.747);
+    height: 840px;
+    
     display:flex;
     align-items: center;
     justify-content: center;
@@ -252,7 +252,7 @@ h5{
     border: 3px solid rgba(224, 224, 224, 0.945);
     border-radius: 100px;
     margin:auto;
-    margin-top: 30px;
+    
 }
    
 
@@ -260,8 +260,8 @@ h5{
     background-image: url( './Photos/javascript.png')  ; 
     background-position: center;
     background-size: cover;
-    height: 150px;
-    width: 127px;
+    height: 145px;
+    width: 120px;
     margin:auto;
 }
 
@@ -269,7 +269,7 @@ h5{
     background-image: url( './Photos/react2.png')  ; 
     background-position: center;
     background-size: cover;
-    height: 75px;
+    height: 70px;
     width: 65px;
     margin:auto;
 }
@@ -314,13 +314,33 @@ h5{
 }
 
 
-.project{
-    font-size: 25px;
+.projects{
+    
+    background-color:rgb(255, 255, 255) ;
     font-family: 'verdana';
-    margin: 100px;
-    color: rgba(179, 238, 16, 0.808); 
-    font-size: 25px;
-    font-family: 'verdana';
-    font-weight: 500;
-    text-align: center
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 840px;
+    
+}
+
+.exchange{
+    background-image: url( './Photos/exchange.png')   ; 
+    background-position: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 250px;
+    border: 3px solid rgb(153, 153, 153);
+    border-radius: 5px;
+    margin: 30px;
+}
+
+.shell{
+    width: 250px;
+    height: 250px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 30px;
 }

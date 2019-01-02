@@ -30,7 +30,7 @@ playerRouter.delete('/', (req, res, next) => {
 
 
 
-//  this route is useless, the post request handles everything..
+//  this route is useless, the post request handles everything..I use it for testing
 playerRouter.get('/:id', (req, res, next) => {
     Player.findOne({_id: req.params.id} , (err, player) => {
         if (err) {

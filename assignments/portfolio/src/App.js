@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Switch, Route } from 'react-router-dom'
+//import { Switch, Route } from 'react-router-dom'
 import Navbar from './Navbar'
 import Home from './Home'
 import Contact from './Contact'
 import Projects from './Projects'
+import About from './About'
 
 
 class App extends Component {
@@ -39,15 +40,22 @@ class App extends Component {
         return (
             <div>
                 <Navbar />
+                <Home  changeColor = {this.changeColor}
+                        style = {this.state}
+                />
+                <About/>
+                <Projects/>
+                <Contact/>
                 
-                <Switch>
+                {/* <Switch> }
                     <Route exact path="/" render = {props => <Home {...props}
                                                                 changeColor = {this.changeColor}
                                                                 style = {this.state}
                                                               />}/>
-                    <Route path="/contact" component={Contact}/>
+                    <Route path="/about" component = {About}/>                                         
+                    <Route path="/contact" component = {Contact}/>
                     <Route path = "/Projects" component = {Projects}/>
-                </Switch>
+                </Switch> */}
             </div>
         )
     }

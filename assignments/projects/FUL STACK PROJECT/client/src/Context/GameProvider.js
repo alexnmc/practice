@@ -177,7 +177,7 @@ class Game extends Component {
                 h1wrapper: { backgroundColor: 'rgba(58, 39, 17, 0.980)'},
                 
             })
-            setTimeout(this.disableShuffle, 4000)
+            setTimeout(this.disableShuffle, 3500)
         }
     }
             
