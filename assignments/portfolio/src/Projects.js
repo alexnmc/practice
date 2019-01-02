@@ -1,4 +1,8 @@
 import React from 'react'
+import exchange from  './Photos/exchange.png'
+import shell from  './Photos/shellgame.png'
+
+
 
 const Projects = () => {
     return (
@@ -9,8 +13,8 @@ const Projects = () => {
         
         <div className="projects">
 
-            <div className ="exchange"></div>
-            <div className = "shell"></div>
+            <img className ="exchange" alt = '' src = {exchange}/>
+            <img className = "shell" alt = '' src = {shell}/>
             <div className = "group"></div>
 
         </div>
