@@ -35,7 +35,6 @@ const About = () => {
                 </div>
 
                 <div className = "provide"> 
-                    
                     <ul>
                         <li>JavaScript (vanilla, React)</li>
                         <li>Responsive HTML/CSS</li>
@@ -55,10 +54,9 @@ const About = () => {
                         <li>Git</li>
                             
                     </ul>
-
                 </div>
-                    
             </div>
+            <div className = 'home5'></div>
         </div>
     )
 }
