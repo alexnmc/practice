@@ -170,9 +170,9 @@ class Game extends Component {
             this.setState({
                 
                 btn:  { color: ' rgb(195, 28, 2) '}, //red
-                box1: { animation:"shake 1.1s , move  1.7s", animationIterationCount: 'infinite, 2' },
-                box2: { animation:"shake 1.2s , move2 1.7s", animationIterationCount: 'infinite, 2' },
-                box3: { animation:"shake 1.1s , move3 1.7s", animationIterationCount: 'infinite, 2' },
+                box1: { animation:"shake 1.1s , move  1.9s", animationIterationCount: 'infinite, 2' },
+                box2: { animation:"shake 1.2s , move2 1.9s", animationIterationCount: 'infinite, 2' },
+                box3: { animation:"shake 1.1s , move3 1.9s", animationIterationCount: 'infinite, 2' },
                 h1: { text: `${this.props.user.name ? this.props.user.name.toUpperCase() + ","  :  ' '} CHOOSE ONE:`, color: 'rgb(202, 143, 77)'},
                 h1wrapper: { backgroundColor: 'rgba(58, 39, 17, 0.980)'},
                 
