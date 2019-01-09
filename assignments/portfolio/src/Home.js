@@ -4,7 +4,7 @@ import React from 'react'
 
 const Home = props => {
     return (
-        <div className="home"  onMouseOver = {props.changeColor}>
+        <div className="home"  id = '1' onMouseOver = {props.changeColor}>
         
             <div className = "home1"> 
                 <p className = 'navbarP2' style = {props.style.navbarP2} > Alexander Nemechek </p>

@@ -6,13 +6,14 @@
 
 .navbar {
     width: 100%;
-    height: 115px;
+    height: 110px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color:  #44b648ce; 
-    border: 20px solid rgba(0, 0, 0, 0.842);
-    font-size: 40px;
+    border-top: 20px solid rgba(0, 0, 0, 0.842);
+    border-bottom: 20px solid rgba(0, 0, 0, 0.842);
+    font-size: 35px;
     font-family:'Times New Roman';
     font-weight: bolder
 }
@@ -32,8 +33,8 @@
 .home,
 .about,
 .exchange {
-    height: 660px;
-    width: 100vw;
+    height: 669px;
+    width: 100%;
     display: flex;
     font-size: 30px;
     align-items: center;
@@ -64,7 +65,7 @@
     background-color: rgb(255, 255, 255);
     width: 550px;
     margin: auto ;
-    border: 15px solid rgb(12, 51, 21);
+    border: 15px solid rgba(9, 46, 18, 0.925);
     transition: all 0.5s ease-in-out 0.1s;
     display: flex;
     justify-content: center;
@@ -92,7 +93,8 @@
  }
 
  h3{
-     color: rgba(250, 0, 0, 0.851);
+     color: rgba(250, 0, 0, 0.924);
+     
  }
 
  form{
@@ -109,7 +111,7 @@
      width: 120px;
      font-size: 25px;
      color: rgb(123, 255, 0);
-     border: 9px solid  #39993c;;
+     border: 9px solid  #286b2b;;
      border-radius: 5px;
      background-color: rgb(58, 56, 56);
      text-align: center;
@@ -139,8 +141,8 @@
      width: 750px;
      margin:auto;
      margin-bottom: 30px;
-     background-color: rgb(14, 32, 18);
-     color: rgb(227, 252, 7);
+     background-color: rgba(14, 32, 18, 0.904);
+     color: rgba(227, 252, 7, 0.863);
     
      
      
@@ -155,8 +157,8 @@
 .textcont{
      height:50px;
      width: 550px;
-     background-color: rgb(8, 12, 7);
-     border: 4px solid #2e772f; 
+     background-color: rgb(35, 41, 34);
+     border: 3px solid #2e772f; 
      transition: all 0.7s ease-in-out 0.1s;
 
 }
@@ -168,7 +170,7 @@
 }
 
 .exchangeText{
-    color: rgba(229, 255, 0, 0.979);
+    color: rgba(229, 255, 0, 0.829);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,8 +179,10 @@
 }
 
 .search{
+    font-family: verdana;
     font-weight: bolder;
-    color: rgb(255, 0, 0);
+    font-size:40px;
+    color: rgba(255, 0, 0, 0.883);
  
 }
 

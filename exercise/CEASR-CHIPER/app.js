@@ -12,7 +12,7 @@
          for(var i = 0; i < input.length; i++){
              // converting
                  // check the index of the current letter in the alphabet
-             if(alphabet.indexOf(input[i]) !== -1){
+             if(alphabet.indexOf(input[i])!==1){
                  var index = alphabet.indexOf(input[i])
                  result += alphabet[(index + shift ) % 26]
              } else {
@@ -32,7 +32,7 @@
          // Break problem down into pieces
      // 3. Start with the first problem, and go from there.
          // Back to step 1 if it breaks
-     // 4. Revsiew, look back, refactor
+     // 4. Review, look back, refactor
      
      
 

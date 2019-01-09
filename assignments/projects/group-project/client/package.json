@@ -1,22 +1,20 @@
 {
-  "name": "portofolio",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
+    "react-browser-router": "^2.1.2",
     "react-dom": "^16.7.0",
-    "react-image": "^1.5.1",
-    "react-page-scroller": "^1.4.2",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1",
-    "react-scrollchor": "^6.0.0"
+    "react-scripts": "2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "npm run build && mv build/index.html build/200.html && surge build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,5 +24,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "proxy": "http://localhost:8000"
 }

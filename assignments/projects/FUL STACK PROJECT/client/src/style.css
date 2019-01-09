@@ -44,27 +44,27 @@ body {
 
  
   .box1:hover{
-     width: 260px;
-     height: 260px;
+     width: 243px;
+     height: 237px;
      border-top-left-radius: 127px;
      border-top-right-radius: 127px;
-     border-bottom: 9px solid rgba(45, 23, 11, 0.986) ;
+     border-bottom: 8px solid rgba(45, 23, 11, 0.986) ;
      
   }
   .box2:hover{
-     width: 260px;
-     height: 260px;
+     width: 243px;
+     height: 237px;
      border-top-left-radius: 127px;
      border-top-right-radius: 127px;
-     border-bottom: 9px solid rgba(45, 23, 11, 0.986) ;
+     border-bottom: 8px solid rgba(45, 23, 11, 0.986) ;
     
   }
   .box3:hover{
-     width: 260px;
-     height: 260px;
+     width: 243px;
+     height: 237px;
      border-top-left-radius: 127px;
      border-top-right-radius: 127px;
-     border-bottom: 9px solid rgba(45, 23, 11, 0.986) ;
+     border-bottom: 8px solid rgba(45, 23, 11, 0.986) ;
 
   }
 
@@ -217,7 +217,7 @@ body {
     width:250px;
     height: 350px;
     text-align: center;
-    background-color:  rgba(71, 42, 8, 0.644);
+    background-color:  rgba(87, 50, 8, 0.644);
     box-shadow: 14px 14px 10px rgba(49, 48, 48, 0.363);
   }
 
