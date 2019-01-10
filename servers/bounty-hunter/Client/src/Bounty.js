@@ -14,7 +14,8 @@ class Bounty extends Component {
             living,
             bountyAmount,
             type,
-            toggle: true
+            toggle: true,
+            
         }
     }
 

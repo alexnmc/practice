@@ -9,15 +9,30 @@ class AdminProvider extends Component {
         this.state = {
             user: JSON.parse(localStorage.getItem("user")) || {},
             token: localStorage.getItem("token") || "",
-            bookings:[] // we store all the bookings  from the database here
+            bookings:[],
+            toggle: true,
+
         }
     }
 
+
+    handleEdit = (id, updates) => {
+        axios.put(`/bookings/${id}`, updates).then(response => {
+            console.log("response.data=",response.data)
+            const updatedBooking = response.data
+            this.setState(prevState => {
+                return {
+                    bookings: prevState.bookings.map(item => item._id === id ? updatedBooking : item )
+                }
+            })
+        })
+    }
+   
+    
     logout = () => {
         this.setState({
             user:'',   // we logout by removing the token from state and local storage
             token: ''
-
         })
         localStorage.removeItem("user")
         localStorage.removeItem("token")
@@ -84,7 +99,8 @@ class AdminProvider extends Component {
                     login: this.login,
                     logout: this.logout,
                     showBookings: this.showBookings,
-                    handleDelete: this.handleDelete
+                    handleDelete: this.handleDelete,
+                    handleEdit: this.handleEdit
 
                 }}>
                 {this.props.children}

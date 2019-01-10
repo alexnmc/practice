@@ -98,6 +98,21 @@
 
 }
 
+.editContainer{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 330px;
+    border: 3px solid rgb(224, 108, 0);
+    border-radius:10px;
+    background-color: rgba(3, 29, 31, 0.781);
+    margin:auto;
+    margin-top:  50px;
+
+}
+
 p{
     color: rgb(245, 217, 191);
     font-family: "verdana";
@@ -170,9 +185,10 @@ button {
 
     background-color: rgba(206, 0, 0, 0.87);
     color: rgb(255, 220, 197);
-    width: 90px;
-    height: 35px;
-    margin-top: 9px;
+    width: 50px;
+    height: 25px;
+    margin-top: 5px;
+    font-size: 12px;
     border-radius: 100px;
     border: 2px solid rgb(0, 0, 0);
 }
@@ -200,7 +216,8 @@ button {
     margin: auto;
     margin-top:20px;
     padding:5px;
-    width: 1200px;
+    width: 1000px;
+    text-align: center;
 
 }
 

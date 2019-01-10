@@ -41,7 +41,6 @@ class App extends Component {
                     return {
                         bounties: prevState.bounties.filter(item => item._id !== id)
                     }
-                
             })
         })        
     }

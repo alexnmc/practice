@@ -44,8 +44,6 @@ bookingsRouter.delete('/:id', (req, res, next) => {  //delete one by ID for admi
 
 
 
-
-
 bookingsRouter.post('/', (req, res) => {   //for testing with postman
     
     const newBooking = new Booking(req.body)
@@ -60,12 +58,26 @@ bookingsRouter.post('/', (req, res) => {   //for testing with postman
 })
 
 
+bookingsRouter.put('/:id', (req, res, next) => {
+    Booking.findOneAndUpdate(
+        {_id: req.params.id},
+        req.body,
+        {new: true},
+        (err, updatedBooking) => {
+            if (err) {
+                return next(err)
+            }
+            return res.status(201).send(updatedBooking)
+        }
+    )
+})
+
+
 
 // checks if the booking is in the database and if the time and date requested is availabale 
 
 bookingsRouter.post('/:date', (req, res, next) => {
-    console.log(req.params)
-    console.log(req.body)
+    
     Booking.findOne({date: req.params.date, time: req.body.time}, (err, booking) => {
         if (err) {
             
