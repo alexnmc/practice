@@ -8,7 +8,6 @@ const Contact = () => {
             <p>Phone: 954-200-4732</p>
             <p>Email: nemechekalexander@gmail.com</p>
             <p>Address: </p>
-            <p>311 SE 3rd Street, apt.204</p>
             <p>Dania, Florida, 33004</p>
         </div>
         </div>

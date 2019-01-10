@@ -15,7 +15,7 @@ const Projects = () => {
         <div className="projects">
             
             <div className = 'excDiv'>
-                <a>
+                <a href = "https://excrates.surge.sh">
                 <img className ="exchange" alt = '' src = {exchange}/>
                 </a>
                 <p className = 'exchangeText'>React website displaying and converting all the foreign currencies including Bitcoin, having Euro as base currency. The aplication gets the data from the Fixer API using Axios.</p>
@@ -25,7 +25,7 @@ const Projects = () => {
             </div>
 
             <div className = ' shellDiv'>
-                <a>
+                <a >
                 <img className = "shell" alt = '' src = {shell}/>
                 </a>
                 <p className = 'shellText'>Shell Game, a fullstack aplication  created in React with CSS animations and lots of JavaScript. Custom API routes built with Mongoose and Express to save player info in MongoDB.
@@ -39,7 +39,7 @@ const Projects = () => {
                 <a>
                 <img className ="shell" alt = '' src = {group}/>
                 </a>
-                <p className = 'exchangeText'>This is an appointment booking platform made with React. User authentication for admin with password encryption and protected routes. Bookings are stored in MongoDB.</p>
+                <p className = 'exchangeText'>User friendly appointment booking platform made with React. User authentication for admin with password encryption and protected routes. Bookings are stored in MongoDB.</p>
                 <a className = 'git1' href = "https://github.com/alexnmc/assignments-practice/tree/master/assignments/projects/API%20PROJECT%20USING%20REACT ">
                     <div className = "git2"></div>
                 </a>
