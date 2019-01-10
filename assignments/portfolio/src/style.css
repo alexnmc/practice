@@ -38,11 +38,11 @@ body{
 
 .navbarP2{
         color:rgb(89, 210, 237);
-        font-size: 25px;
+        font-size: 27px;
         font-family: 'verdana';
-        font-weight: 500;
+        font-weight: 600;
         margin-top: 50px;
-        width: 300px;
+        width: 400px;
         margin-left: 1070px;
         position: absolute;
         transition: all 0.4s ease-in-out 0.1s;
@@ -56,7 +56,7 @@ body{
         font-weight: 600;
         margin-top: 85px;
         width: 300px;
-        margin-left:1110px; 
+        margin-left:1130px; 
 }
 
 
@@ -64,7 +64,7 @@ body{
   
  height: 350px;
  background-color:  rgba(32, 50, 83, 0.24);
- border-top: 90px solid rgba(45, 52, 75, 0.897); 
+ border-top: 90px solid rgba(45, 52, 75, 0.822); 
  
    
  
@@ -499,9 +499,31 @@ h5{
         background-size: cover;
         position: fixed;
        
-        
     }
     
+    .navbar,
+    .home1,
+    .home2,
+    .home3,
+    .home4,
+    .projects,
+    .about{
+        width: 100%;
+        
+    }
+
+    
+    .inline{
+        margin:auto;
+        width:auto;
+    }
+    
+    .navbar{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
     
     .welcomeP{
         font-size: 25px;
@@ -530,12 +552,13 @@ h5{
    }
     
     .link{
-        font-size: 16px;
+        font-size: 17px;
         margin: auto;
-        margin-top:15px;
         color: white;
         font-weight: 600;
         position: relative;
+        padding-top: 17px;
+        display: flex;
        
     }
 
@@ -555,10 +578,10 @@ h5{
 }
     
     .aboutP{
-        margin: 10px;
+        margin: 12px;
         border: 0px;
         padding-top: 7px;
-        font-size:15px;
+        font-size:16px;
     }
 
     .projects{
@@ -568,15 +591,24 @@ h5{
     
     
     .home3{
-       padding: 20px;
+      
        height: auto;
+       padding:10px;
+       padding-bottom: 30px;
+       
+      
     }
     
+    .work{
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
 
     
     .ID{
         height: 120px;
         width:120px;
+        margin-top: 55px;
         
     }
     
@@ -593,7 +625,7 @@ h5{
 
     
     .logos{
-        width: 320px;
+        width:100%;
         height: 100px;
         margin: 0px;
         display:flex;
@@ -639,17 +671,23 @@ h5{
 
 
       ul{
-          margin: 5px;
+          margin: 20px;
+          margin-top:15px;
+          padding-left: 20px;
+          width:120px;
           
       }
 
       li{
           font-size: 15px;
+          width: 100px;
+          margin: 5px;
       }
 
       .contact1{
-          font-size: 18px;
-          margin:10px;
+          font-size: 17px;
+         padding: 10px;
+    
       }
 
       .linkedin,
