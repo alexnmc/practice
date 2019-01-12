@@ -58,7 +58,9 @@ bookingsRouter.post('/', (req, res) => {   //for testing with postman
 })
 
 
-bookingsRouter.put('/:id', (req, res, next) => {
+bookingsRouter.put('/:id', (req, res, next) => { // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
+    
+    
     Booking.findOneAndUpdate(
         {_id: req.params.id},
         req.body,

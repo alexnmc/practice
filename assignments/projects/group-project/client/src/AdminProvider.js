@@ -47,7 +47,6 @@ class AdminProvider extends Component {
             this.setState({
                 bookings: res.data
             })
-
         })
     }
     
@@ -55,7 +54,7 @@ class AdminProvider extends Component {
     handleDelete = (id) => {
         axios.delete(`/bookings/${id}`).then(res => {
                 
-            this.setState(prevState=>({//we use prevState so the  the requested booking gets deleted without refreshing
+            this.setState(prevState=>({//we use prevState so the requested booking gets deleted without refreshing
                     bookings: prevState.bookings.filter(item => item._id !== id)
     // filters the bookings array in state, updates state with a new array with all the items in the array which does NOT have the item._id ....
             }))
@@ -90,6 +89,8 @@ class AdminProvider extends Component {
         .catch(err => alert(err.response.data.errMsg))
     }
 
+    
+    
     render() {
         return (
             <AdminContext.Provider

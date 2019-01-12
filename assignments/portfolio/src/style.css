@@ -195,6 +195,7 @@ ul{
     
 }
 
+
 li{
     color: rgb(250, 250, 250);
     font-size: 19px;
@@ -261,7 +262,7 @@ li{
 
 .contact{
     background-color: rgba(16, 16, 31, 0.947);
-    height: 600px;
+    height: 500px;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -449,7 +450,7 @@ h5{
     font-family: 'verdana';
     color: white;
     display: block;
-    height: 800px;
+    height: 900px;
 }
 
 .exchange{
@@ -537,6 +538,7 @@ h5{
     
    .home1{
     border-top: 50px solid rgba(45, 52, 75, 0.897); 
+    height: 300px;
    }
     
     .link{

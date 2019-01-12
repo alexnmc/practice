@@ -18,8 +18,8 @@ const About = () => {
                 </div>
 
                     <p className = "aboutP">
-                        My name is Alexander Nemechek, I am a full stack software developer.
-                        I enjoy being challenged and engaging with projects that require me to work outside my comfort and knowledge set, 
+                        My name is Alexander Nemechek and I am a full stack software developer.
+                        I enjoy being challenged and engaging in projects that require me to work outside my comfort and knowledge set, 
                         continuing to learn new languages and development techniques. 
                     </p>
                     <p className = "aboutP" > MY SKILLS ARE:</p>

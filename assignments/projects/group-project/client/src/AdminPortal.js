@@ -12,7 +12,7 @@ class AdminPortal extends Component  {
         this.state = {
             
             date: '',
-            time: '',      //we store all the data from the inputs here and after that we send it to the database
+            time: '',      //we store all the data from the edit inputs here 
             name: '',
             email: '',
             phone: '',
@@ -31,11 +31,11 @@ class AdminPortal extends Component  {
 
     
     
-    editToggler = (id) => {
+    editToggler = (id) => {// this method grabs the booking id from the displayed booking and stores it in state so the handleEdit method can grab it from state
         this.setState(prevState =>{
             return{
                 toggle: !prevState.toggle,
-                currentId: id
+                currentId: id// it saves the id in state
             }
         })
     }
@@ -55,108 +55,107 @@ class AdminPortal extends Component  {
     
         const updates = {
                 date: this.state.date,
-                time: this.state.time,  
+                time: this.state.time,    // creates the object we want to send for editing, the database finds the object in the database and updates all the changed values
                 name: this.state.name,
                 email: this.state.email,
                 phone: this.state.phone,
         }
-        if(!updates.date.length){
-            delete updates.date
+        if(!updates.date.length) { // if state did not get any data from the inputs than we delete all those from our updates object so we dont loose the saved booking details
+            delete updates.date   // we dont want to send any empty items to the database because the booking object  will get updated with the new empty values
         }
-        if(!updates.time.length){
+        if(!updates.time.length) {
             delete updates.time
         }
-        if(!updates.name.length){
+        if(!updates.name.length) {
             delete updates.name
         }
-        if(!updates.email.length){
+        if(!updates.email.length) {
             delete updates.email
         }
-        if(!updates.phone.length){
+        if(!updates.phone.length) {
             delete updates.phone
         }
-        console.log("updates object =",updates)
+        console.log("this goes into the database for update=",updates)
         
-        this.props.handleEdit(this.state.currentId, updates)
+        this.props.handleEdit(this.state.currentId, updates)// we grab from state the id of the booking we want to edit  and then we call the handleEdit function with it!
         this.editToggler(null)
-}
+    }
    
    
    
-   render(){
+    render(){
         
         return (
-        <Fragment>
-            <div>
-            
-            {this.state.toggle ? 
-                <div className="adminPortal">
-                <h1 className= 'h1'>Bookings:</h1>
-                <div >
-                { this.props.bookings.map( item =>
-                    <div className = "bookingList" key = {item._id} > 
-                        
-                        {  `Name: ${item.name.toUpperCase()}, 
-                            Date: ${moment(item.date).format("MMM Do YY")}, 
-                            Time: ${item.time}, Phone: ${item.phone}, 
-                            Email: ${item.email}`}
-                        <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                        <button className = 'deleteButton' onClick={() => this.editToggler(item._id)}>Edit</button>
-                    </div>)}
+            <Fragment>
+                <div>
+                
+                    {this.state.toggle ? 
+                        <div className="adminPortal">
+                            <h1 className= 'h1'>Bookings:</h1>
+                        <div >
+                            { this.props.bookings.map( item =>
+                                <div className = "bookingList" key = {item._id} > 
+                                    
+                                    {  `Name: ${item.name.toUpperCase()} ,
+                                        Date: ${moment(item.date).format("MMM Do YY ")} ,
+                                        Time: ${item.time} , Phone: ${item.phone} , 
+                                        Email: ${item.email} `}
+                                    <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
+                                    <button className = 'deleteButton' onClick={() => this.editToggler(item._id)}>Edit</button>
+                                </div>
+                            )}
+                        </div>
+                            <button onClick = {this.props.logout}>Log out </button>
+                        </div>
+
+                    :
+                        <div className = "admin">
+                            <div className='editContainer'>
+                                <form onSubmit={this.handleSubmit} className = 'bookingForm'>
+                                    <p>Edit here:</p>
+                                    <input className = "date"
+                                        type='date' 
+                                        name='date'
+                                        value={this.state.date} 
+                                        onChange={this.handleChange}
+                                        />
+                                    <select 
+                                        name='time'
+                                        value={this.state.time}
+                                        onChange={this.handleChange}>
+                                        <option value = ''>Choose a Time</option>
+                                        {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
+                                    </select>
+                                    <input 
+                                        type='text'
+                                        name='name'
+                                        placeholder='Name'
+                                        value={this.state.name}
+                                        onChange={this.handleChange}
+                                        />
+                                    <input 
+                                        type='email'
+                                        name='email'
+                                        placeholder=' Email'
+                                        value={this.state.email}
+                                        onChange={this.handleChange}
+                                        />
+                                    <input 
+                                        type='number'
+                                        name='phone'
+                                        placeholder='Phone Number'
+                                        value={this.state.phone}
+                                        onChange={this.handleChange}
+                                        />
+                                    <button>Save</button>
+                                </form>
+                            </div>   
+                        </div>
+                    }
                 </div>
-                <button onClick = {this.props.logout}>Log out </button>
-                </div>
-
-            :
-
-                <div className='editContainer'>
-                <form onSubmit={this.handleSubmit} className = 'bookingForm'>
-                    <p>Edit here:</p>
-                    <input className = "date"
-                        type='date' 
-                        name='date'
-                        value={this.state.date} 
-                        onChange={this.handleChange}
-                        />
-                    <select 
-                        name='time'
-                        value={this.state.time}
-                        onChange={this.handleChange}>
-                        <option value = ''>Choose a Time</option>
-                        {data.time.map((time, index) => <option key={time} value={time} className = {index}>{time}</option>)}
-                    </select>
-                    <input 
-                        type='text'
-                        name='name'
-                        placeholder='Name'
-                        value={this.state.name}
-                        onChange={this.handleChange}
-                        />
-                    <input 
-                        type='email'
-                        name='email'
-                        placeholder=' Email'
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                        />
-                    <input 
-                        type='number'
-                        name='phone'
-                        placeholder='Phone Number'
-                        value={this.state.phone}
-                        onChange={this.handleChange}
-                        />
-                    <button>Save</button>
-                </form>
-            
-            </div>
+            </Fragment>
+        )
     }
-    </div>
-    </Fragment>
-    )
-    }
-
-
 }
 
-export default  withAdmin(AdminPortal)
+    export default  withAdmin(AdminPortal)
