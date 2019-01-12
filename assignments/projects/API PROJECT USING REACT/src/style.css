@@ -100,7 +100,7 @@
  form{
      display: flex;
      justify-content: center ;
-     
+     margin-bottom: 100px;
      background-color: white ;
      border: 10px solid white ;
      
@@ -258,6 +258,7 @@
     }
 
     .home{
-        background-size: 770px 100%;
+        background-size: auto  135vh;
+        
     }
 }
