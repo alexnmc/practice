@@ -37,7 +37,6 @@ class Admin extends Component {
             password: ''
 
         })
-
     }
 
 
@@ -57,11 +56,9 @@ class Admin extends Component {
             this.setState({
                 username: '',
                 password: '',
+        })
 
-
-            })
-
-            this.editToggler()
+            
         } else {
             if(this.state.adminPassword === "") {
                 alert("please enter secret code: vschool")
@@ -69,6 +66,7 @@ class Admin extends Component {
                 alert("wrong code")
             }
         }
+        this.editToggler()
     }
 
 
@@ -88,7 +86,8 @@ class Admin extends Component {
         return (
             <Fragment>
                 <div className="admin">
-                    {this.state.toggle ?
+                    {
+                    this.state.toggle ?
                         <div>
                             <form onSubmit={this.handleLogin} className='logIn'>
                                 <h4>Admin only:</h4>
@@ -114,7 +113,7 @@ class Admin extends Component {
                         </div>
                         :
                         <form onSubmit={this.handleSignup} className='signUp'>
-
+                        
                             <input
                                 type='text'
                                 name='adminPassword'
@@ -140,9 +139,8 @@ class Admin extends Component {
                             />
                             <button>Sign up</button>
                         </form>
-
+                            
                     }
-
                 </div>
             </Fragment>
         )

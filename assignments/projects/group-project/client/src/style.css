@@ -100,17 +100,39 @@
 
 .editContainer{
 
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
-    width: 330px;
+    height: 70px;
+    width: auto;
     border: 3px solid rgb(224, 108, 0);
     border-radius:10px;
     background-color: rgba(3, 29, 31, 0.781);
     margin:auto;
-    margin-top:  50px;
+    margin-top:  100px;
+}
 
+.edit{
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 35px;
+    width: 170px;
+}
+
+.editButton{
+    width:100px;
+    border-radius: 200px;
+    margin:10px;
+   
+}
+
+.bookingForm2{
+    height:auto;
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 p{
