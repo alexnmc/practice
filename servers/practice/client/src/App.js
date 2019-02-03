@@ -6,6 +6,7 @@ import Wash from  './Wash'
 import Apple from './Apple'
 import Business from './Business'
 import TechCrunch from './TechCrunch'
+import BBC from './BBC'
 
 class App extends Component {
     render(){
@@ -18,6 +19,7 @@ class App extends Component {
                     <Route path="/contact" component={Apple}/>
                     <Route path="/business" component = {Business}/>
                     <Route path = "/techcrunch" component = {TechCrunch}/>
+                    <Route path = "/bbc" component = {BBC}/>
                 </Switch>
             </div>
         )

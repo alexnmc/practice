@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <div className="navbar">
+            <Link to = "/bbc">BBC News</Link>
             <Link to = "/">Wall Street Journal</Link>
             <Link to = "/about">Bitcoin News</Link>
             <Link to = "/contact">Apple News</Link>
