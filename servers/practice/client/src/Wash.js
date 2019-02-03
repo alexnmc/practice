@@ -34,8 +34,8 @@ export default class Wash extends Component {
            <div className = "newsDiv">
                
                <h1> {item.title}</h1>
-               <h2> {item.description}</h2>
                <img src={ item.urlToImage} />
+               <h2> {item.description}</h2>
            </div>
         )
     })
