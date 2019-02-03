@@ -31,6 +31,7 @@ export default class News extends Component { // no need to exposrt on the botto
     render(){
         const article = this.state.articles.map(item => {
         return(
+            
            <div className = "newsDiv">
                
                <h1> {item.title}</h1>
