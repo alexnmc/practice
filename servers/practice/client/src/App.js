@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Navbar from './Navbar'
-import Home from './Home'
-import About from  './About'
-import Contact from './Contact'
-
+import News from './News'
+import Wash from  './Wash'
+import Apple from './Apple'
+import Business from './Business'
+import TechCrunch from './TechCrunch'
 
 class App extends Component {
     render(){
@@ -12,9 +13,11 @@ class App extends Component {
             <div>
                 <Navbar />
                 <Switch>
-                    <Route exact path="/" component={Home}/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/contact" component={Contact}/>
+                    <Route exact path="/" component={News}/>
+                    <Route path="/about" component={Wash}/>
+                    <Route path="/contact" component={Apple}/>
+                    <Route path="/business" component = {Business}/>
+                    <Route path = "/techcrunch" component = {TechCrunch}/>
                 </Switch>
             </div>
         )
