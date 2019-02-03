@@ -45,7 +45,7 @@ class Todos extends Component {
     render(){
         return(
          <Fragment> 
-         {this.state.isEditing ? 
+         { this.state.isEditing ? 
             
             <div>
                 <form onSubmit = {this.handleSubmit}>
