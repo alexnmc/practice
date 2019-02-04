@@ -1,17 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Scroll from './Scroll.js'
+
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            <Scroll/>
+            
+            
             <Link to = "/bbc">BBC News</Link>
             <Link to = "/">Wall Street Journal</Link>
-            <Link to = "/about">Bitcoin News</Link>
+            <Link to = "/axios">AXIOS</Link>
+            <Link to = "/cbs">CBS News</Link>
             <Link to = "/contact">Apple News</Link>
             <Link to = "/business">Business News</Link>
             <Link to = "/techcrunch">TechCrunch</Link>
+            <Link to = "/abc">ABC News</Link>
+            
+            
+            
         </div>
     )
 }

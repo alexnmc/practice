@@ -8,7 +8,7 @@
       
       this.state = {
         showMenu: false,
-        articles:[]
+        url:''
       
       
       
@@ -17,7 +17,10 @@
       
       this.showMenu = this.showMenu.bind(this);
       this.closeMenu = this.closeMenu.bind(this);
+      
     }
+
+   
     
     showMenu(event) {
       event.preventDefault();
@@ -34,17 +37,6 @@
     }
   
    
-   getNews(){
-
-    axios.get("https://newsapi.org/v2/everything?domains=wsj.com&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa")
-         .then(response => {
-            
-             
-            this.setState({
-                articles: response.data.articles
-            })
-        })
-   }
    
    
    
@@ -59,7 +51,7 @@
             this.state.showMenu
               ? (
                 <div className="menu">
-                  <button onClick = {this.getNews}> Menu item 1 </button>
+                  <button onClick = {() => {this.setState({url: "https://newsapi.org/v2/everything?domains=wsj.com&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa"})}}> Menu item 1 </button>
                   <button> Menu item 2 </button>
                   <button> Menu item 3 </button>
                   <button> Menu item 4 </button>

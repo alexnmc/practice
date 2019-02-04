@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
-export default class Wash extends Component {
+export default class Axios extends Component {
     constructor(){
         super()
         this.state = {
@@ -14,7 +14,7 @@ export default class Wash extends Component {
    
     componentDidMount(){
         // Get the data once the page has loaded and save it in state
-        axios.get("https://newsapi.org/v2/everything?q=bitcoin&from=2019-01-03&sortBy=publishedAt&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa")
+        axios.get("https://newsapi.org/v2/top-headlines?sources=axios&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa")
          .then(response => {
             console.log(response.data.articles)
              
