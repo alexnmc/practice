@@ -13,6 +13,8 @@ bountyRouter.get('/', (req, res, next) => {
     })
 })
 
+
+
 bountyRouter.get('/:id', (req, res, next) => {
     Bounty.findOne({_id: req.params.id} , (err, data) => {
         if (err) {
@@ -22,6 +24,9 @@ bountyRouter.get('/:id', (req, res, next) => {
         return res.status(200).send(data)
     })
 })
+
+
+
 
 bountyRouter.post('/', (req, res, next) => {
     const newBounty = new Bounty(req.body)
@@ -33,6 +38,9 @@ bountyRouter.post('/', (req, res, next) => {
         return res.status(200).send(newBounty)
     })
 })
+
+
+
 
 bountyRouter.put('/:id', (req, res, next) => {
     Bounty.findOneAndUpdate(
@@ -48,7 +56,9 @@ bountyRouter.put('/:id', (req, res, next) => {
     )
 })
 
- bountyRouter.delete('/:id', (req, res, next) => {
+
+
+bountyRouter.delete('/:id', (req, res, next) => {
     Bounty.findOneAndDelete({_id: req.params.id}, (err, deletedBounty) => {
         if (err) {
             res.status(500)
