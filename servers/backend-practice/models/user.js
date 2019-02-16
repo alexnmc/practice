@@ -12,6 +12,8 @@ const userSchema = new Schema({
     score: {
         type: Number
     }
+
+
 })
 
 module.exports = mongoose.model("User", userSchema)
