@@ -10,7 +10,8 @@ const userSchema = new Schema({
         type: String
     },
     score: {
-        type: Number
+        type: Number,
+        default:0
     }
 
 
