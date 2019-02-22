@@ -5,7 +5,7 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const expressJwt = require("express-jwt");
 const path = require("path")
-const PORT = process.env.PORT || 8000
+const PORT =  7000
 const secret = process.env.SECRET || "some secret passphrase here for local development"
 
 
@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 // Routes
-app.use('/monkey', require('./routes/user')) //use database(database name) through the routes./routes/user
-app.use("/auth", require("./routes/auth"));
+app.use('/monkey', require('./routes/user')) 
+app.use('/auth', require("./routes/auth"))
 
 
 
@@ -31,8 +31,8 @@ app.use((err, req, res, next) => {
 })
 
 
-// Database Connect                         // name of db on local hard drive = "database"
-mongoose.connect('mongodb://localhost:27017/monkey', {useNewUrlParser: true}, () => {
+// Database Connect                         // name of db on local hard drive = "monkey"
+mongoose.connect('mongodb://localhost:27017/monkeyDB', {useNewUrlParser: true}, () => {
     console.log("connected to the db")
 })
 
