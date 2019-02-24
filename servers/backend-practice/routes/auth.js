@@ -1,12 +1,12 @@
 const express = require("express")
-const Admin = require("../models/admin");
+const User = require("../models/user");
 const authRouter = express.Router();
 const jwt = require("jsonwebtoken");
 
 //post a new user to user collection (signing up)
 authRouter.post("/signup", (req, res, next) => {
     
-    Admin.findOne({username: req.body.username}, (err, existingAdmin) => {
+    User.findOne({username: req.body.username}, (err, existingUser) => {
         
         if (err) {
             res.status(500)
@@ -14,20 +14,20 @@ authRouter.post("/signup", (req, res, next) => {
         }
         
         
-        if (existingAdmin) {
+        if (existingUser) {
                res.status(400)
                return next(new Error ("That username already exists!"))
         }
        
-        const newAdmin = new Admin(req.body);
-        newAdmin.save((err, addedAdmin) => {
+        const newUser = new User(req.body);
+        newUser.save((err, addedUser) => {
             if (err) {
              res.status(500)
              return next(err)
 
         }
-            const token = jwt.sign(addedAdmin.withoutPassword(), process.env.SECRET);
-            return res.status(201).send({success: true, admin: addedAdmin.withoutPassword(), token});
+            const token = jwt.sign(addedUser.withoutPassword(), process.env.SECRET);
+            return res.status(201).send({success: true, user: addedUser.withoutPassword(), token});
         });
     });
 });
@@ -37,19 +37,19 @@ authRouter.post("/signup", (req, res, next) => {
 
 authRouter.post("/login", (req, res, next) => {
     // Try to find the user with the submitted username 
-    Admin.findOne({username: req.body.username}, (err, admin) => {
+     User.findOne({username: req.body.username}, (err, user) => {
         if (err) {
         res.status(500)
         return next(err)
         }
 
         // If that user isn't in the database OR the password is wrong:
-        if (!admin ) {
+        if (!user ) {
              res.status(403)
              return next(new Error( "Username or password are incorrect"))
         }
 
-        admin.checkPassword(req.body.password, (err, match )=>{ //this function runs the check password method from the schema, it decrypts the password and compares it w the users input
+         user.checkPassword(req.body.password, (err, match )=>{ //this function runs the check password method from the schema, it decrypts the password and compares it w the users input
 
             if(err){
                 res.status(500)
@@ -61,10 +61,10 @@ authRouter.post("/login", (req, res, next) => {
              return next(new Error( "Username or password are incorrect")) //if password doesn not match send back this error
             }
 
-            const token = jwt.sign(admin.withoutPassword(), process.env.SECRET) //if match is true create token
+            const token = jwt.sign(user.withoutPassword(), process.env.SECRET) //if match is true create token
 
              // Send the token back to the client app.
-            return res.send({token: token, admin: admin.withoutPassword(), success: true})
+            return res.send({token: token, user: user.withoutPassword(), success: true})
        })
     })
 })
@@ -73,7 +73,7 @@ authRouter.post("/login", (req, res, next) => {
 
 authRouter.get('/', (req, res) => {    // get all for testing with postman 
     
-    Admin.find((err, data) => {
+    User.find((err, data) => {
         if(err) {
             res.status(500)
             return next(err)
@@ -87,7 +87,7 @@ authRouter.get('/', (req, res) => {    // get all for testing with postman
 
 authRouter.delete('/', (req, res, next) => {
     
-     Admin.remove((err, data) => {      // for testing, deletes everything on the /auth endpoint!
+    User.remove((err, data) => {      // for testing, deletes everything on the /auth endpoint!
         if (err) {
             res.status(500)
             return next(err)

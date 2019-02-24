@@ -1,14 +1,14 @@
 const express = require('express')
-const userRouter = express.Router()
-const User = require('../models/user')
+const monkeyRouter = express.Router()
+const Monkey = require('../models/monkeys')
 
 
 // GET ALL 
 
 
-userRouter.get('/', (req, res, next) => {
+monkeyRouter.get('/', (req, res, next) => {
     
-    User.find((err, data) => {
+    Monkey.find((err, data) => {
         if(err) {
              res.status(500)
              return next(err)
@@ -22,8 +22,8 @@ userRouter.get('/', (req, res, next) => {
 
 
 // get one by id..
-userRouter.get('/:id', (req, res, next) => {
-    User.findOne({_id: req.params.id} , (err, data) => {
+monkeyRouter.get('/:id', (req, res, next) => {
+    Monkey.findOne({_id: req.params.id} , (err, data) => {
         if (err) {
             res.status(500)
             return next(err)
@@ -37,14 +37,14 @@ userRouter.get('/:id', (req, res, next) => {
 
 
 
-userRouter.post('/', (req, res, next) => {
-    const newUser = new User(req.body)
-    newUser.save(err => {
+monkeyRouter.post('/', (req, res, next) => {
+    const newMonkey = new Monkey(req.body)
+    newMonkey.save(err => {
         if (err) {
             res.status(500)
             return next(err)
         }
-        return res.status(200).send(newUser)
+        return res.status(200).send(newMonkey)
     })
 })
 
@@ -53,20 +53,20 @@ userRouter.post('/', (req, res, next) => {
 
 
 
-userRouter.delete('/:id', (req, res, next) => {
-     User.findOneAndDelete({_id: req.params.id}, (err, deletedUser) => {
+monkeyRouter.delete('/:id', (req, res, next) => {
+    Monkey.findOneAndDelete({_id: req.params.id}, (err, deletedMonkey) => {
         if (err) {
             res.status(500)
             return next(err)
         }
-        return res.status(202).send(`${deletedUser.name} was succesfully deleted!`)
+        return res.status(202).send(`${deletedMonkey.name} was succesfully deleted!`)
     })
 })
 
 
 
-userRouter.delete('/', (req, res, next) => {
-    User.remove( (err, data) => {
+monkeyRouter.delete('/', (req, res, next) => {
+    Monkey.remove( (err, data) => {
        if (err) {
            res.status(500)
            return next(err)
@@ -80,17 +80,17 @@ userRouter.delete('/', (req, res, next) => {
 
 
 
-userRouter.put('/:id', (req, res, next) => {
-    User.findOneAndUpdate(
+monkeyRouter.put('/:id', (req, res, next) => {
+    Monkey.findOneAndUpdate(
         {_id: req.params.id},
         req.body,
         {new: true},
-        (err, updatedUser) => {
+        (err, updatedMonkey) => {
             if (err) {
                 
                 return next(err)
             }
-            return res.status(201).send(updatedUser)
+            return res.status(201).send(updatedMonkey)
         }
     )
 })
@@ -100,31 +100,31 @@ userRouter.put('/:id', (req, res, next) => {
 //update score
 
 
-userRouter.put('/inc/:id', (req, res, next) => {
-     User.findOneAndUpdate(
+monkeyRouter.put('/inc/:id', (req, res, next) => {
+    Monkey.findOneAndUpdate(
         {_id: req.params.id},
         {$inc: {score: 1}},
         {new: true},
-        (err, updatedPlayer) => {
+        (err, updatedMonkey) => {
             if (err) {
                 return next(err)
             }
-            return res.status(201).send(updatedPlayer)
+            return res.status(201).send(updatedMonkey)
         }
     )
 })
 
 
-userRouter.put('/dec/:id', (req, res, next) => {
-    User.findOneAndUpdate(
+monkeyRouter.put('/dec/:id', (req, res, next) => {
+    Monkey.findOneAndUpdate(
         {_id: req.params.id},
         {$inc: {score: -1}},
         {new: true},
-        (err, updatedPlayer) => {
+        (err, updatedMonkey) => {
             if (err) {
                 return next(err)
             }
-            return res.status(201).send(updatedPlayer)
+            return res.status(201).send(updatedMonkey)
         }
     )
 })
@@ -133,4 +133,4 @@ userRouter.put('/dec/:id', (req, res, next) => {
 
 
 
-module.exports = userRouter
+module.exports = monkeyRouter

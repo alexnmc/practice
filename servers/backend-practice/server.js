@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 // Routes
-app.use('/monkey', require('./routes/user')) 
+app.use('/monkey', require('./routes/monkeys')) 
 app.use('/auth', require("./routes/auth"))
 
 
