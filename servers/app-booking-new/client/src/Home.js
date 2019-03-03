@@ -57,6 +57,11 @@ class Home extends Component {
         this.setState({
             [name]: value
         })
+
+        this.setState({
+            userID: this.props.user._id,
+            username: this.props.user.username
+        })
     }
 
     
