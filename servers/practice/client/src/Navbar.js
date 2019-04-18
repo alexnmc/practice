@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
     return (
         <div className="navbar">
-            
-            
             <Link to = "/bbc">BBC News</Link>
             <Link to = "/">Wall Street Journal</Link>
             <Link to = "/axios">AXIOS</Link>
@@ -15,9 +13,6 @@ const Navbar = () => {
             <Link to = "/business">Business News</Link>
             <Link to = "/techcrunch">TechCrunch</Link>
             <Link to = "/abc">ABC News</Link>
-            
-            
-            
         </div>
     )
 }

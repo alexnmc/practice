@@ -34,11 +34,10 @@ export default class ABC extends Component { // no need to exposrt on the bottom
         return(
            <div>
                
-
-           <div className = "newsDiv">
+            <div className = "newsDiv">
                
                <h1> {item.title}</h1>
-               <img src={ item.urlToImage} />
+               <img alt = '' src={ item.urlToImage} />
                <h2> {item.description}</h2>
               
            </div>
