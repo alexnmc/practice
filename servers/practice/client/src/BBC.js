@@ -14,11 +14,9 @@ export default class BBC extends Component { // no need to exposrt on the bottom
 
    
     componentDidMount(){
-        // Get the data once the page has loaded and save it in state
+       
         axios.get("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa")
          .then(response => {
-            console.log(response.data.articles)
-             
             this.setState({
                 articles: response.data.articles
             })
@@ -26,6 +24,18 @@ export default class BBC extends Component { // no need to exposrt on the bottom
     }
    
    
+    
+    saveAll = () => {
+        for(let i = 0; i < this.state.articles.length; i++){
+            axios.post(`/articles/${this.state.articles[i].title}`, this.state.articles[i]).then(response => {
+            }).catch(err => console.log(err.response.data.errMsg))
+        }
+         alert("all articles were saved")
+    }
+    
+    
+    
+    
     save = (title, urlToImage, description) => {
        
         const article1 = {
@@ -65,8 +75,9 @@ export default class BBC extends Component { // no need to exposrt on the bottom
             <div>
             <div className = "topSpace">
             </div>
+            <button className = 'saveAll' onClick = {() => this.saveAll()}>Save all</button>
             {article}
-            </div>
+             </div>
             
         )
     }

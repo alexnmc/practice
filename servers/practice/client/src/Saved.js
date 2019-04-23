@@ -15,10 +15,8 @@ export default class Saved extends Component { // no need to exposrt on the bott
    
     componentDidMount(){
         // Get the data once the page has loaded and save it in state
-        axios.get(" /articles")
+        axios.get("/articles")
          .then(response => {
-            console.log(response)
-             
             this.setState({
                 articles: response.data
             })
@@ -35,6 +33,18 @@ export default class Saved extends Component { // no need to exposrt on the bott
         })
     }
     
+
+    deleteAll = () => {
+        axios.delete('/articles').then(response => {
+            alert(response.data)
+        })
+       
+        this.setState({
+            articles: []
+         })
+    }
+
+    
    
    
     render(){
@@ -48,15 +58,14 @@ export default class Saved extends Component { // no need to exposrt on the bott
                     <button className = 'delete' onClick = {() => this.delete(item._id)}>Delete</button>
                </div>
            </div>
-       
         )
     })
        
         return(
-            <div>
-                <div className = "topSpace">
-                </div>
-               {article}
+            <div className = 'saved'>
+                <div className = "topSpace"></div>
+                <button className = 'deleteAll' onClick = {() => this.deleteAll()}>Delete all</button>
+               {this.state.articles.length ? article : <h1 className = 'databaseH1'>Database empty</h1>}
             </div>
         )
     }
