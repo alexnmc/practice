@@ -25,30 +25,37 @@ export default class Saved extends Component { // no need to exposrt on the bott
         })
     }
    
-   
+    delete = (id) => {
+        axios.delete(`/articles/${id}`).then(response => {
+             alert(response.data)
+        })
+
+        this.setState({
+            articles: this.state.articles.filter(item => item._id !== id)
+        })
+    }
     
    
    
     render(){
         const article = this.state.articles.map(item => {
         return(
-           <div>
-               
-            <div className = "newsDiv">
-               
-               <h1> {item.title}</h1>
-               <img alt = '' src={item.urlToImage} />
-               <h2> {item.description}</h2>
-              
-           </div>
+           <div key = {Math.random()}>
+               <div className = "newsDiv" >
+                    <h1> {item.title}</h1>
+                    <img alt = '' src={item.urlToImage} />
+                    <h2> {item.description}</h2>
+                    <button className = 'delete' onClick = {() => this.delete(item._id)}>Delete</button>
+               </div>
            </div>
        
         )
     })
        
         return(
-        
             <div>
+                <div className = "topSpace">
+                </div>
                {article}
             </div>
         )

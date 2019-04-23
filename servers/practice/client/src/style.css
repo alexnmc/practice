@@ -56,14 +56,20 @@ img{
       font-size: 15px;
       margin:auto;
       margin-top: 40px;
+      margin-bottom: 50px;
       background-color: white;
      
 }
 
 .div{
-    background-color: rgba(180, 178, 178, 0.883);
+   
     display:flex;
     flex-direction: column;
+}
+
+.topSpace{
+    height: 100px;
+    width:100%
 }
 
 .menu{
@@ -78,5 +84,10 @@ button{
     background-color: rgb(0, 197, 0);
     font-size: 15pt;
     cursor: pointer;
-    
+    margin-top:10pt;
+}
+
+.delete{
+    background-color: rgb(235, 0, 0);
+    color: white;
 }

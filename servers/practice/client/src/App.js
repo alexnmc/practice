@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Navbar from './Navbar'
-import ABC from './ABC'
+import BBC from './BBC'
 import Saved from './Saved'
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
             <div className = "div">
                 <Navbar />
                 <Switch>
-                    <Route path= "/abc" component={ABC}/>
+                    <Route path= "/bbc" component={BBC}/>
                     <Route path= "/saved" component={Saved}/>
                     
                 </Switch>

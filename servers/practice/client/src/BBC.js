@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-export default class ABC extends Component { // no need to exposrt on the bottom of the page
+export default class BBC extends Component { // no need to exposrt on the bottom of the page
     constructor(){
         super()
         this.state = {
@@ -15,7 +15,7 @@ export default class ABC extends Component { // no need to exposrt on the bottom
    
     componentDidMount(){
         // Get the data once the page has loaded and save it in state
-        axios.get("https://newsapi.org/v2/top-headlines?sources=abc-news&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa")
+        axios.get("https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa")
          .then(response => {
             console.log(response.data.articles)
              
@@ -27,17 +27,18 @@ export default class ABC extends Component { // no need to exposrt on the bottom
    
    
     save = (title, urlToImage, description) => {
-        console.log(urlToImage)
+       
         const article1 = {
             "title": title,
             "urlToImage": urlToImage,
             "description": description
         }
         
-        axios.post('/articles', article1).then(res => {
-        
-            alert('article saved')
+        axios.post(`/articles/${title}`, article1).then(response => {
+            
+           alert(response.data)
         })
+        .catch(err => console.log(err.response.data.errMsg))
     }
    
    
@@ -45,9 +46,9 @@ export default class ABC extends Component { // no need to exposrt on the bottom
     render(){
         const article = this.state.articles.map(item => {
         return(
-           <div>
+           <div key = { Math.random()}>
                
-            <div className = "newsDiv">
+            <div className = "newsDiv" >
                
                <h1> {item.title}</h1>
                <img alt = '' src={item.urlToImage} />
@@ -61,10 +62,12 @@ export default class ABC extends Component { // no need to exposrt on the bottom
     })
        
         return(
-        
             <div>
-               {article}
+            <div className = "topSpace">
             </div>
+            {article}
+            </div>
+            
         )
     }
 }
