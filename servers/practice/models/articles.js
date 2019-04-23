@@ -5,11 +5,20 @@ const Schema = mongoose.Schema
 
 
 const articlesSchema = new Schema({
-    name: {
+    title: {
         type: String,
-        required: true
+    },
+
+    urlToImage: {
+        type:String
+    },
+
+    description: {
+        type: String
     }
     
 })
 
 module.exports = mongoose.model("articles", articlesSchema)
+
+

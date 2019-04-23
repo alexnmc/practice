@@ -26,6 +26,19 @@ export default class ABC extends Component { // no need to exposrt on the bottom
     }
    
    
+    save = (title, urlToImage, description) => {
+        console.log(urlToImage)
+        const article1 = {
+            "title": title,
+            "urlToImage": urlToImage,
+            "description": description
+        }
+        
+        axios.post('/articles', article1).then(res => {
+        
+            alert('article saved')
+        })
+    }
    
    
    
@@ -39,6 +52,7 @@ export default class ABC extends Component { // no need to exposrt on the bottom
                <h1> {item.title}</h1>
                <img alt = '' src={item.urlToImage} />
                <h2> {item.description}</h2>
+               <button onClick = {() => this.save(item.title, item.urlToImage, item.description)}>Save</button>
               
            </div>
            </div>

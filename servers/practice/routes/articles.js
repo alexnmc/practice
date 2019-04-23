@@ -12,7 +12,6 @@ articlesRouter.get('/', (req, res) => {    // get all for testing with postman
             return next(err)
         }
         return res.status(200).send(data)
-
     })
 })
 
@@ -21,7 +20,6 @@ articlesRouter.get('/', (req, res) => {    // get all for testing with postman
 articlesRouter.post('/', (req, res) => {   
     
     const newArticle = new Article(req.body)
-    
     newArticle.save((err, article) => {
         if(err) {
             res.status(500)
@@ -32,16 +30,19 @@ articlesRouter.post('/', (req, res) => {
 })
 
 
-articlesRouter.delete('/:id', (req, res, next) => {  //delete one by ID 
+
+articlesRouter.delete('/', (req, res, next) => {  //delete one by ID 
      
-    Article.findOneAndDelete({_id: req.params.id} , (err, data) => {
+    Article.remove((err, data) => {
         if (err) {
             res.status(500)
             return next(err)
         }
-        return res.status(202).send('article deleted')
+        return res.status(202).send('articles deleted')
     })
 })
+
+
 
 
 

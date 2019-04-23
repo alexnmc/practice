@@ -13,7 +13,7 @@ app.use(morgan('dev'))
 app.use('/articles', require('./routes/articles'))
 
 
-mongoose.connect('mongodb://localhost:27017/version2', {useNewUrlParser: true}, () => {
+mongoose.connect('mongodb://localhost:27017/version5', {useNewUrlParser: true}, () => {
     console.log('connect to the db captain!')    // name of database is version2
 })
 
