@@ -4,9 +4,21 @@ const Article = require("../models/articles")
 
 
 
+articlesRouter.get('/:id', (req, res) => {    // get all for testing with postman 
+    
+    Article.find({userID: req.params.id} , (err, data) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
+    })
+})
+
+
 articlesRouter.get('/', (req, res) => {    // get all for testing with postman 
     
-    Article.find((err, data) => {
+    Article.find( (err, data) => {
         if(err) {
             res.status(500)
             return next(err)
@@ -17,10 +29,9 @@ articlesRouter.get('/', (req, res) => {    // get all for testing with postman
 
 
 
-
 articlesRouter.post('/:title', (req, res, next) => {
     
-    Article.findOne({title: req.params.title}, (err, article) => { // checks the database for an article with the same title like the one requested, this is awesome...
+    Article.findOne({title: req.params.title, userID: req.body.userID}, (err, article) => { // checks the database for an article with the same title like the one requested, this is awesome...
         if (err) {
             res.status(500)
             return next(err)
@@ -45,9 +56,10 @@ articlesRouter.post('/:title', (req, res, next) => {
 
 
 
-articlesRouter.delete('/', (req, res, next) => {  //delete one by ID 
+
+articlesRouter.delete('/delete/:id', (req, res, next) => {  //delete one by ID 
      
-    Article.remove((err, data) => {
+    Article.remove({userID: req.params.id},(err, data) => {
         if (err) {
             res.status(500)
             return next(err)
@@ -55,6 +67,7 @@ articlesRouter.delete('/', (req, res, next) => {  //delete one by ID
         return res.status(202).send('deletion succesful')
     })
 })
+
 
 
 articlesRouter.delete('/:id', (req, res, next) => {  //delete one by ID 
@@ -65,6 +78,19 @@ articlesRouter.delete('/:id', (req, res, next) => {  //delete one by ID
             return next(err)
         }
         return res.status(202).send('article deleted')
+    })
+})
+
+
+
+articlesRouter.delete('/', (req, res, next) => {  //delete database for postman 
+     
+    Article.remove((err, data) => {
+        if (err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(202).send('deletion succesful')
     })
 })
 

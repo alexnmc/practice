@@ -1,14 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {withUser} from './UserProvider'
 
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <div className="navbar">
-            <Link to = "/bbc">BBC News</Link>
-            <Link to = "/saved">Saved Articles</Link>
+            
+            {props.token ? <Link to = "/">Read</Link> : null}
+            {props.token ? <Link to = "/saved">Saved Articles</Link> : null}
+           
         </div>
     )
 }
 
-export default Navbar
+export default withUser(Navbar)

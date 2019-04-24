@@ -1,28 +1,36 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {withUser} from './UserProvider'
 
 
 
-export default class Saved extends Component { // no need to exposrt on the bottom of the page
-    constructor(){
-        super()
+ class Saved extends Component { // no need to exposrt on the bottom of the page
+    constructor(props){
+        super(props)
         this.state = {
-            articles:[]
+            articles:[],
+            idNumber : this.props.user._id
 
         }
     }
 
    
     componentDidMount(){
-        // Get the data once the page has loaded and save it in state
-        axios.get("/articles")
+        this.getArticles(this.state.idNumber)
+    }
+   
+    
+    getArticles = (id) => {
+        axios.get(`/articles/${id}`)
          .then(response => {
             this.setState({
                 articles: response.data
             })
         })
     }
-   
+    
+    
+    
     delete = (id) => {
         axios.delete(`/articles/${id}`).then(response => {
              alert(response.data)
@@ -34,8 +42,10 @@ export default class Saved extends Component { // no need to exposrt on the bott
     }
     
 
-    deleteAll = () => {
-        axios.delete('/articles').then(response => {
+    
+    
+    deleteAll = (id) => {
+        axios.delete(`articles/delete/${id}`).then(response => {
             alert(response.data)
         })
        
@@ -64,11 +74,13 @@ export default class Saved extends Component { // no need to exposrt on the bott
         return(
             <div className = 'saved'>
                 <div className = "topSpace"></div>
-                <button className = 'deleteAll' onClick = {() => this.deleteAll()}>Delete all</button>
-               {this.state.articles.length ? article : <h1 className = 'databaseH1'>Database empty</h1>}
+                <button className = 'deleteAll' onClick = {() => this.deleteAll(this.state.idNumber)}>Delete all</button>
+               {this.state.articles.length ? article : <h1 className = 'databaseH1'>You don't have any saved articles</h1>}
             </div>
         )
     }
 }
 
+
+export default withUser(Saved)
               

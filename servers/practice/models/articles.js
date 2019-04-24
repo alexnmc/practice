@@ -15,8 +15,11 @@ const articlesSchema = new Schema({
 
     description: {
         type: String
-    }
+    },
     
+    userID:{
+     type: String
+    }
 })
 
 module.exports = mongoose.model("articles", articlesSchema)
