@@ -8,8 +8,6 @@ body {
     display: flex;
     justify-content: center;
     background-color: rgba(245, 245, 245, 0.055)
-    
-    
   }
   
   
@@ -17,8 +15,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 100px;
-    
-    
   }
   
    #box1,
@@ -49,24 +45,24 @@ body {
      border-top-left-radius: 120px;
      border-top-right-radius: 120px;
      border-bottom:30px solid rgba(45, 23, 11, 0.986) ;
-     
   }
+  
+  
   #box2:hover{
      width: 270px;
      height: 310px;
      border-top-left-radius: 120px;
      border-top-right-radius: 120px;
      border-bottom: 30px solid rgba(45, 23, 11, 0.986) ;
-    
   }
 
+  
   #box3:hover{
      width: 270px;
      height: 310px;
      border-top-left-radius: 120px;
      border-top-right-radius: 120px;
      border-bottom: 30px solid rgba(45, 23, 11, 0.986) ;
-
   }
 
   
@@ -79,16 +75,14 @@ body {
   background-color: rgba(105, 70, 26, 0.698);
   border: 4px solid rgba(95, 63, 24, 0.781);
   border-radius: 10px;
-  
-
 }
+
 
 h1{
   color: rgb(202, 143, 71);
   font-size: 35px
-
-  
 }
+
 
 #btn{
   height: 50px;
@@ -119,8 +113,6 @@ p{
   margin-top: -40px;
   margin-right: -120px;
 }
-
-
 
 
 @keyframes shake {

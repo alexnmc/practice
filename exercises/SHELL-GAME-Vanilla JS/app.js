@@ -13,37 +13,32 @@
 
     let score = 0
 
-
-
 function function1(){
-    if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
-       
+   if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
        box1.innerHTML = '.'
        box2.innerHTML = ''
        box3.innerHTML = ''
-       box1.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box2.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box3.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
+       box1.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box2.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box3.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.innerHTML = 'YOU WON!'
        h1wrap.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.style.color =  "rgba(36, 26, 11, 0.877)"
        score++
        document.getElementById('score').innerHTML = `Your score: ${score}`
-       
-    }else{
+   }else{
        box1.innerHTML = ''
        box2.innerHTML = ''
        box3.innerHTML = '.'
-       box1.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box2.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box3.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
+       box1.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box2.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box3.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.innerHTML = 'LOOOSER!'
        h1wrap.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.style.color =  "rgba(36, 26, 11, 0.877)"
        score--
        document.getElementById('score').innerHTML = `Your score: ${score}`
-
-    }
+   }
       box1.style.animation = false; 
       box1.style.animationIterationCount = false; 
       box2.style.animation = false; 
@@ -57,23 +52,21 @@ function function2(){
        box2.innerHTML = '.'
        box1.innerHTML = ''
        box3.innerHTML = ''
-       box1.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box2.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box3.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
+       box1.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box2.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box3.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.innerHTML = 'YOU WON!'
        h1wrap.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.style.color =  "rgba(36, 26, 11, 0.877)"
        score++
        document.getElementById('score').innerHTML = `Your score: ${score}`
-
-
    }else{
        box3.innerHTML = ''
        box2.innerHTML = ''
        box1.innerHTML = '.'
-       box1.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box2.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box3.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
+       box1.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box2.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box3.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.innerHTML = 'LOOOSER!'
        h1wrap.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.style.color =  "rgba(36, 26, 11, 0.877)"
@@ -89,26 +82,25 @@ function function2(){
 }
 
 function function3(){
-    if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
+   if(Math.floor(Math.random()*(1 - 3) + 3) === 1){
        box1.innerHTML = ''
        box2.innerHTML = ''
        box3.innerHTML = '.'
-       box1.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box2.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box3.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
+       box1.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box2.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box3.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.innerHTML = 'YOU WON!'
        h1wrap.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.style.color = "rgba(36, 26, 11, 0.877)"
        score++
        document.getElementById('score').innerHTML = `Your score: ${score}`
-
-    }else{
+   }else{
        box1.innerHTML = ''
        box2.innerHTML = '.'
        box3.innerHTML = ''
-       box1.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box2.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
-       box3.style.backgroundColor =  'rgba(245, 245, 245, 0.055)'
+       box1.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box2.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
+       box3.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.innerHTML = 'LOOOSER!'
        h1wrap.style.backgroundColor = 'rgba(245, 245, 245, 0.055)'
        h1.style.color =  "rgba(36, 26, 11, 0.877)"
@@ -144,8 +136,6 @@ function function3(){
        
        box3.style.animation = "shake 0.9s, move3 2.1s"; 
        box3.style.animationIterationCount = 'infinite, 2';
-     
-       
    }
 
    
