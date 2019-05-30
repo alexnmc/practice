@@ -115,8 +115,7 @@ function function3(){
       box3.style.animationIterationCount = false; 
    }
    
-  document.getElementById('btn').addEventListener('click', function4)
-
+  
    function function4(){
        box1.style.backgroundColor = "rgba(105, 70, 26, 0.698)"
        box2.style.backgroundColor = "rgba(105, 70, 26, 0.698)"
@@ -128,16 +127,17 @@ function function3(){
        h1wrap.style.backgroundColor = "rgba(36, 26, 11, 0.897)"
        h1.style.color = 'rgb(202, 143, 77)'
        
-       box1.style.animation = "shake 0.9s , move 2.1s" ;
-       box1.style.animationIterationCount = 'infinite, 2';
+       box1.style.animation = "shake 0.9s , move 2.1s" 
+       box1.style.animationIterationCount = 'infinite, 2'
       
-       box2.style.animation = "shake 0.8s, move2 2.2s"; 
-       box2.style.animationIterationCount = 'infinite, 2';
+       box2.style.animation = "shake 0.8s, move2 2.2s" 
+       box2.style.animationIterationCount = 'infinite, 2'
        
-       box3.style.animation = "shake 0.9s, move3 2.1s"; 
-       box3.style.animationIterationCount = 'infinite, 2';
+       box3.style.animation = "shake 0.9s, move3 2.1s" 
+       box3.style.animationIterationCount = 'infinite, 2'
    }
 
-   
+   document.getElementById('btn').addEventListener('click', function4)
+
    
       

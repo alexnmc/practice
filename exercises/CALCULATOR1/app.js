@@ -1,6 +1,4 @@
 
-
-
 var calculator1 = document.myForm
 
 calculator1.addEventListener('submit', function(event){
