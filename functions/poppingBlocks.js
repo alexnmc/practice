@@ -17,10 +17,6 @@ Here's a demonstration:
 */
 
 
-
-
-
-
 function finalResult(arr) {
 	for(let i = 0; i<arr.length; i++){
   if(arr[i] === arr[i+1] && arr[i] === arr[i+2]&& arr[i] !== arr[i+3]){
