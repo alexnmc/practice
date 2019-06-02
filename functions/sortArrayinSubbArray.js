@@ -8,8 +8,8 @@ function sort(arr){
         arr2.push(arr[i])
         arr3.push([])
       }
-    for(let j = 0; j<arr2.length; j++){ // checks is there re any other elements mathching the one in the new arr and pushes all of them in a 3rd array
-       if(arr2[j] === arr[i]){
+    for(let j = 0; j<arr2.length; j++){ // checks if there are any other elements mathching the one in the new arr and pushes all of them in a 3rd array
+       if(arr[i] === arr2[j]){
        arr3[j].push(arr[i])
       }
     }
