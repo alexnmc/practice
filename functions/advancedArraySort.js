@@ -14,7 +14,7 @@ function sort(arr){
       }
     }
   }
-   return arr3
+   console.log( arr3)
 }
 
   
