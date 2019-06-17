@@ -1,8 +1,12 @@
 
 
+
+
+
+
 h1{
     text-align: center ;
-    font-size: 50px;
+    font-size: 45px;
     color: grey;
 }
 
@@ -10,7 +14,8 @@ h1{
     height : 150px;
     width : 100%;
     background-color:  blanchedalmond;
-    display: inline-block;}
+    display: inline-block;
+}
 
 
 #div2{
@@ -41,6 +46,7 @@ h2{
     position: relative;
     left:171px;
     top: -105px;
+    width:200pt;
 
 }
 
@@ -59,9 +65,8 @@ h2{
 #total{
     text-align: center;
     position: relative;
-    left: -165px;
+    left: 360px;
     top: -65px;
-    
 }
 
 #buton{
@@ -74,12 +79,13 @@ h2{
 
 input{
     width:80px;
-    height: 35px;
+    height: 20px;
     position:relative;
     top:  -145px;
     left: 1195px;
     font-size: 22px;
     background-color: aliceblue;
+    padding:10pt;
           
 }
 
