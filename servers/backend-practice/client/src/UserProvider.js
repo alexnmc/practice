@@ -24,7 +24,10 @@ class UserProvider extends Component {
     editToggler = () => {
         this.setState(prevState => {
             return {
-                toggle: !prevState.toggle  //toggle from login to signin
+                toggle: !prevState.toggle,  //toggle from login to signin
+                username: '',
+                password: '',
+                repeat: '',
             }
         })
     }
