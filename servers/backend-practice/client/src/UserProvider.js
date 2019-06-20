@@ -134,7 +134,7 @@ class UserProvider extends Component {
                    handleSignup: this.handleSignup,
                    handleChange:this.handleChange,
                    handleDelete2: this.handleDelete2,
-                   logout: this.logout2,
+                   logout: this.logout,
                    
                 }}>
                 {this.props.children}
