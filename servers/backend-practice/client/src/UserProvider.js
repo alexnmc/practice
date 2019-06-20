@@ -37,10 +37,9 @@ class UserProvider extends Component {
         this.state.password === this.state.repeat ?
             axios.post('/user/signup', userInfo).then(res => {
                 const { token, user } = res.data
-                localStorage.setItem("user", JSON.stringify(user))//stores the token and the user  in local storage in case of page refresh...
+                localStorage.setItem("user", JSON.stringify(user))     //stores the token and the user  in local storage in case of page refresh...
                 localStorage.setItem("token", token)
-                this.setState({ user: user, token })
-                
+                this.setState({user: user, token })
             })
             .catch(err => alert(err.response.data.errMsg))
         :
