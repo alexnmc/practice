@@ -81,6 +81,7 @@ class UserProvider extends Component {
             this.setState({
                 username: '',
                 password: '',
+                repeat: ''
             })
        
     }
