@@ -8,9 +8,8 @@ const Login = (props) => {
         return(
             <div>
                 <div className = 'login'>
-                    <div className = "login2" >
-                        {props.toggle ?
-                            <div className = 'login3'>
+                    { props.toggle ?
+                            <div className = 'login2'>
                                 <form  onSubmit = {props.handleLogin} className='loginForm'>
                                     <h4>Log in:</h4>
                                     <input
@@ -74,7 +73,7 @@ const Login = (props) => {
                     </div>            
                     }
                 </div>
-            </div>
+           
         </div> 
         )
     

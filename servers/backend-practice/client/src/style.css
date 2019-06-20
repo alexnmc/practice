@@ -13,12 +13,38 @@ body{
     position:relative;
 }
 
-h1{
-    margin: 0pt;
+
+ .logout,
+ .loginButton{
+    width:90pt;
+    height:24pt;
+    font-size:12pt;
+    margin-top:5pt;
+ }
+
+ .login1{
+    width: 132pt;
+    height: 23.5pt;
+    border: 1px solid  rgba(2, 2, 2, 0.74);
+    background-color:  rgb(255, 235, 209);
+    color:black;
+    border-radius: 3px;
+    margin-top:7pt;
+    padding-left:3.5pt;
 }
 
-
 .loginForm,
+.login2{
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:200pt;
+    font-family: helvetica;
+    font-size:20pt;
+}
+
 .logIn,
 .signUp{
     display:flex;
@@ -26,7 +52,23 @@ h1{
     align-items: center;
     justify-content: center;
     height: auto;
-    width:130pt;
+    width:200pt;
     font-size: 20pt;
     font-family: helvetica;
+    margin:auto;
+}
+
+
+.home{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+}
+
+.logout{
+    width:90pt;
+    height:24pt;
+    font-size:12pt;
+    margin:auto;
 }
