@@ -17,13 +17,7 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 
-
-
-
-
 app.use("/user", require("./routes/user"))
-
-
 
 
 
