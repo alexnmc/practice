@@ -16,3 +16,17 @@ body{
 h1{
     margin: 0pt;
 }
+
+
+.loginForm,
+.logIn,
+.signUp{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width:130pt;
+    font-size: 20pt;
+    font-family: helvetica;
+}
