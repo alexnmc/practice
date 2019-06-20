@@ -6,17 +6,37 @@ import axios from 'axios'
 const Context = React.createContext()
 
 
-class UserProvider extends Component {
+class NotesProvider extends Component {
     constructor(){
         super()
         this.state = {
-            notes:[]
+            notes:[],
+            newNotes: ''
         }
     }
 
     
-    getNotes(){
-        
+    handleSubmit = (e) => {
+       e.preventDefault()
+       
+    }
+
+
+    
+    saveNotes = (id) => {
+        axios.post(`/notes`, {notes: this.state.newNotes,  userID: id}).then(res => {
+            console.log(res)
+        })
+    }
+    
+    
+    
+    handleChange2 = (e) => {
+        e.preventDefault()
+        const { name, value } = e.target
+        this.setState({
+            [name]: value
+        })
     }
     
     
@@ -24,6 +44,9 @@ class UserProvider extends Component {
         return (
             <Context.Provider
                 value={{
+                    ...this.state,
+                    saveNotes: this.saveNotes,
+                    handleChange2: this.handleChange2
                    
                 }}>
                 {this.props.children}
@@ -32,7 +55,7 @@ class UserProvider extends Component {
     }
 }
 
-export default UserProvider
+export default NotesProvider
 
 
 export const withData= C => props => (
