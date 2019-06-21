@@ -53,7 +53,7 @@ class NotesProvider extends Component {
     handleToggler = (id) => {
         this.state.notes.map(item => item._id === id ? item.toggle = false : item.toggle = true) 
         this.setState({
-            hey: 'you'  // I have to re-render context so it can send the new props....
+            edit: ''  // I have to re-render context so it can send the new props....
         })
     }
 
