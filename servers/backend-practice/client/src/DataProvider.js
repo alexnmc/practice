@@ -19,20 +19,19 @@ class NotesProvider extends Component {
     
     
     saveNotes = (id) => {
-        
         axios.post(`/notes`, {notes: this.state.newNotes,  userID: id}).then(res => {
-            console.log(res)
+            console.log(res.data)
         })
         this.setState({
             newNotes:''
         })
-        console.log('state', this.state.notes)
+       
     }
 
    
     getNotes = (id) => {
-            axios.get(`/notes/${id}`).then(res => { // careful with the endpoint
-            console.log('res.data',res.data)
+            axios.get(`/notes/${id}`).then(res => { // careful with the endpoint...
+           
             this.setState(prevState => {
                 return {
                     notes: res.data

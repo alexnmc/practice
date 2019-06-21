@@ -7,7 +7,7 @@ body{
 }
 
 .appjs{
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(255, 253, 253);
     height:100vh;
     width: 100vw;
     position:relative;
@@ -20,6 +20,10 @@ body{
     height:24pt;
     font-size:12pt;
     margin-top:5pt;
+    border-radius: 3px;
+    background-color: greenyellow;
+    font-weight: bolder;
+
  }
 
  .login1{
@@ -71,16 +75,50 @@ body{
     width:90pt;
     height:24pt;
     font-size:12pt;
+    margin-top:40vh;
+    position: fixed;
 }
 
-.showNotes{
+.showNotes2{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    overflow: scroll;
+    height:70vh;
+    width:350pt;
 }
 
 h2{
-    margin: auto;
-    color:red;
-    font-family: 'arial'
+    color:rgb(82, 82, 82);
+    font-family: 'arial';
+}
+
+h1{
+    font-family: 'arial black';
+    color: red;
+    margin-top: -10vh;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+textarea{
+    width:300pt;
+    height:200pt;
+    margin:10pt;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 14pt;
+
+}
+
+.data{
+    display: flex;
+    justify-content: space-around;
+    width:100vw;
 }

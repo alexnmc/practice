@@ -11,12 +11,16 @@ class Data extends Component{
       
    }
 
+   componentWillReceiveProps(){
+    this.props.getNotes(this.props.user._id)
+      
+   }
    
    
    handleSubmit = (e) => {
     e.preventDefault()
     this.props.saveNotes(this.props.user._id)
-    this.props.getNotes(this.props.user._id)
+   
     
 }
    
@@ -33,20 +37,22 @@ class Data extends Component{
     
     
     return(
-        <div>
-           
+        <div className = 'data'>
             <form onSubmit = {this.handleSubmit}>
-                <input
+                <textarea rows = '20'
                 className = "notes"
                 type ='text'
                 name ='newNotes'
                 placeholder ='write something'
                 value = {this.props.newNotes}
-                onChange= {this.props.handleChange2}
-                />
-                <button>Submit</button>
+                onChange= {this.props.handleChange2}>
+                </textarea>
+                <button className = 'loginButton'>Submit</button>
             </form>
-            {notes}
+            <h1>write something</h1>
+            <div className = 'showNotes2'>
+                {notes}
+            </div>
         </div>
     )
 }
