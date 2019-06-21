@@ -8,7 +8,7 @@ body{
 }
 
 .appjs{
-    background-color: rgb(255, 253, 253);
+    background-color: rgba(199, 178, 159, 0.877);
     height:100vh;
     width: 100vw;
     position:relative;
@@ -22,8 +22,9 @@ body{
     font-size:12pt;
     margin-top:5pt;
     border-radius: 3px;
-    background-color: rgb(131, 218, 0);
+    background-color: rgb(172, 92, 0);
     font-weight: bolder;
+    color:white;
    
 
  }
@@ -114,6 +115,7 @@ body{
 .edit{
     height:100pt;
     margin: auto;
+    margin-top: 10pt;
 }
 
 .buttonWrap{
@@ -133,7 +135,7 @@ body{
 
 h1{
     font-family: 'arial black';
-    color: red;
+    color: rgb(187, 90, 0);
     margin-top: -10vh;
 }
 
