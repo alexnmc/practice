@@ -27,11 +27,11 @@ class Data extends Component{
     
      let notes = this.props.notes.map(item =>{
          return(
-             <div>
+             <div className = 'alltext'>
                  {item.toggle?
                 <div key = {item._id} className = 'showNotes'>
                     <h3>{moment(item.date).format('MMMM Do YYYY, h:mm:ss a')}</h3>          
-                    <h2>{item.notes}</h2>  
+                    <h2 className = 'h2'>{item.notes}</h2>  
                     <div className = 'buttonWrap'>
                         <button className = 'deleteButton' type="button" onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                         <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
@@ -77,9 +77,10 @@ class Data extends Component{
                 <button className = 'loginButton'>Save</button>
             </form>
             <h1>write something</h1>
-            <div className = 'showNotes2'>
+            <div className = 'alltext2'>
                 {notes}
             </div>
+           
         </div>
     )
 }

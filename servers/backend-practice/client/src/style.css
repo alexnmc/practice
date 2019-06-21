@@ -3,6 +3,7 @@
 body{
     height:100vh;
     width: 100vw;
+    overflow: hidden;
     
 }
 
@@ -23,6 +24,7 @@ body{
     border-radius: 3px;
     background-color: rgb(131, 218, 0);
     font-weight: bolder;
+   
 
  }
 
@@ -80,18 +82,24 @@ body{
 }
 
 
-
-
-.showNotes2{
+.alltext{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: scroll;
-    height:70vh;
     width:370pt;
-    margin-right:20pt;
+    
+    
 }
+
+.alltext2{
+    
+    height:80vh;
+    width:380pt;
+    margin-right:20pt;
+    overflow: scroll;
+}
+
 
 .showNotes{
     display: flex;
@@ -99,9 +107,8 @@ body{
     align-items: flex-start;
     flex-direction: column;
     width:370pt;
-    margin-bottom:20pt;
+    word-break: break-all;
 }
-
 
 
 .edit{
@@ -117,10 +124,11 @@ body{
 }
 
 
-h2{
+.h2{
     color:rgb(82, 82, 82);
     font-family: 'arial';
     margin: 0pt;
+    font-size: 14pt;
 }
 
 h1{
@@ -133,8 +141,8 @@ form{
     display:flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-   
+    justify-content: flex-start;
+    margin-left:50pt;
 }
 
 textarea{
@@ -145,8 +153,7 @@ textarea{
     justify-content: flex-start;
     align-items: flex-start;
     font-size: 14pt;
-    margin-left:100pt;
-
+    padding:5pt;
 }
 
 .data{
