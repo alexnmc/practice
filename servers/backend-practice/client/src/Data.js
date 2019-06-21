@@ -28,12 +28,27 @@ class Data extends Component{
     
      let notes = this.props.notes.map(item =>{
          return(
-             <div className = 'showNotes'>
-               <h2>{item.notes}</h2>
-             </div>
+             <div className = 'showNotes' key = {item._id}>
+                 {!item.toggle?
+                <div>
+                    <h2>{item.notes}</h2>
+                    <button className = 'deleteButton' onClick = {this.props.handleDelete}>Delete</button>  
+                    <button className = 'deleteButton' onClick= {this.props.editToggle}>Edit</button>
+                </div>
+                :
+                <form>
+                    <input/>
+                    <button className = "editButton" onClick = {this.handleSubmit}>Save</button>
+                    <button className = "editButton" onClick = {this.editToggle}>Exit</button>
+                </form>
+             
+                 }
+            </div>
          )
      })
     
+    
+            
     
     
     return(
@@ -47,7 +62,7 @@ class Data extends Component{
                 value = {this.props.newNotes}
                 onChange= {this.props.handleChange2}>
                 </textarea>
-                <button className = 'loginButton'>Submit</button>
+                <button className = 'loginButton'>Save</button>
             </form>
             <h1>write something</h1>
             <div className = 'showNotes2'>
