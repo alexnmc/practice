@@ -27,27 +27,32 @@ class Data extends Component{
     
      let notes = this.props.notes.map(item =>{
          return(
-             <div className = 'showNotes' >
+             <div>
                  {item.toggle?
-                <div key = {item._id}>
+                <div key = {item._id} className = 'showNotes'>
                     <h3>{moment(item.date).format('MMMM Do YYYY, h:mm:ss a')}</h3>          
                     <h2>{item.notes}</h2>  
-                    <button className = 'deleteButton' type="button" onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
+                    <div className = 'buttonWrap'>
+                        <button className = 'deleteButton' type="button" onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
+                        <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
+                    </div>
                 </div>
                 :
-                <form>
-                    <input
+                <div className = 'showNotes'>
+                    <textarea
                     className = "edit"
                     type='text'
                     name='edit'
                     placeholder='write something'
                     value={this.props.edit}
                     onChange={this.props.handleChange2}
-                    />
-                    <button className = "editButton" type="button" onClick = {() => this.props.handleEdit(item._id)}>Save</button>
-                    <button className = "editButton" type="button" onClick = {this.props.handleTogglerReset}>Exit</button>
-                </form>
+                    >
+                    </textarea>
+                    <div className = 'buttonWrap'>
+                        <button className = "editButton" type="button" onClick = {() => this.props.handleEdit(item._id)}>Save</button>
+                        <button className = "editButton" type="button" onClick = {this.props.handleTogglerReset}>Exit</button>
+                    </div>
+                </div>
              
                  }
             </div>
