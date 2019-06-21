@@ -5,41 +5,48 @@ import {withData} from './DataProvider'
 
 
 class Data extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            notes: this.props.notes,
+        }
+    }
+   
    
    componentDidMount(){
       this.props.getNotes(this.props.user._id)
-      
-   }
+    }
 
-   componentWillReceiveProps(){
-    this.props.getNotes(this.props.user._id)
-      
-   }
    
    
-   handleSubmit = (e) => {
+   
+   
+   
+    handleSubmit = (e) => {
     e.preventDefault()
     this.props.saveNotes(this.props.user._id)
-   
     
-}
+   }
+
    
+
+  
    render(props){ 
     
      let notes = this.props.notes.map(item =>{
          return(
-             <div className = 'showNotes' key = {item._id}>
-                 {!item.toggle?
-                <div>
+             <div className = 'showNotes' >
+                 {item.toggle?
+                <div key = {item._id}>
                     <h2>{item.notes}</h2>
                     <button className = 'deleteButton' onClick = {this.props.handleDelete}>Delete</button>  
-                    <button className = 'deleteButton' onClick= {this.props.editToggle}>Edit</button>
+                    <button className = 'deleteButton' onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
                 </div>
                 :
                 <form>
                     <input/>
-                    <button className = "editButton" onClick = {this.handleSubmit}>Save</button>
-                    <button className = "editButton" onClick = {this.editToggle}>Exit</button>
+                    <button className = "editButton" onClick = {this.props.handleSubmit}>Save</button>
+                    <button className = "editButton" onClick = { this.props.handleTogglerReset}>Exit</button>
                 </form>
              
                  }

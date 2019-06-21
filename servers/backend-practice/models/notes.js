@@ -9,6 +9,11 @@ const notesSchema = new Schema({
 
     userID:{
         type: String
+    },
+
+    toggle: {
+        type: Boolean,
+        default: true 
     }
    
 
