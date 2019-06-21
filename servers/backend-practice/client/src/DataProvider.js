@@ -31,7 +31,7 @@ class NotesProvider extends Component {
 
    
     getNotes = (id) => {
-            axios.get(`notes/find/:${id}`).then(res => {
+            axios.get(`/notes/${id}`).then(res => { // careful with the endpoint
             console.log('res.data',res.data)
             this.setState(prevState => {
                 return {

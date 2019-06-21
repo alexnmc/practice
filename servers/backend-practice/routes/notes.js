@@ -20,7 +20,7 @@ notesRouter.post('/', (req, res, next) => {      // regular post request without
 )
 
 
-notesRouter.get('/find/:id', (req, res, next) => {    
+notesRouter.get('/:id', (req, res, next) => {    
     
     Notes.find({userID: req.params.id}, (err, notes) => {
         if(err) {
