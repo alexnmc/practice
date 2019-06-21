@@ -12,8 +12,7 @@ class NotesProvider extends Component {
         this.state = {
             notes:[],
             newNotes: '',
-            edit: ''
-           
+            edit:''
         }
     }
 
@@ -78,7 +77,7 @@ class NotesProvider extends Component {
     
     
     handleEditSubmit = (id, updates) => {
-        console.log(updates)
+       
         axios.put(`/notes/${id}`, updates).then(response => {
             const updatedNotes = response.data
             this.setState(prevState => {
@@ -87,6 +86,7 @@ class NotesProvider extends Component {
                 }
             })
         })
+       
     }
     
     

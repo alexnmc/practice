@@ -29,9 +29,9 @@ class Data extends Component{
              <div className = 'showNotes' >
                  {item.toggle?
                 <div key = {item._id}>
-                    <h2>{item.notes}</h2>
-                    <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                    <button className = 'deleteButton' onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
+                    <h2>{item.notes}</h2>              
+                    <button className = 'deleteButton' type="button" onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
+                    <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
                 </div>
                 :
                 <form>
@@ -43,8 +43,8 @@ class Data extends Component{
                     value={this.props.edit}
                     onChange={this.props.handleChange2}
                     />
-                    <button className = "editButton" onClick = {() => this.props.handleEdit(item._id)}>Save</button>
-                    <button className = "editButton" onClick = {this.props.handleTogglerReset}>Exit</button>
+                    <button className = "editButton" type="button" onClick = {() => this.props.handleEdit(item._id)}>Save</button>
+                    <button className = "editButton" type="button" onClick = {this.props.handleTogglerReset}>Exit</button>
                 </form>
              
                  }
