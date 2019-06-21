@@ -11,7 +11,8 @@ class NotesProvider extends Component {
         super()
         this.state = {
             notes:[],
-            newNotes: ''
+            newNotes: '',
+           
         }
     }
 
@@ -23,7 +24,8 @@ class NotesProvider extends Component {
             console.log(res.data)
         })
         this.setState({
-            newNotes:''
+            newNotes:'',
+           
         })
        
     }
@@ -40,7 +42,6 @@ class NotesProvider extends Component {
         })
        
     }
-    
     
     
     handleChange2 = (e) => {
@@ -68,6 +69,7 @@ class NotesProvider extends Component {
         })
     }
     
+    
     handleEdit = (id, updates) => {
         axios.put(`/bookings/${id}`, updates).then(response => {
             response.data === 'JetSki Not Available' && alert(response.data)
@@ -80,10 +82,11 @@ class NotesProvider extends Component {
         })
     }
     
+    
     handleDelete = (id) => {
-        axios.delete(`/bookings/${id}`).then(res => {
+        axios.delete(`/notes/${id}`).then(res => {
                 this.setState(prevState=>({//we use prevState so the requested booking gets deleted without refreshing
-                    bookings: prevState.bookings.filter(item => item._id !== id)
+                    notes: prevState.notes.filter(item => item._id !== id)
     // filters the bookings array in state, updates state with a new array with all the items in the array which does NOT have the item._id ....
             }))
         })

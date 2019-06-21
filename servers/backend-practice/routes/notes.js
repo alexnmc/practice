@@ -59,5 +59,16 @@ notesRouter.delete('/', (req, res, next) => {
 })
 
 
+notesRouter.delete('/:id', (req, res, next) => {     //delete one by ID for admin use only
+     
+    Notes.findOneAndDelete({_id: req.params.id} , (err, data) => {
+        if (err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(202).send('note deleted')
+    })
+})
+
 
 module.exports = notesRouter

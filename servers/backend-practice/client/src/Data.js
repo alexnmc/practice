@@ -5,19 +5,15 @@ import {withData} from './DataProvider'
 
 
 class Data extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            notes: this.props.notes,
-        }
-    }
-   
+    
    
    componentDidMount(){
       this.props.getNotes(this.props.user._id)
     }
 
-   
+   componentDidUpdate(){
+    this.props.getNotes(this.props.user._id) 
+   }
    
    
    
@@ -39,7 +35,7 @@ class Data extends Component{
                  {item.toggle?
                 <div key = {item._id}>
                     <h2>{item.notes}</h2>
-                    <button className = 'deleteButton' onClick = {this.props.handleDelete}>Delete</button>  
+                    <button className = 'deleteButton' onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                     <button className = 'deleteButton' onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
                 </div>
                 :
