@@ -29,7 +29,8 @@ class Data extends Component{
              <div className = 'showNotes' >
                  {item.toggle?
                 <div key = {item._id}>
-                    <h2>{item.notes}</h2>              
+                    <h2>{item.notes}</h2>  
+                    <h3>{item.date}</h3>            
                     <button className = 'deleteButton' type="button" onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                     <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
                 </div>

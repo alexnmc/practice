@@ -14,8 +14,13 @@ const notesSchema = new Schema({
     toggle: {
         type: Boolean,
         default: true 
-    }
+    },
    
+    date: {
+        type: Date,
+        required: true
+        
+    }
 
 })
     

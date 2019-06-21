@@ -20,7 +20,7 @@ class NotesProvider extends Component {
     
     
     saveNotes = (id) => {
-        axios.post(`/notes`, {notes: this.state.newNotes,  userID: id}).then(res => {
+        axios.post(`/notes`, {notes: this.state.newNotes,  userID: id, date: new Date}).then(res => {
             console.log(res.data)
         })
         this.setState({
@@ -69,7 +69,8 @@ class NotesProvider extends Component {
     
     handleEdit = (id) => {
         const updates = {
-            notes: this.state.edit
+            notes: this.state.edit,
+            date: new Date()
         }
         this.handleEditSubmit(id, updates)
     }
