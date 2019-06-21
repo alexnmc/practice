@@ -15,7 +15,7 @@ class Data extends Component{
    handleSubmit = (e) => {
     e.preventDefault()
     this.props.saveNotes(this.props.user._id)
-    this.props.getNotes(this.props.user._id)
+    this.props.getNotes(this.props.user._id) // need to rerender...
     
    }
 
@@ -35,9 +35,16 @@ class Data extends Component{
                 </div>
                 :
                 <form>
-                    <input/>
-                    <button className = "editButton" onClick = {this.props.handleSubmit}>Save</button>
-                    <button className = "editButton" onClick = { this.props.handleTogglerReset}>Exit</button>
+                    <input
+                    className = "edit"
+                    type='text'
+                    name='edit'
+                    placeholder='write something'
+                    value={this.props.edit}
+                    onChange={this.props.handleChange2}
+                    />
+                    <button className = "editButton" onClick = {() => this.props.handleEdit(item._id)}>Save</button>
+                    <button className = "editButton" onClick = {this.props.handleTogglerReset}>Exit</button>
                 </form>
              
                  }

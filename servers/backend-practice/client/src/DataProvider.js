@@ -12,6 +12,7 @@ class NotesProvider extends Component {
         this.state = {
             notes:[],
             newNotes: '',
+            edit: ''
            
         }
     }
@@ -27,20 +28,17 @@ class NotesProvider extends Component {
             newNotes:'',
            
         })
-       
     }
 
    
     getNotes = (id) => {
             axios.get(`/notes/${id}`).then(res => { // careful with the endpoint...
-           
             this.setState(prevState => {
                 return {
                     notes: res.data
                 }
             })
         })
-       
     }
     
     
@@ -70,13 +68,22 @@ class NotesProvider extends Component {
     }
     
     
-    handleEdit = (id, updates) => {
-        axios.put(`/bookings/${id}`, updates).then(response => {
-            response.data === 'JetSki Not Available' && alert(response.data)
-            const updatedBooking = response.data
+    handleEdit = (id) => {
+        const updates = {
+            notes: this.state.edit
+        }
+        this.handleEditSubmit(id, updates)
+    }
+    
+    
+    
+    handleEditSubmit = (id, updates) => {
+        console.log(updates)
+        axios.put(`/notes/${id}`, updates).then(response => {
+            const updatedNotes = response.data
             this.setState(prevState => {
                 return {
-                    bookings: response.data === 'JetSki Not Available' ? prevState.bookings : prevState.bookings.map(item => item._id === id ? updatedBooking : item )
+                    notes: prevState.notes.map(item => item._id === id ? updatedNotes : item )
                 }
             })
         })

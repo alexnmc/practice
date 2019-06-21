@@ -71,4 +71,21 @@ notesRouter.delete('/:id', (req, res, next) => {     //delete one by ID for admi
 })
 
 
+notesRouter.put('/:id',  (req, res, next) => {      // express router reads the endpoint, and after the : sign is a variable containing a number, the id number of the item ..:id is a variable changing
+        Notes.findOneAndUpdate(
+                {_id: req.params.id},
+                req.body,                           // update existing booking with this object this is the 2nd argument of the axios.put
+                {new: true},                 
+                (err, updatedNotes) => {
+                    if (err) {
+                        res.status(500)
+                        return next(err)
+                    }
+                    return res.status(201).send(updatedNotes)
+                }
+        )
+})  
+    
+
+
 module.exports = notesRouter

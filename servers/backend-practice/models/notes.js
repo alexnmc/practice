@@ -21,7 +21,4 @@ const notesSchema = new Schema({
     
 
 
-    
-
-
 module.exports = mongoose.model("Notes", notesSchema); //admin model using the admin schema
