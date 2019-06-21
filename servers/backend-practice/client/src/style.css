@@ -122,3 +122,8 @@ textarea{
     justify-content: space-around;
     width:100vw;
 }
+
+h3{
+    font-family: 'arial';
+    color: blue;
+}
