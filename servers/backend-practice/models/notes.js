@@ -4,9 +4,10 @@ const Schema = mongoose.Schema;
 const notesSchema = new Schema({  
     notes: {
         type: String,
+        required:true
     },
 
-    userId:{
+    userID:{
         type: String
     }
    

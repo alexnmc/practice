@@ -72,3 +72,15 @@ body{
     height:24pt;
     font-size:12pt;
 }
+
+.showNotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    margin: auto;
+    color:red;
+    font-family: 'arial'
+}

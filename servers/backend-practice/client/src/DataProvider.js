@@ -16,17 +16,30 @@ class NotesProvider extends Component {
     }
 
     
-    handleSubmit = (e) => {
-       e.preventDefault()
-       
-    }
-
-
+    
     
     saveNotes = (id) => {
+        
         axios.post(`/notes`, {notes: this.state.newNotes,  userID: id}).then(res => {
             console.log(res)
         })
+        this.setState({
+            newNotes:''
+        })
+        console.log('state', this.state.notes)
+    }
+
+   
+    getNotes = (id) => {
+            axios.get(`notes/find/:${id}`).then(res => {
+            console.log('res.data',res.data)
+            this.setState(prevState => {
+                return {
+                    notes: res.data
+                }
+            })
+        })
+       
     }
     
     
@@ -46,7 +59,8 @@ class NotesProvider extends Component {
                 value={{
                     ...this.state,
                     saveNotes: this.saveNotes,
-                    handleChange2: this.handleChange2
+                    handleChange2: this.handleChange2,
+                    getNotes: this.getNotes
                    
                 }}>
                 {this.props.children}

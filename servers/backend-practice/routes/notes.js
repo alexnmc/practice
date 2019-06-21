@@ -14,9 +14,50 @@ notesRouter.post('/', (req, res, next) => {      // regular post request without
             res.status(500)
             return next(err)
         }
-        return res.status(201).send(notes)
+        return res.status(201).send('saved')
     })
 }
 )
+
+
+notesRouter.get('/find/:id', (req, res, next) => {    
+    
+    Notes.find({userID: req.params.id}, (err, notes) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(notes)
+    })
+   
+})
+
+
+
+notesRouter.get('/', (req, res, next) => {    
+    
+    Notes.find((err, notes) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(notes)
+    })
+   
+})
+
+
+notesRouter.delete('/', (req, res, next) => {
+    
+    Notes.remove((err, data) => {      // for postman testing, deletes everything !
+        if (err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(202).send('all notes were deleted!')
+    })
+})
+
+
 
 module.exports = notesRouter

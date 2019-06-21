@@ -7,6 +7,7 @@ import {withData} from './DataProvider'
 class Data extends Component{
    
    componentDidMount(){
+      this.props.getNotes(this.props.user._id)
       
    }
 
@@ -15,11 +16,25 @@ class Data extends Component{
    handleSubmit = (e) => {
     e.preventDefault()
     this.props.saveNotes(this.props.user._id)
+    this.props.getNotes(this.props.user._id)
+    
 }
    
    render(props){ 
+    
+     let notes = this.props.notes.map(item =>{
+         return(
+             <div className = 'showNotes'>
+               <h2>{item.notes}</h2>
+             </div>
+         )
+     })
+    
+    
+    
     return(
         <div>
+           
             <form onSubmit = {this.handleSubmit}>
                 <input
                 className = "notes"
@@ -31,6 +46,7 @@ class Data extends Component{
                 />
                 <button>Submit</button>
             </form>
+            {notes}
         </div>
     )
 }
