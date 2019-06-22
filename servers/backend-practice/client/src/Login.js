@@ -31,6 +31,7 @@ const Login = (props) => {
                                     />
                                     <button className = 'loginButton'>Log in</button>
                                 </form>
+                                <h4>Don't have an account?</h4>
                                 <button className ='loginButton' onClick = {props.editToggler}>Sign up</button>
                             </div>
                             
@@ -69,7 +70,7 @@ const Login = (props) => {
                             />
                             <button className = 'loginButton'>Sign up</button>
                         </form> 
-                            <button className ='loginButton' onClick = {props.editToggler}>Log in</button>
+                            <button className ='loginButton' onClick = {props.editToggler}>Return</button>
                     </div>            
                     }
                 </div>
