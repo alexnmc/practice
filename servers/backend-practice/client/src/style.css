@@ -95,7 +95,6 @@ body{
 }
 
 .alltext2{
-    
     height:80vh;
     width:380pt;
     margin-right:20pt;
@@ -114,9 +113,12 @@ body{
 }
 
 
+.space{
+    min-height:100pt
+}
+
 .edit{
-    height:100pt;
-    margin: auto;
+    height:70pt;
     margin-top: 10pt;
 }
 
@@ -124,7 +126,7 @@ body{
     display: flex;
     width: 120pt;
     justify-content: space-around;
-    margin-top:15pt;
+   
 }
 
 

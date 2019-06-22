@@ -28,8 +28,10 @@ class Data extends Component{
              <div className = 'alltext'>
                  {item.toggle?
                 <div key = {item._id} className = 'showNotes'>
-                    <h3>{moment(item.date).format('MMMM Do YYYY, h:mm:ss a')}</h3>          
-                    <h2 className = 'h2'>{item.notes}</h2>  
+                    <div className = 'space'>
+                        <h3>{moment(item.date).format('MMMM Do YYYY, h:mm:ss a')}</h3>          
+                        <h2 className = 'h2'>{item.notes}</h2> 
+                    </div> 
                     <div className = 'buttonWrap'>
                         <button className = 'deleteButton' type="button" onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
                         <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id, item.notes)}>Edit</button>
