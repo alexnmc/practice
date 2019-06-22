@@ -177,27 +177,28 @@ textarea{
     justify-content: space-around;
     width:100vw;
     height:80vh;
-    background-color: rgba(104, 62, 13, 0.904);
+    background-color: rgba(88, 54, 16, 0.904);
     border-top:2px solid white;
     border-bottom:2px solid white;
 }
 
 h3{
     font-family: 'arial';
-    color: rgb(66, 148, 255);
+    color: rgb(124, 159, 255);
     margin-bottom:5pt;
 }
 
 .youwrote{
     color:rgb(255, 174, 0);
-    font-family: 'arial'
+    font-family: 'arial';
+    margin-top: 0pt;
     
 }
 
 .editButton{
     width: 56px;
     height: 27px;
-    border-radius: 4px;
+    border-radius: 2px;
     border:2px solid rgb(30, 80, 35);
     background-color: rgb(57, 116, 88);
     color: rgb(241, 241, 241);
@@ -211,7 +212,14 @@ h3{
     width: 56px;
     height: 28px;
     font-size: 12px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: 2px solid rgb(93, 28, 28);
     display: inline;
+}
+
+.mainLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 }

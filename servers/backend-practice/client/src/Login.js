@@ -6,7 +6,7 @@ import {withUser} from './UserProvider'
 const Login = (props) => {
     
         return(
-            <div>
+            <div className = 'mainLogin'>
                 <div className = 'login'>
                     { props.toggle ?
                             <div className = 'login2'>
