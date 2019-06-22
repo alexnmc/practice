@@ -29,7 +29,8 @@ class Data extends Component{
                  {item.toggle?
                 <div key = {item._id} className = 'showNotes'>
                     <div className = 'space'>
-                        <h3>{moment(item.date).format('MMMM Do YYYY, h:mm:ss a')}</h3>          
+                        <h3>{moment(item.date).format('MMMM Do YYYY, h:mm:ss a')}</h3> 
+                        <p className = 'youwrote'>you wrote:</p>         
                         <h2 className = 'h2'>{item.notes}</h2> 
                     </div> 
                     <div className = 'buttonWrap'>
