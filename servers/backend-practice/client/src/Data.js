@@ -61,6 +61,7 @@ class Data extends Component{
     
     return(
         <div className = 'data'>
+            <h2 className = 'hello'>{`Hello ${this.props.user.username}`}</h2>
             <form onSubmit = {this.handleSubmit}>
                 <textarea rows = '20'
                 className = "notes"

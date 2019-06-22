@@ -126,6 +126,7 @@ body{
     display: flex;
     width: 120pt;
     justify-content: space-around;
+    margin-top:10pt;
    
 }
 
@@ -135,6 +136,15 @@ body{
     font-family: 'arial';
     margin: 0pt;
     font-size: 15pt;
+    position:relative;
+}
+
+
+.hello{
+   position:fixed;
+   text-align: start;
+   font-family: 'arial';
+   color: rgb(172, 92, 0);
 }
 
 h1{
@@ -154,10 +164,7 @@ form{
 textarea{
     width:350pt;
     height:200pt;
-    margin:10pt;
-    display:flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    margin-top:100pt;
     font-size: 14pt;
     padding:5pt;
 }
