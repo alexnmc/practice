@@ -18,14 +18,12 @@ class NotesProvider extends Component {
 
     
     
-    
     saveNotes = (id) => {
         axios.post(`/notes`, {notes: this.state.newNotes,  userID: id, date: new Date()}).then(res => {
             console.log(res.data)
         })
         this.setState({
             newNotes:'',
-           
         })
     }
 
@@ -50,10 +48,11 @@ class NotesProvider extends Component {
     }
 
    
-    handleToggler = (id) => {
+    handleToggler = (id, notes) => {
         this.state.notes.map(item => item._id === id ? item.toggle = false : item.toggle = true) 
         this.setState({
-            edit: ''  // I have to re-render context so it can send the new props....
+            edit: notes  // I have to re-render context so it can send the new props....
+        // I set edit to the item's notes so the input field displays the notes to be edited!
         })
     }
 
@@ -62,7 +61,7 @@ class NotesProvider extends Component {
         e.preventDefault()
         this.state.notes.map(item => item.toggle = true) 
         this.setState({
-            hey: 'me'  // I have to re-render context so it can send the new props....
+            refresh: 'on'  // I have to re-render context so it can send the new props....
         })
     }
     
@@ -76,9 +75,7 @@ class NotesProvider extends Component {
     }
     
     
-    
     handleEditSubmit = (id, updates) => {
-       
         axios.put(`/notes/${id}`, updates).then(response => {
             const updatedNotes = response.data
             this.setState(prevState => {
@@ -87,15 +84,14 @@ class NotesProvider extends Component {
                 }
             })
         })
-       
     }
     
     
     handleDelete = (id) => {
         axios.delete(`/notes/${id}`).then(res => {
-                this.setState(prevState=>({//we use prevState so the requested booking gets deleted without refreshing
+                this.setState(prevState=>({   //I use prevState so the requested booking gets deleted without refreshing
                     notes: prevState.notes.filter(item => item._id !== id)
-    // filters the bookings array in state, updates state with a new array with all the items in the array which does NOT have the item._id ....
+                                            // filters the bookings array in state, updates state with a new array with all the items in the array which does NOT have the item._id ....
             }))
         })
     }

@@ -21,8 +21,6 @@ class Data extends Component{
    }
 
    
-
-  
    render(props){ 
     
      let notes = this.props.notes.map(item =>{
@@ -34,7 +32,7 @@ class Data extends Component{
                     <h2 className = 'h2'>{item.notes}</h2>  
                     <div className = 'buttonWrap'>
                         <button className = 'deleteButton' type="button" onClick = {() => this.props.handleDelete(item._id)}>Delete</button>  
-                        <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id)}>Edit</button>
+                        <button className = 'deleteButton' type="button" onClick= {() => this.props.handleToggler(item._id, item.notes)}>Edit</button>
                     </div>
                 </div>
                 :
@@ -43,7 +41,6 @@ class Data extends Component{
                     className = "edit"
                     type='text'
                     name='edit'
-                    placeholder='write something'
                     value={this.props.edit}
                     onChange={this.props.handleChange2}
                     >
@@ -58,9 +55,6 @@ class Data extends Component{
             </div>
          )
      })
-    
-    
-            
     
     
     return(
@@ -80,7 +74,6 @@ class Data extends Component{
             <div className = 'alltext2'>
                 {notes}
             </div>
-           
         </div>
     )
 }
