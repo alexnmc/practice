@@ -5,7 +5,9 @@
 
 function checkEnding(str1, str2) {
 	var end = str1.slice(-str2.length)
-	if(end===str2){return true}
-	else{return false}
-	
+	if(end === str2) {
+		return true
+	} else {
+		return false
+	}
 }

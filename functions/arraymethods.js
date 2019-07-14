@@ -80,7 +80,7 @@ byAge(arr = [
             newArr.sort(function(a,b){
                 if(a.lastName > b.lastName){return 1}
                    })
-             newArr.forEach(function(item){
+            newArr.forEach(function(item){
                    item =  `<li>  ${item.firstName} ${item.lastName} is ${item.age} </li>`
                    console.log(item)
                    })    
