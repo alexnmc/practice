@@ -1,5 +1,6 @@
 
 /*
+
 When two blocks of the same "type" are adjacent to each other, the entire contiguous block disappears (pops off). If this occurs, this can allow previously separated blocks to be in contact with each other, setting off a chain reaction. This will continue until each block is surrounded by a different block.
 
 Here's a demonstration:
@@ -19,12 +20,12 @@ Here's a demonstration:
 
 function finalResult(arr) {
 	for(let i = 0; i<arr.length; i++){
-  if(arr[i] === arr[i+1] && arr[i] === arr[i+2]&& arr[i] !== arr[i+3]){
+    if(arr[i] === arr[i+1] && arr[i] === arr[i+2] && arr[i] !== arr[i+3]){
       arr.splice(i,3)
       if(arr.length > 0){
         i -= 3
       }
-    }
+  }
     else if(arr[i] === arr[i+1] && arr[i]){
       arr.splice(i,2)
         if(arr.length > 0){

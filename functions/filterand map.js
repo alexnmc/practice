@@ -4,11 +4,11 @@ var arr= [1,2,3,4,5,6]
 
   var array = arr.map(function(item){ return item *2   })
 
-  console.log(array)
+console.log(array)
 
   var array2 = arr.map(function(item){ return item + ""})
  
-   console.log(array2)
+console.log(array2)
 
 
    var arr2 = [{
@@ -38,7 +38,6 @@ var arr= [1,2,3,4,5,6]
  
  
  var array4 = arr2.filter(function(item){if(item.age<18){ return item.name }})
-
  console.log(array4)
 
  

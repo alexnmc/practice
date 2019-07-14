@@ -2,7 +2,9 @@
 
 
 /*
- function fibonacci(n) {
+ 
+
+function fibonacci(n) {
        var nums =[0,1];
        var total = 0;
        for(var i = 0; i <= n; i++) {
@@ -11,12 +13,12 @@
        }
        total += nums[i]}
        console.log(total)
- }
+}
      fibonacci(5)
     
 
  
-    function countChar(str){
+function countChar(str){
         var mf = 1;
         var m = 0;
         var item;
@@ -49,7 +51,7 @@ function reverseStr(str){
 
    
    
-    function checkForNumberInString(arr){
+function checkForNumberInString(arr){
         var newArr= []
         for(let i=0;i<arr.length;i++){
          for(let j=0;j<arr[i].length;j++){
@@ -60,11 +62,11 @@ function reverseStr(str){
           }
         }
          return newArr
-    }
+}
                                         
 
 
-        function randomPassword(length) {
+function randomPassword(length) {
             var chars = "abcdefghijklmnopqrstuvwxyz!@#$%^&*()-+<>ABCDEFGHIJKLMNOP1234567890";
             var pass = "";
             for (var i = 0; i < length; i++) {
@@ -72,12 +74,13 @@ function reverseStr(str){
                 pass += chars[y];
             }
                 return pass;
-        }
+}
 
-                console.log(randomPassword(10)) 
+        console.log(randomPassword(10)) 
 
         
-        function countCode(string) {           // this function checks if the word "code" or "co e" is in the string in the argument
+        
+function countCode(string) {           // this function checks if the word "code" or "co e" is in the string in the argument
                     string.toUpperCase()
                     var splitStr = string.split('')
                     let count = 0;
@@ -88,12 +91,9 @@ function reverseStr(str){
                       }
                     }
                     return count;
-                  }    */
+                  }    
+                  
+*/
                   
         
-                  function isPalindrome(str){
-            var newStr = str.match(/[a-z]/gi).join('').toLowerCase()
-            return newStr === newStr.split('').reverse().join('')
-        }
-                            
-            console.log(isPalindrome('Star Rats!'))
+            
