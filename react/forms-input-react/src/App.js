@@ -17,8 +17,6 @@ class App extends Component{
         this.setState({[event.target.name]: event.target.value}) // this is for all the inputs ...name = 'fName' , name = 'age etc
     }
 
-
-
     handleSubmit = event => {
         event.preventDefault()
         alert(`A name was submitted: ${this.state.fName} ${this.state.lName} and the age is ${this.state.age}`)
