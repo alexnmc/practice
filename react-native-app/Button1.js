@@ -1,32 +1,28 @@
 import React from 'react'
 import {withButton} from './ButtonProvider'
-import {ScrollView, StyleSheet, Text, View , Button} from 'react-native'
-import A from 'react-native-a'
+import {ScrollView, TouchableOpacity, Text, View , Button} from 'react-native'
 
     const Button1 = (props) => {
 
         function getNews(url, name) {
-           props.getNewsSource(url, name)
+           props.getNewsCountry(url, name)
            
         }
     
-        function getNews2(url, name) {
-            props.getNewsCountry(url, name)
-        }
+       
 
         
     return (
         <View style = {{ position: 'absolute', height:'auto'}}>
            <Button
-                onPress={() => props.getNews()}
+                onPress={() => props.editToggle()}
                 title="Read"
                 color="tomato"
                 accessibilityLabel="Learn more about this purple button"
-                style = {{width: 200, height: 100, margin:'auto'}}
             />
             {props.toggle ?
-                    <ScrollView>
-                        <TouchableOpacity onPress={() => { this.getNews('ar','Argentina')}}>
+                    <ScrollView style = {{position: 'fixed', height: 300, width: 200, backgroundColor: 'white'}}>
+                        <TouchableOpacity onPress={() => {getNews('at','Austria')}}>
                             <Text>Argentina</Text>
                         </TouchableOpacity>
                     </ScrollView>

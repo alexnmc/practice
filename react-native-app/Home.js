@@ -37,13 +37,14 @@ render(){
   })
   
     return (
-      
-      <ScrollView contentContainerStyle = {styles.body2}> 
-      <View style={{width: '100%', height:120, backgroundColor: 'black', position: 'fixed', display:'flex', alignItems: 'center', alignContent: 'center'}}>
+      <View>
+      <View style={{ position: 'fixed', width: '100%', height:100, backgroundColor: 'black', display:'flex', alignItems: 'center', alignContent: 'center'}}>
          <Button1/>
       </View>
+      <ScrollView contentContainerStyle = {styles.body2}> 
         {article}
       </ScrollView>
+      </View>
     )
   }
 }
