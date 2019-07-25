@@ -33,12 +33,12 @@ render(){
   const article = this.state.articles.map(item => {
       return (
           <View key={Math.random()} style = {styles.body}>
-              <Text > {item.title} </Text>
+              <Text style = {{margin:'auto'}}> {item.title} </Text>
               <Image source ={{uri: item.urlToImage}} style={{width: '100%', height: '50%', margin:'auto'}}/>
-              <Text> {item.description} </Text>
-              <Text >{item.source.name} </Text>
+              <Text style = {{margin:'auto'}}> {item.description} </Text>
+              <Text style = {{margin:'auto'}}>{item.source.name} </Text>
               <View >
-                  <A href={item.url}>read more</A>
+                  <A href={item.url} style = {{margin:'auto'}}>read more</A>
               </View>
           </View>
       )
@@ -46,7 +46,7 @@ render(){
   
     return (
       
-      <ScrollView style = {styles.body2}> 
+      <ScrollView contentContainerStyle = {styles.body2}> 
         <ImageBackground source={require('./Photos/news.jpg')} 
           style={{flex:1,  
                   position: 'fixed',
@@ -68,13 +68,14 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop:50
    
  },
 
  body2:{
-  flex: 1,
-  width: '100%',
-  height: '100%',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center'
   
 }
 })
