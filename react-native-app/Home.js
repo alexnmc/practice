@@ -1,7 +1,8 @@
 import React, { Component }  from 'react';
-import {ScrollView, ImageBackground, StyleSheet, Text, View , Image} from 'react-native'
+import {ScrollView, StyleSheet, Text, View , Image} from 'react-native'
 import A from 'react-native-a'
 import {withButton} from './ButtonProvider'
+import Button1 from './Button1'
 
 
   class  App extends Component{
@@ -14,15 +15,13 @@ import {withButton} from './ButtonProvider'
   
 
 
-componentDidMount(){ 
-   this.props.getNews()
-}
-  
+  componentDidMount(){ 
+    this.props.getNews()
+  }
+    
   
   
 render(){
-  
-  
   const article = this.props.articles.map(item => {
       return (
           <View key={Math.random()} style = {styles.body}>
@@ -40,15 +39,10 @@ render(){
     return (
       
       <ScrollView contentContainerStyle = {styles.body2}> 
-        <ImageBackground source={require('./Photos/news.jpg')} 
-          style={{flex:1,  
-                  position: 'fixed',
-                  width: '100%',
-                  height: '100%',
-                  justifyContent: 'center',   
-                  resizeMode: "repeat"}}>
-          </ImageBackground>
-          {article}
+      <View style={{width: '100%', height:120, backgroundColor: 'black', position: 'fixed', display:'flex', alignItems: 'center', alignContent: 'center'}}>
+         <Button1/>
+      </View>
+        {article}
       </ScrollView>
     )
   }
