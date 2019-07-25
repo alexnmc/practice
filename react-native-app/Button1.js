@@ -21,14 +21,32 @@ import {ScrollView, TouchableOpacity, Text, View , Button} from 'react-native'
                 accessibilityLabel="Learn more about this purple button"
             />
             {props.toggle ?
-                    <ScrollView style = {{position: 'fixed', height: 300, width: 200, backgroundColor: 'white'}}>
-                        <TouchableOpacity onPress={() => {getNews('at','Austria')}}>
+                    <ScrollView style = {{position: 'absolute', height:'90%', width: 200, backgroundColor: 'white'}}>
+                        <TouchableOpacity onPress={() => {getNews('ar','Argentina')}}>
                             <Text>Argentina</Text>
                         </TouchableOpacity>
+                    
+                        <TouchableOpacity onPress={() => {getNews('au','Austrialia')}}>
+                            <Text>Australia</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => {getNews('at','Austria')}}>
+                            <Text>Austria</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => {getNews('be','Belgium')}}>
+                            <Text>Belgium</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => {getNews('br','Brazil')}}>
+                            <Text>Brazil</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity onPress={() => {getNews('ca','Canada')}}>
+                            <Text>Canada</Text>
+                        </TouchableOpacity>
                     </ScrollView>
-                
-               
-            :
+                :
                 null
             
             
