@@ -48,9 +48,11 @@ render(){
   
     return (
       <View style={{ backgroundColor: 'black'}}>
-        <View style={{ width: '100%', height:100, backgroundColor: 'black', display:'flex', alignItems: 'flex-start'}}>
-          <Button1/>
-        </View>
+        <View style={{ width: '100%', height: 100, backgroundColor: 'white', display:'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+           <Button1/>
+           <Text style = {styles.channelName}>Hello</Text>
+         
+         </View>
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
           {article}
         </ScrollView>
@@ -60,13 +62,14 @@ render(){
 }
 
 const styles = StyleSheet.create({
+    
     news:{
-      width: '90%',
+      width: '97%',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       marginTop:50,
-      padding: 5,
+      padding: 7,
       backgroundColor: 'white'
     },
 
@@ -78,13 +81,13 @@ const styles = StyleSheet.create({
 
   itemTitle:{
     color:'rgb(131, 0, 0)',
-    fontSize: 15,
+    fontSize: 17,
     fontWeight: "900",
     width:'100%'
   },
 
   mainText:{
-    fontSize:15,
+    fontSize:16,
     fontFamily: 'Arial',
     fontWeight: '900',
     width: '100%'
@@ -103,9 +106,13 @@ const styles = StyleSheet.create({
      justifyContent: 'space-between',
      alignItems:"center",
      marginTop: 5
-    
+  },
 
-  }
+  channelName: {
+    color: 'rgb(128, 0, 0)',
+    fontWeight: "900",
+    
+   }
 
 
 })

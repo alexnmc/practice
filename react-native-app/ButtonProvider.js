@@ -11,7 +11,8 @@ class ButtonProvider extends Component {
         super(props)
         this.state = {
             articles: [],
-            toggle: false
+            channelName: '',
+            toggle: false,
         }
     }
 
@@ -30,12 +31,14 @@ class ButtonProvider extends Component {
          .then(response => {
             this.setState({
                 articles: response.data.articles,
+                channelName: name
                 
             })
         })
             this.setState(prevState=>{  
                 return { 
                     toggle: !prevState.toggle,
+                    
                     
                 }
             })
@@ -47,6 +50,7 @@ class ButtonProvider extends Component {
          .then(response => {
             this.setState({
                 articles: response.data.articles,
+                channelName: name
                 
             })
         })

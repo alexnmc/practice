@@ -13,13 +13,14 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
        
 
     return (
-        <View style = {{marginTop: 40, height:400}}>
+        <View>
             <TouchableOpacity onPress={() => props.editToggle()} style = {styles.buttonCover}>
                        <Text style = {styles.button}>Read</Text>
             </TouchableOpacity>
                
             {props.toggle ?
-                   <ScrollView style = {styles.navbarWrap}>
+                <ScrollView style = {styles.navbarWrap}>
+                   
                    <TouchableOpacity onPress={() => getNews('ar', 'Argentina')}>
                        <Text style = {styles.newsLink}>Argentina</Text>
                    </TouchableOpacity>
@@ -99,6 +100,8 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
             height:'100%' , 
             borderWidth: 0.5,
             borderColor: 'black',
+            position:'absolute',
+            height: 400
         },
 
         button:{
@@ -113,12 +116,12 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
             display: "flex",
             alignItems: "center",
             justifyContent: 'center',
-            width: 100,
-            height: 30,
+            width: 120,
+            height: 32,
             backgroundColor: 'rgb(175, 0, 0)',
             borderWidth: 1,
             borderColor: 'rgb(141, 0, 0)',
-            marginLeft: 15
+            margin: 2
         }
       
     })
