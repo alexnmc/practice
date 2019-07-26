@@ -48,10 +48,10 @@ render(){
   
     return (
       <View style={{ backgroundColor: 'black'}}>
-        <View style={{ width: '100%', height: 100, backgroundColor: 'white', display:'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+        <View style={{ width: '100%', height: 100, backgroundColor: 'white', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
            <Button1/>
-           <Text style = {styles.channelName}>Hello</Text>
-         
+           <Text style = {styles.channelName}>{this.props.channelName}</Text>
+           <Button1/>
          </View>
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
           {article}
@@ -111,6 +111,8 @@ const styles = StyleSheet.create({
   channelName: {
     color: 'rgb(128, 0, 0)',
     fontWeight: "900",
+    fontSize: 14,
+    margin: 10
     
    }
 

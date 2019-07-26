@@ -110,6 +110,7 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
             fontWeight: '900',
             color: 'rgb(241, 241, 241)',
            
+           
         },
 
         buttonCover:{
@@ -121,7 +122,8 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
             backgroundColor: 'rgb(175, 0, 0)',
             borderWidth: 1,
             borderColor: 'rgb(141, 0, 0)',
-            margin: 2
+            margin: 10,
+            
         }
       
     })
