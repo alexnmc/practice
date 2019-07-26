@@ -22,41 +22,44 @@ import Button1 from './Button1'
   
   
 render(){
-  const article = this.props.articles.map(item => {
+  const article = 
+      this.props.toggle ?
+      null
+      :
+      this.props.articles.map(item => {
       return (
-          <View key={Math.random()} style = {styles.body}>
+          <View key={Math.random()} style = {styles.news}>
               <Text style = {{margin:'auto'}}> {item.title} </Text>
-              <Image source ={{uri: item.urlToImage}} style={{width: '100%', height: '50%', margin:'auto'}}/>
+              <Image source ={{uri: item.urlToImage}} style={{flex:1, width: '100%', height: '50%', margin:'auto'}}/>
               <Text style = {{margin:'auto'}}> {item.description} </Text>
               <Text style = {{margin:'auto'}}>{item.source.name} </Text>
-              <View >
-                  <A href={item.url} style = {{margin:'auto'}}>read more</A>
-              </View>
+              <A href={item.url} style = {{margin:'auto'}}>read more</A>
           </View>
       )
   })
   
     return (
       <View>
-      <View style={{ position: 'fixed', width: '100%', height:100, backgroundColor: 'black', display:'flex', alignItems: 'center', alignContent: 'center'}}>
-         <Button1/>
-      </View>
-      <ScrollView contentContainerStyle = {styles.body2}> 
-        {article}
-      </ScrollView>
+        <View style={{ width: '100%', height:100, backgroundColor: 'black', display:'flex', alignItems: 'center', alignContent: 'center'}}>
+          <Button1/>
+        </View>
+        <ScrollView contentContainerStyle = {styles.body2}> 
+          {article}
+        </ScrollView>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  body:{
+  news:{
     width: '90%',
     height: 300,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop:50
+    marginTop:50,
+   
    
  },
 

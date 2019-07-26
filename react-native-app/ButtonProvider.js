@@ -26,7 +26,6 @@ class ButtonProvider extends Component {
     }
 
     getNewsCountry = (url, name) => {  
-        
         axios.get( `https://newsapi.org/v2/top-headlines?country=${url}&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa`)
          .then(response => {
             this.setState({
@@ -44,7 +43,6 @@ class ButtonProvider extends Component {
     }
 
     getNewsSource= (url, name) => { 
-        
         axios.get( `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa`)
          .then(response => {
             this.setState({
@@ -65,7 +63,6 @@ class ButtonProvider extends Component {
         this.setState(prevState=>{
             return{ 
                 toggle: !prevState.toggle,
-                
             }
         })
     }

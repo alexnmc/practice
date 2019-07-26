@@ -9,8 +9,8 @@ const App = (props) => {
         <ButtonProvider>
           <Home/>
         </ButtonProvider>
-        )
+    )
 }
                
 
-export default  App
+ export default  App

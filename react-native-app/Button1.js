@@ -1,19 +1,21 @@
 import React from 'react'
 import {withButton} from './ButtonProvider'
-import {ScrollView, TouchableOpacity, Text, View , Button} from 'react-native'
+import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'react-native'
 
+    
     const Button1 = (props) => {
 
+        
         function getNews(url, name) {
            props.getNewsCountry(url, name)
+           props.editToggle()
            
         }
     
        
 
-        
     return (
-        <View style = {{ position: 'absolute', height:'auto'}}>
+        <View style = {{marginTop: 40, height:400}}>
            <Button
                 onPress={() => props.editToggle()}
                 title="Read"
@@ -21,41 +23,62 @@ import {ScrollView, TouchableOpacity, Text, View , Button} from 'react-native'
                 accessibilityLabel="Learn more about this purple button"
             />
             {props.toggle ?
-                    <ScrollView style = {{position: 'absolute', height:'90%', width: 200, backgroundColor: 'white'}}>
-                        <TouchableOpacity onPress={() => {getNews('ar','Argentina')}}>
-                            <Text>Argentina</Text>
+                    <ScrollView style = {styles.navbarWrap}>
+                        <Button
+                                onPress={() => props.editToggle()}
+                                title="Argentina"
+                                color="tomato"
+                                accessibilityLabel="Learn more about this purple button"
+                        />
+
+
+
+                        <TouchableOpacity onPress={() => props.editToggle()}>
+                            <Text style = {styles.newsLink}>Argentina</Text>
                         </TouchableOpacity>
                     
-                        <TouchableOpacity onPress={() => {getNews('au','Austrialia')}}>
-                            <Text>Australia</Text>
+                        <TouchableOpacity onPress={() => getNews('au','Austrialia')}>
+                            <Text style = {styles.newsLink}>Australia</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => {getNews('at','Austria')}}>
-                            <Text>Austria</Text>
+                        <TouchableOpacity onPress={() => getNews('at','Austria')}>
+                            <Text style = {styles.newsLink}>Austria</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => {getNews('be','Belgium')}}>
-                            <Text>Belgium</Text>
+                        <TouchableOpacity onPress={() => getNews('be','Belgium')}>
+                            <Text style = {styles.newsLink}>Belgium</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => {getNews('br','Brazil')}}>
-                            <Text>Brazil</Text>
+                        <TouchableOpacity onPress={() => getNews('br','Brazil')}>
+                            <Text style = {styles.newsLink}>Brazil</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity onPress={() => {getNews('ca','Canada')}}>
-                            <Text>Canada</Text>
+                        <TouchableOpacity onPress={() => getNews('ca','Canada')}>
+                            <Text style = {styles.newsLink}>Canada</Text>
                         </TouchableOpacity>
                     </ScrollView>
                 :
                 null
-            
-            
             }
             </View>
-       
-         )
+        )
     }
 
+    const styles = StyleSheet.create({
+        
+        newsLink:{
+            margin: 10,
+            fontSize: 20,
+           
+        },
+
+        navbarWrap: {
+            marginTop: 80, 
+            borderWidth: 0.5,
+            borderColor: 'black',
+        }
+      
+    })
                
 
 export default  withButton(Button1)
