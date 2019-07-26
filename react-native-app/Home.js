@@ -47,8 +47,8 @@ render(){
   })
   
     return (
-      <View>
-        <View style={{ width: '100%', height:100, backgroundColor: 'black', display:'flex', alignItems: 'center', alignContent: 'center'}}>
+      <View style={{ backgroundColor: 'black'}}>
+        <View style={{ width: '100%', height:100, backgroundColor: 'black', display:'flex', alignItems: 'flex-start'}}>
           <Button1/>
         </View>
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       marginTop:50,
-      padding: 5
+      padding: 5,
+      backgroundColor: 'white'
     },
 
   body2:{

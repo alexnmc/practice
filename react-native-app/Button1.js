@@ -14,12 +14,10 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
 
     return (
         <View style = {{marginTop: 40, height:400}}>
-           <Button
-                onPress={() => props.editToggle()}
-                title="Read"
-                color="tomato"
-                accessibilityLabel="Learn more about this purple button"
-            />
+            <TouchableOpacity onPress={() => props.editToggle()} style = {styles.buttonCover}>
+                       <Text style = {styles.button}>Read</Text>
+            </TouchableOpacity>
+               
             {props.toggle ?
                    <ScrollView style = {styles.navbarWrap}>
                    <TouchableOpacity onPress={() => getNews('ar', 'Argentina')}>
@@ -99,9 +97,28 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
         navbarWrap: {
             marginTop: 80, 
             height:'100%' , 
-            width: '50%', 
             borderWidth: 0.5,
             borderColor: 'black',
+        },
+
+        button:{
+            fontSize:14,
+            fontFamily: 'Helvetica',
+            fontWeight: '900',
+            color: 'rgb(241, 241, 241)',
+           
+        },
+
+        buttonCover:{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: 'center',
+            width: 100,
+            height: 30,
+            backgroundColor: 'rgb(175, 0, 0)',
+            borderWidth: 1,
+            borderColor: 'rgb(141, 0, 0)',
+            marginLeft: 15
         }
       
     })
