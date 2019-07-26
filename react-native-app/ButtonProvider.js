@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 
 
+
 const ButtonContext = React.createContext()
 
 
@@ -13,7 +14,8 @@ class ButtonProvider extends Component {
             articles: [],
             channelName: 'Austria',
             toggle: false,
-            toggle2: false
+            toggle2: false,
+           
         }
     }
 
@@ -82,6 +84,8 @@ class ButtonProvider extends Component {
             }
         })
     }
+
+    
     
     
     render() {
@@ -95,7 +99,6 @@ class ButtonProvider extends Component {
                     getNewsSource: this.getNewsSource,
                     editToggle: this.editToggle,
                     editToggle2: this.editToggle2
-                    
                 }}>
                 {this.props.children}
             </ButtonContext.Provider>

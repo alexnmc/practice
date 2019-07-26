@@ -1,20 +1,25 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {withButton} from './ButtonProvider'
 import {StyleSheet, ScrollView, TouchableOpacity, Text, View} from 'react-native'
 
     
-    const Button2 = (props) => {
+class Button2 extends Component{
+  
+    constructor(){
+      super()
+     this.state = {
+      }
+  }
 
-        
-        function getNews(url, name) {
-           props.getNewsSource(url, name)
+        getNews = (url, name) => {
+           this.props.getNewsSource(url, name)
         }
     
        
-
+render(){
     return (
         <View>
-            <TouchableOpacity onPress={() => props.editToggle2()} style = {styles.buttonCover2}>
+            <TouchableOpacity onPress={() => this.props.editToggle2()} style = {styles.buttonCover2}>
                        <Text style = {styles.button2}>Read</Text>
             </TouchableOpacity>
                
@@ -149,26 +154,6 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View} from 'react-native
                        <Text style = {styles.newsLink}>Brazil</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => getNews("bg", "Bulgaria")}>
-                       <Text style = {styles.newsLink}>Bulgaria</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('ca','Canada')}>
-                       <Text style = {styles.newsLink}>Canada</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("cu", "Cuba")}>
-                       <Text style = {styles.newsLink}>Cuba</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("co", "Colombia")}>
-                       <Text style = {styles.newsLink}>Colombia</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('cn','China')}>
-                       <Text style = {styles.newsLink}>China</Text>
-                   </TouchableOpacity>
-
                    <TouchableOpacity onPress={() => getNews("cz", "Czech Republic")}>
                        <Text style = {styles.newsLink}>Czech Republic</Text>
                    </TouchableOpacity>
@@ -192,6 +177,7 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View} from 'react-native
             </View>
         )
     }
+}
 
     const styles = StyleSheet.create({
         

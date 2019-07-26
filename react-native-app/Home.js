@@ -45,14 +45,14 @@ render(){
               </View>
           </View>
       )
-  })
+      })
   
     return (
       <View style={{ backgroundColor: 'black'}}>
         <View style={{ width: '100%', height: 100, backgroundColor: 'white', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
            <Button1/>
            <Text style = {styles.channelName}>{this.props.channelName}</Text>
-           <Button2/>
+         
          </View>
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
           {article}
