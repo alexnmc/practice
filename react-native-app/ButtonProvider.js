@@ -13,6 +13,7 @@ class ButtonProvider extends Component {
             articles: [],
             channelName: 'Austria',
             toggle: false,
+            toggle2: false
         }
     }
 
@@ -37,9 +38,8 @@ class ButtonProvider extends Component {
         })
             this.setState(prevState=>{  
                 return { 
-                    toggle: !prevState.toggle,
-                    
-                    
+                    toggle: false,
+                    toggle2: false
                 }
             })
         
@@ -56,7 +56,8 @@ class ButtonProvider extends Component {
         })
             this.setState(prevState=>{
                 return{ 
-                    toggle: !prevState.toggle,
+                    toggle: false,
+                    toggle2: false
                     
                 }
             })
@@ -67,6 +68,17 @@ class ButtonProvider extends Component {
         this.setState(prevState=>{
             return{ 
                 toggle: !prevState.toggle,
+                toggle2: false
+            }
+        })
+    }
+
+    editToggle2 = () => {
+        this.setState( prevState => {   
+            return { 
+                toggle2: !prevState.toggle2, 
+                toggle: false,
+                
             }
         })
     }
@@ -80,7 +92,9 @@ class ButtonProvider extends Component {
                     ...this.state,
                     getNews: this.getNews,
                     getNewsCountry: this.getNewsCountry,
-                    editToggle: this.editToggle
+                    getNewsSource: this.getNewsSource,
+                    editToggle: this.editToggle,
+                    editToggle2: this.editToggle2
                     
                 }}>
                 {this.props.children}

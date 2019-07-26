@@ -1,25 +1,25 @@
 import React from 'react'
 import {withButton} from './ButtonProvider'
-import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'react-native'
+import {StyleSheet, ScrollView, TouchableOpacity, Text, View} from 'react-native'
 
     
-    const Button1 = (props) => {
+    const Button2 = (props) => {
 
         
         function getNews(url, name) {
-           props.getNewsCountry(url, name)
+           props.getNewsSource(url, name)
         }
     
        
 
     return (
         <View>
-            <TouchableOpacity onPress={() => props.editToggle()} style = {styles.buttonCover}>
-                       <Text style = {styles.button}>Read</Text>
+            <TouchableOpacity onPress={() => props.editToggle2()} style = {styles.buttonCover2}>
+                       <Text style = {styles.button2}>Read</Text>
             </TouchableOpacity>
                
-            {props.toggle ?
-                <ScrollView style = {styles.navbarWrap}>
+            {props.toggle2 ?
+                <ScrollView style = {styles.navbarWrap2}>
                    
                    <TouchableOpacity onPress={() => getNews('ar', 'Argentina')}>
                        <Text style = {styles.newsLink}>Argentina</Text>
@@ -201,24 +201,24 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
            
         },
 
-        navbarWrap: {
+        navbarWrap2: {
             marginTop: 80, 
             width: 200,
             borderWidth: 0.5,
             borderColor: 'black',
             position:'absolute',
             height:600,
-            
+            marginLeft: -70
         },
 
-        button:{
+        button2:{
             fontSize:14,
             fontFamily: 'Helvetica',
             fontWeight: '900',
             color: 'rgb(241, 241, 241)',
         },
 
-        buttonCover:{
+        buttonCover2:{
             display: "flex",
             alignItems: "center",
             justifyContent: 'center',
@@ -234,5 +234,5 @@ import {StyleSheet, ScrollView, TouchableOpacity, Text, View , Button} from 'rea
     })
                
 
-export default  withButton(Button1)
+export default  withButton(Button2)
 

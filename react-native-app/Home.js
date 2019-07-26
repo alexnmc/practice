@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet, Text, View , Image, TouchableOpacity} from 'reac
 import A from 'react-native-a'
 import {withButton} from './ButtonProvider'
 import Button1 from './Button1'
+import Button2 from './Button2'
 
 
   class Home extends Component{
@@ -28,7 +29,7 @@ import Button1 from './Button1'
   
 render(){
   const article = 
-      this.props.toggle ?
+      this.props.toggle || this.props.toggle2 ?
       null
       :
       this.props.articles.map(item => {
@@ -51,7 +52,7 @@ render(){
         <View style={{ width: '100%', height: 100, backgroundColor: 'white', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
            <Button1/>
            <Text style = {styles.channelName}>{this.props.channelName}</Text>
-           <Button1/>
+           <Button2/>
          </View>
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
           {article}
@@ -111,7 +112,7 @@ const styles = StyleSheet.create({
   channelName: {
     color: 'rgb(128, 0, 0)',
     fontWeight: "900",
-    fontSize: 14,
+    fontSize: 17,
     margin: 10
     
    }
