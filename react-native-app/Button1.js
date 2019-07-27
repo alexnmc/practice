@@ -149,7 +149,7 @@ render(){
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("mx", "Mexico" )}>
-                       <Text style = {styles.newsLink}> </Text>
+                       <Text style = {styles.newsLink}>Mexico </Text>
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("ma", "Morocco" )}>
@@ -177,11 +177,11 @@ render(){
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("pt", "Portugal" )}>
-                       <Text style = {styles.newsLink}> </Text>
+                       <Text style = {styles.newsLink}>Portugal </Text>
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("ru", "Russia" )}>
-                       <Text style = {styles.newsLink}>Portugal </Text>
+                       <Text style = {styles.newsLink}>Russia</Text>
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("ro", "Romania" )}>

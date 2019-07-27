@@ -23,8 +23,8 @@ const Loading = ({type, color}) => {
 
 const styles = StyleSheet.create({
   lottie: {
-    width: 400,
-    height: 400
+    width: 300,
+    height: 300
   }
 });
 
