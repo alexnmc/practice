@@ -87,13 +87,13 @@ const styles = StyleSheet.create({
 
   itemTitle:{
     color:'rgb(131, 0, 0)',
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: "900",
     width:'100%'
   },
 
   mainText:{
-    fontSize:16,
+    fontSize:17,
     fontFamily: 'Arial',
     fontWeight: '900',
     width: '100%'
