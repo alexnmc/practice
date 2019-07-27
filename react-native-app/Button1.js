@@ -140,7 +140,7 @@ render(){
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("lt", "Lithuania")}>
-                       <Text style = {styles.newsLink}>Czech Republic</Text>
+                       <Text style = {styles.newsLink}>Lithuania</Text>
                    </TouchableOpacity>
                
                    <TouchableOpacity onPress={() => this.getNews("my", "Malaysia")}>
