@@ -197,19 +197,19 @@ render(){
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("sg", "Singapore" )}>
-                       <Text style = {styles.newsLink}> Singapore</Text>
+                       <Text style = {styles.newsLink}>Singapore</Text>
                    </TouchableOpacity>
                    
                    <TouchableOpacity onPress={() => this.getNews("sl", "Slovakia" )}>
-                       <Text style = {styles.newsLink}> Slovakia</Text>
+                       <Text style = {styles.newsLink}>Slovakia</Text>
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("za", "South Africa" )}>
-                       <Text style = {styles.newsLink}> South Africa</Text>
+                       <Text style = {styles.newsLink}>South Africa</Text>
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("se", "Sweeden" )}>
-                       <Text style = {styles.newsLink}> Sweeden</Text>
+                       <Text style = {styles.newsLink}>Sweeden</Text>
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("ch", "Swiss" )}>
@@ -225,7 +225,7 @@ render(){
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("tr", "Turkey" )}>
-                       <Text style = {styles.newsLink}> Turkey</Text>
+                       <Text style = {styles.newsLink}>Turkey</Text>
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("ua", "Ukraine" )}>
@@ -245,7 +245,26 @@ render(){
                    </TouchableOpacity>
 
                    <TouchableOpacity onPress={() => this.getNews("ve", "Venezuela")}>
-                       <Text style = {styles.newsLink}> Venezuela</Text>
+                       <Text style = {styles.newsLink}>Venezuela</Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
+                   </TouchableOpacity>
+
+                  
+                   <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
+                   </TouchableOpacity>
+                  
+                  
+                   <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
+                   </TouchableOpacity>
+                   
+                   
+                   <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
                    </TouchableOpacity>
 
                 </ScrollView>

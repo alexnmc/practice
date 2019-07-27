@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   },
 
   bottom:{
-     width: '95%',
+     width: '97%',
      display: 'flex',
      flexDirection: 'row',
      justifyContent: 'space-between',
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
     fontWeight: "900",
     fontSize: 17,
     margin: 10,
-    width: 100,
+    width: "32%",
     textAlign: 'center'
    
   }

@@ -162,6 +162,25 @@ render(){
                    <TouchableOpacity onPress={() => this.getNews("the-wall-street-journal", 'Wall Street Journal' )}>
                        <Text style = {styles.newsLink}>Wall Street Journal </Text>
                    </TouchableOpacity>
+
+                  
+                   <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
+                   </TouchableOpacity>
+
+
+                   <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
+                   </TouchableOpacity>
+
+
+                    <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => this.getNews( )}>
+                       <Text style = {styles.newsLink}></Text>
+                   </TouchableOpacity>
                 
             </ScrollView>
             </Animated.View>
@@ -202,7 +221,7 @@ render(){
             width: width,
             backgroundColor: 'black',
             position: 'absolute',
-            left:-220
+            left:-223
         },
 
         button2:{
