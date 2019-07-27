@@ -1,30 +1,47 @@
 import React, {Component} from 'react'
 import {withButton} from './ButtonProvider'
-import {StyleSheet, ScrollView, TouchableOpacity, Text, View} from 'react-native'
+import {Dimensions, Animated, Easing, StyleSheet, ScrollView, TouchableOpacity, Text, View} from 'react-native'
+
+var {width, height} = Dimensions.get('window')
 
     
 class Button2 extends Component{
   
     constructor(){
       super()
-     this.state = {
+      
+      this.state = {
+        right: new Animated.Value(-200)
       }
-  }
+    }
 
         getNews = (url, name) => {
            this.props.getNewsSource(url, name)
+        }
+
+        
+        move = () => {
+            this.state.right.setValue(-200)// reseting the animation
+            this.props.editToggle2()
+            Animated.timing(this.state.right, {
+               toValue:5,
+               duration:500,
+               easing: Easing.linear
+           }).start()
         }
     
        
 render(){
     return (
         <View>
-            <TouchableOpacity onPress={() => this.props.editToggle2()} style = {styles.buttonCover2}>
-                       <Text style = {styles.button2}>Read</Text>
+            <TouchableOpacity onPress={() => this.move()} style = {styles.buttonCover2}>
+                <Text style = {styles.button2}>Channels</Text>
             </TouchableOpacity>
                
-            {props.toggle2 ?
-                <ScrollView style = {styles.navbarWrap2}>
+            {this.props.toggle2 ?
+             <View style = {styles.container2}>
+             <Animated.View style = {[styles.navbarWrap2, {right: this.state.right}]}>
+                <ScrollView>
                    
                    <TouchableOpacity onPress={() => getNews('ar', 'Argentina')}>
                        <Text style = {styles.newsLink}>Argentina</Text>
@@ -133,42 +150,10 @@ render(){
                    <TouchableOpacity onPress={() => getNews("fr", "France")}>
                        <Text style = {styles.newsLink}>Francce</Text>
                    </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('ar', 'Argentina')}>
-                       <Text style = {styles.newsLink}>Argentina</Text>
-                   </TouchableOpacity>
-               
-                   <TouchableOpacity onPress={() => getNews('au','Austrialia')}>
-                       <Text style = {styles.newsLink}>Australia</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('at','Austria')}>
-                       <Text style = {styles.newsLink}>Austria</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('be','Belgium')}>
-                       <Text style = {styles.newsLink}>Belgium</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('br','Brazil')}>
-                       <Text style = {styles.newsLink}>Brazil</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("cz", "Czech Republic")}>
-                       <Text style = {styles.newsLink}>Czech Republic</Text>
-                   </TouchableOpacity>
-               
-                   <TouchableOpacity onPress={() => getNews("eg", "Egypt")}>
-                       <Text style = {styles.newsLink}>Egypt</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("fr", "France")}>
-                       <Text style = {styles.newsLink}>Francce</Text>
-                   </TouchableOpacity>
-
-
                 
-                </ScrollView>
+                   </ScrollView>
+            </Animated.View>
+            </View>
                 
                 :
                 
@@ -184,17 +169,28 @@ render(){
         newsLink:{
             margin: 10,
             fontSize: 20,
+            fontWeight: '900',
+            color: 'rgb(155, 0, 0)'
            
         },
 
         navbarWrap2: {
-            marginTop: 80, 
+            marginTop: 10, 
             width: 200,
             borderWidth: 0.5,
             borderColor: 'black',
             position:'absolute',
             height:600,
-            marginLeft: -70
+            backgroundColor: 'white'
+        },
+
+        container2: {
+            top: 40,
+            height: height,
+            width: width,
+            backgroundColor: 'black',
+            position: 'absolute',
+            left:-220
         },
 
         button2:{

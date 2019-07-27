@@ -33,7 +33,7 @@ render(){
       null
       :
       this.props.articles.map(item => {
-      return (
+        return (
           <View key={Math.random()} style = {styles.news}>
               <Text style = {styles.itemTitle}> {item.title} </Text>
               <Image source ={{uri: item.urlToImage}} style={{width: '100%', height: 200, margin:5}}/>
@@ -44,16 +44,16 @@ render(){
                 <TouchableOpacity onPress={() => this.scrolling()}><Image source={require('./Photos/scroll.png')}  style={{width: 30, height:30}}/></TouchableOpacity>
               </View>
           </View>
-      )
+        )
       })
   
     return (
       <View style={{ backgroundColor: 'black'}}>
-        <View style={{ width: '100%', height: 100, backgroundColor: 'white', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
+        <View style={{ width: '100%', height: 80, backgroundColor: 'black', display:'flex', flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between'}}>
            <Button1/>
            <Text style = {styles.channelName}>{this.props.channelName}</Text>
-         
-         </View>
+           <Button2/>
+        </View>
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
           {article}
         </ScrollView>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   body2:{
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 
   itemTitle:{
@@ -110,12 +110,11 @@ const styles = StyleSheet.create({
   },
 
   channelName: {
-    color: 'rgb(128, 0, 0)',
+    color: 'white',
     fontWeight: "900",
     fontSize: 17,
     margin: 10
-    
-   }
+  }
 
 
 })

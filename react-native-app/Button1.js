@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import {withButton} from './ButtonProvider'
-import {Animated, Easing, StyleSheet, ScrollView, TouchableOpacity, Text, View } from 'react-native'
+import {Dimensions, Animated, Easing, StyleSheet, ScrollView, TouchableOpacity, Text, View } from 'react-native'
 
+var {width, height} = Dimensions.get('window')
 
 
 class Button1 extends Component{
@@ -28,7 +29,7 @@ class Button1 extends Component{
             this.props.editToggle()
             Animated.timing(this.state.left, {
                toValue:5,
-               duration:1000,
+               duration:500,
                easing: Easing.linear
            }).start()
         }
@@ -40,10 +41,11 @@ render(){
     return (
         <View>
             <TouchableOpacity onPress={() => this.move()} style = {styles.buttonCover}>
-                       <Text style = {styles.button}>Read</Text>
+                       <Text style = {styles.button}>Countries</Text>
             </TouchableOpacity>
                
             {this.props.toggle ?
+             <View style = {styles.container}>
              <Animated.View style = {[styles.navbarWrap, {left: this.state.left}]}>
                 <ScrollView>
                    
@@ -152,17 +154,6 @@ render(){
                        <Text style = {styles.newsLink}>Egypt</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews("fr", "France")}>
-                       <Text style = {styles.newsLink}>Francce</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => this.getNews('ar', 'Argentina')}>
-                       <Text style = {styles.newsLink}>Argentina</Text>
-                   </TouchableOpacity>
-               
-                   <TouchableOpacity onPress={() => this.getNews('au','Austrialia')}>
-                       <Text style = {styles.newsLink}>Australia</Text>
-                   </TouchableOpacity>
 
                    
 
@@ -172,6 +163,7 @@ render(){
                    
                 </ScrollView>
                 </Animated.View>
+                </View>
                 
                 :
                 
@@ -191,17 +183,26 @@ render(){
         newsLink:{
             margin: 10,
             fontSize: 20,
-           
+            fontWeight: '900',
+            color: 'rgb(155, 0, 0)'
+        },
+
+        container: {
+            top: 40,
+            height: height,
+            width: width,
+            backgroundColor: 'black',
+            position: 'absolute'
         },
 
         navbarWrap: {
-            marginTop: 60, 
+            marginTop: 10, 
             width: 200,
             borderWidth: 0.5,
             borderColor: 'black',
             position:'absolute',
             height:600,
-           
+            backgroundColor: 'white'
         },
 
         button:{
