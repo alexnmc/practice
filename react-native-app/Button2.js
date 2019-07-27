@@ -43,115 +43,127 @@ render(){
              <Animated.View style = {[styles.navbarWrap2, {right: this.state.right}]}>
                 <ScrollView>
                    
-                   <TouchableOpacity onPress={() => getNews('ar', 'Argentina')}>
-                       <Text style = {styles.newsLink}>Argentina</Text>
-                   </TouchableOpacity>
-               
-                   <TouchableOpacity onPress={() => getNews('au','Austrialia')}>
-                       <Text style = {styles.newsLink}>Australia</Text>
+                   <TouchableOpacity onPress={() => getNews("axios", "Axios")}>
+                       <Text style = {styles.newsLink}>Axios </Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => getNews('at','Austria')}>
-                       <Text style = {styles.newsLink}>Austria</Text>
+                   <TouchableOpacity onPress={() => getNews("bbc-news", "BBC News" )}>
+                       <Text style = {styles.newsLink}>BBC News </Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => getNews('be','Belgium')}>
-                       <Text style = {styles.newsLink}>Belgium</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('br','Brazil')}>
-                       <Text style = {styles.newsLink}>Brazil</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("bg", "Bulgaria")}>
-                       <Text style = {styles.newsLink}>Bulgaria</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('ca','Canada')}>
-                       <Text style = {styles.newsLink}>Canada</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("cu", "Cuba")}>
-                       <Text style = {styles.newsLink}>Cuba</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("co", "Colombia")}>
-                       <Text style = {styles.newsLink}>Colombia</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('cn','China')}>
-                       <Text style = {styles.newsLink}>China</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("cz", "Czech Republic")}>
-                       <Text style = {styles.newsLink}>Czech Republic</Text>
-                   </TouchableOpacity>
-               
-                   <TouchableOpacity onPress={() => getNews("eg", "Egypt")}>
-                       <Text style = {styles.newsLink}>Egypt</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("fr", "France")}>
-                       <Text style = {styles.newsLink}>Francce</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('de','Germany')}>
-                       <Text style = {styles.newsLink}>Germany</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('ar', 'Argentina')}>
-                       <Text style = {styles.newsLink}>Argentina</Text>
-                   </TouchableOpacity>
-               
-                   <TouchableOpacity onPress={() => getNews('au','Austrialia')}>
-                       <Text style = {styles.newsLink}>Australia</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('at','Austria')}>
-                       <Text style = {styles.newsLink}>Austria</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('be','Belgium')}>
-                       <Text style = {styles.newsLink}>Belgium</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('br','Brazil')}>
-                       <Text style = {styles.newsLink}>Brazil</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("bg", "Bulgaria")}>
-                       <Text style = {styles.newsLink}>Bulgaria</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('ca','Canada')}>
-                       <Text style = {styles.newsLink}>Canada</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("cu", "Cuba")}>
-                       <Text style = {styles.newsLink}>Cuba</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("co", "Colombia")}>
-                       <Text style = {styles.newsLink}>Colombia</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews('cn','China')}>
-                       <Text style = {styles.newsLink}>China</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("cz", "Czech Republic")}>
-                       <Text style = {styles.newsLink}>Czech Republic</Text>
-                   </TouchableOpacity>
-               
-                   <TouchableOpacity onPress={() => getNews("eg", "Egypt")}>
-                       <Text style = {styles.newsLink}>Egypt</Text>
-                   </TouchableOpacity>
-
-                   <TouchableOpacity onPress={() => getNews("fr", "France")}>
-                       <Text style = {styles.newsLink}>Francce</Text>
+                   <TouchableOpacity onPress={() => getNews("bbc-sport", 'BBC Sport' )}>
+                       <Text style = {styles.newsLink}>BBC Sport </Text>
                    </TouchableOpacity>
                 
-                   </ScrollView>
+                   <TouchableOpacity onPress={() => getNews("business-insider", 'Businsess Insider' )}>
+                       <Text style = {styles.newsLink}> Businsess Insider</Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("business-insider-uk", 'Business Insider UK' )}>
+                       <Text style = {styles.newsLink}>Business Insider UK </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("cbs-news", 'CBS News' )}>
+                       <Text style = {styles.newsLink}>CBS News </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("cnn","CNN" )}>
+                       <Text style = {styles.newsLink}>CNN </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews( "cnbc", "CNBC News")}>
+                       <Text style = {styles.newsLink}>CNBC </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("crypto-coins-news", 'Crypto Coins News' )}>
+                       <Text style = {styles.newsLink}>Crypto Coins News </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("daily-mail", "Daily Mail News" )}>
+                       <Text style = {styles.newsLink}>Daily Mail </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("espn", 'ESPN News' )}>
+                       <Text style = {styles.newsLink}>ESPN </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("entertainment-weekly", 'Entertaiment Weekly' )}>
+                       <Text style = {styles.newsLink}>Entertaiment Weekly </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("financial-times", 'Financial Times')}>
+                       <Text style = {styles.newsLink}>Financial Times </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("fox-news", 'FOX News' )}>
+                       <Text style = {styles.newsLink}>FOX News </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("fox-sports", 'FOX Sports' )}>
+                       <Text style = {styles.newsLink}>FOX Sports </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("google-news" , 'Google News' )}>
+                       <Text style = {styles.newsLink}> Google News</Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("independent", 'Independent' )}>
+                       <Text style = {styles.newsLink}>Independent </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("mtv-news", 'MTV News' )}>
+                       <Text style = {styles.newsLink}>MTV News </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("the-new-york-times", ' NY Times' )}>
+                       <Text style = {styles.newsLink}>NY Times </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("nfl-news", 'NFL News' )}>
+                       <Text style = {styles.newsLink}>NFL News </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("national-geographic", 'National Georgraphic' )}>
+                       <Text style = {styles.newsLink}>National Georgraphic </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("newsweek", 'Newsweek' )}>
+                       <Text style = {styles.newsLink}>Newsweek </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("news24", 'NEWS 24' )}>
+                       <Text style = {styles.newsLink}>News 24 </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews( "reuters", "Reuters")}>
+                       <Text style = {styles.newsLink}>Reuters </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("the-economist", 'The Economist' )}>
+                       <Text style = {styles.newsLink}>The Economist </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("the-washington-times", 'Washington Times' )}>
+                       <Text style = {styles.newsLink}>Washington Times </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("the-washington-post", 'Washington Post' )}>
+                       <Text style = {styles.newsLink}> Washington Post</Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("time", 'TIME' )}>
+                       <Text style = {styles.newsLink}>TIME </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("usa-today", 'USA Today' )}>
+                       <Text style = {styles.newsLink}> </Text>
+                   </TouchableOpacity>
+                
+                   <TouchableOpacity onPress={() => getNews("the-wall-street-journal", 'Wall Street Journal' )}>
+                       <Text style = {styles.newsLink}>Wall Street Journal </Text>
+                   </TouchableOpacity>
+                
+            </ScrollView>
             </Animated.View>
             </View>
                 

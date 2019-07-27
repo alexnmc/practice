@@ -15,10 +15,6 @@ class Button1 extends Component{
       }
   }
   
-   
-
-
-    
         getNews = (url, name) => {
            this.props.getNewsCountry(url, name)
         }
@@ -35,8 +31,6 @@ class Button1 extends Component{
         }
     
         
-       
-       
 render(){
     return (
         <View>
@@ -106,61 +100,154 @@ render(){
                        <Text style = {styles.newsLink}>Germany</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews('ar', 'Argentina')}>
-                       <Text style = {styles.newsLink}>Argentina</Text>
+                   <TouchableOpacity onPress={() => this.getNews("gr", "Greece")}>
+                       <Text style = {styles.newsLink}>Greece</Text>
                    </TouchableOpacity>
                
-                   <TouchableOpacity onPress={() => this.getNews('au','Austrialia')}>
-                       <Text style = {styles.newsLink}>Australia</Text>
+                   <TouchableOpacity onPress={() => this.getNews("hk", "Hong Kong")}>
+                       <Text style = {styles.newsLink}>Honk Kong</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews('at','Austria')}>
-                       <Text style = {styles.newsLink}>Austria</Text>
+                   <TouchableOpacity onPress={() => this.getNews("hu", "Hungary")}>
+                       <Text style = {styles.newsLink}>Hungary</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews('be','Belgium')}>
-                       <Text style = {styles.newsLink}>Belgium</Text>
+                   <TouchableOpacity onPress={() => this.getNews("it", "Italy")}>
+                       <Text style = {styles.newsLink}>Italy</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews('br','Brazil')}>
-                       <Text style = {styles.newsLink}>Brazil</Text>
+                   <TouchableOpacity onPress={() => this.getNews("id", "Indonesia")}>
+                       <Text style = {styles.newsLink}>Indonesia</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews("bg", "Bulgaria")}>
-                       <Text style = {styles.newsLink}>Bulgaria</Text>
+                   <TouchableOpacity onPress={() => this.getNews("ie", "Ireland")}>
+                       <Text style = {styles.newsLink}>Ireland</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => getNews('ca','Canada')}>
-                       <Text style = {styles.newsLink}>Canada</Text>
+                   <TouchableOpacity onPress={() => getNews("il", "Israel")}>
+                       <Text style = {styles.newsLink}>Israel</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews("cu", "Cuba")}>
-                       <Text style = {styles.newsLink}>Cuba</Text>
+                   <TouchableOpacity onPress={() => this.getNews("jp", "Japan")}>
+                       <Text style = {styles.newsLink}>Japan</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews("co", "Colombia")}>
-                       <Text style = {styles.newsLink}>Colombia</Text>
+                   <TouchableOpacity onPress={() => this.getNews("kr", "Korea")}>
+                       <Text style = {styles.newsLink}>Korea</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews('cn','China')}>
-                       <Text style = {styles.newsLink}>China</Text>
+                   <TouchableOpacity onPress={() => this.getNews('lv','Latvia')}>
+                       <Text style = {styles.newsLink}>Latvia</Text>
                    </TouchableOpacity>
 
-                   <TouchableOpacity onPress={() => this.getNews("cz", "Czech Republic")}>
+                   <TouchableOpacity onPress={() => this.getNews("lt", "Lithuania")}>
                        <Text style = {styles.newsLink}>Czech Republic</Text>
                    </TouchableOpacity>
                
-                   <TouchableOpacity onPress={() => this.getNews("eg", "Egypt")}>
-                       <Text style = {styles.newsLink}>Egypt</Text>
+                   <TouchableOpacity onPress={() => this.getNews("my", "Malaysia")}>
+                       <Text style = {styles.newsLink}>Malaysia</Text>
                    </TouchableOpacity>
 
+                   <TouchableOpacity onPress={() => this.getNews("mx", "Mexico" )}>
+                       <Text style = {styles.newsLink}> </Text>
+                   </TouchableOpacity>
 
+                   <TouchableOpacity onPress={() => this.getNews("ma", "Morocco" )}>
+                       <Text style = {styles.newsLink}>Morocco </Text>
+                   </TouchableOpacity>
                    
+                   <TouchableOpacity onPress={() => this.getNews("nl", "Netherlands" )}>
+                       <Text style = {styles.newsLink}>Netherlands </Text>
+                   </TouchableOpacity>
 
-                   
-                   
+                   <TouchableOpacity onPress={() => this.getNews("nz", "New Zealand" )}>
+                       <Text style = {styles.newsLink}>New Zealand </Text>
+                   </TouchableOpacity>
 
+                   <TouchableOpacity onPress={() => this.getNews("ng", "Nigeria" )}>
+                       <Text style = {styles.newsLink}>Nigeria </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("no", "Norway" )}>
+                       <Text style = {styles.newsLink}>Norway </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("pl", "Poland" )}>
+                       <Text style = {styles.newsLink}>Poland </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("pt", "Portugal" )}>
+                       <Text style = {styles.newsLink}> </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("ru", "Russia" )}>
+                       <Text style = {styles.newsLink}>Portugal </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("ro", "Romania" )}>
+                       <Text style = {styles.newsLink}>Romania </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("sa", "Saudi Arabia" )}>
+                       <Text style = {styles.newsLink}>Saudi Arabia </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("rs", "Serbia" )}>
+                       <Text style = {styles.newsLink}>Serbia </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("sg", "Singapore" )}>
+                       <Text style = {styles.newsLink}> Singapore</Text>
+                   </TouchableOpacity>
                    
+                   <TouchableOpacity onPress={() => this.getNews("sl", "Slovakia" )}>
+                       <Text style = {styles.newsLink}> Slovakia</Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("za", "South Africa" )}>
+                       <Text style = {styles.newsLink}> South Africa</Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("se", "Sweeden" )}>
+                       <Text style = {styles.newsLink}> Sweeden</Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("ch", "Swiss" )}>
+                       <Text style = {styles.newsLink}>Swiss </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("tw", "Taiwan" )}>
+                       <Text style = {styles.newsLink}>Taiwan </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("th", "Thailand" )}>
+                       <Text style = {styles.newsLink}>Thailand </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("tr", "Turkey" )}>
+                       <Text style = {styles.newsLink}> Turkey</Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("ua", "Ukraine" )}>
+                       <Text style = {styles.newsLink}>Ukraine </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("ae", "United Arab Emirates" )}>
+                       <Text style = {styles.newsLink}>Emirates </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("gb", "United Kingdom" )}>
+                       <Text style = {styles.newsLink}>UK </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("us", "USA" )}>
+                       <Text style = {styles.newsLink}>USA </Text>
+                   </TouchableOpacity>
+
+                   <TouchableOpacity onPress={() => this.getNews("ve", "Venezuela")}>
+                       <Text style = {styles.newsLink}> Venezuela</Text>
+                   </TouchableOpacity>
+
                 </ScrollView>
                 </Animated.View>
                 </View>
