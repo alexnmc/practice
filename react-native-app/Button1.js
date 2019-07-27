@@ -43,7 +43,6 @@ render(){
              <Animated.View style = {[styles.navbarWrap, {left: this.state.left}]}>
                 <ScrollView>
                    
-                   
                    <TouchableOpacity onPress={() => this.getNews('ar', 'Argentina')}>
                        <Text style = {styles.newsLink}>Argentina</Text>
                    </TouchableOpacity>
@@ -328,7 +327,6 @@ render(){
             borderWidth: 1,
             borderColor: 'rgb(141, 0, 0)',
             margin: 5,
-            
         }
     })
 

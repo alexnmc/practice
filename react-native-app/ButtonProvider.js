@@ -12,7 +12,7 @@ class ButtonProvider extends Component {
         super(props)
         this.state = {
             articles: [],
-            channelName: 'Austria',
+            channelName: 'choose source ' ,
             toggle: false,
             toggle2: false,
             loading: 'off'
