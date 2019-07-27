@@ -16,15 +16,15 @@ class App extends Component {
             
     //if there is a token in the local storage(or state) the  Admin component redirects to the AdminPortal component autoomatically
             <div>
-                <Navbar token = {localStorage.getItem("token2")} />
+                <Navbar token = {localStorage.getItem("token")} />
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/contact" component={Contact}/>
-                    <Route exact path="/pharma" render = {props => localStorage.getItem("token2") ? <Redirect to="/portal"/> : <PharmaLogin {...props}/>}/>
+                    <Route exact path="/pharma" render = {props => localStorage.getItem("token") ? <Redirect to="/portal"/> : <PharmaLogin {...props}/>}/>
                     <ProtectedRoutes
                         redirectTo="/pharma"
                         component={PharmaPortal}  // prevents users access to the adminportal by typing in the url in the browser
-                        token={localStorage.getItem("token2") }
+                        token={localStorage.getItem("token") }
                         path="/adminportal"
                     />
                 

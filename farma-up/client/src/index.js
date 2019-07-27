@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import { BrowserRouter } from 'react-router-dom'
+import PharmaProvider from './PharmaProvider'
 import './style.css'
 
 
@@ -10,7 +11,11 @@ import './style.css'
 ReactDOM.render(
         
         <BrowserRouter>
-          <App/>
+        <PharmaProvider>
+
+        <App/>
+        
+        </PharmaProvider>
         </BrowserRouter>,
         
    
