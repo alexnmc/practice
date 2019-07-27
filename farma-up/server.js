@@ -21,13 +21,14 @@ app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 app.use("/user", require("./routes/user"))
+app.use("/message", require("./routes/message"))
 
 
 
 
 
-mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/version3', {useNewUrlParser: true}, () => {
-    console.log('connect to the db captain!')    // name of database is version3
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost:27017/messages', {useNewUrlParser: true}, () => {
+    console.log('connect to the db captain!')    // name of database is messages
 })
 mongoose.set('useCreateIndex', true); // stops the error message...
 
