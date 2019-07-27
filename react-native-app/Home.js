@@ -118,7 +118,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: "900",
     fontSize: 17,
-    margin: 10
+    margin: 10,
+    width: 100,
+    textAlign: 'center'
+   
   }
 
 
