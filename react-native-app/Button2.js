@@ -104,7 +104,7 @@ render(){
                    </TouchableOpacity>
                 
                    <TouchableOpacity onPress={() => this.getNews("google-news" , 'Google News' )}>
-                       <Text style = {styles.newsLink}> Google News</Text>
+                       <Text style = {styles.newsLink}>Google News</Text>
                    </TouchableOpacity>
                 
                    <TouchableOpacity onPress={() => this.getNews("independent", 'Independent' )}>
@@ -148,7 +148,7 @@ render(){
                    </TouchableOpacity>
                 
                    <TouchableOpacity onPress={() => this.getNews("the-washington-post", 'Washington Post' )}>
-                       <Text style = {styles.newsLink}> Washington Post</Text>
+                       <Text style = {styles.newsLink}>Washington Post</Text>
                    </TouchableOpacity>
                 
                    <TouchableOpacity onPress={() => this.getNews("time", 'TIME' )}>
@@ -156,7 +156,7 @@ render(){
                    </TouchableOpacity>
                 
                    <TouchableOpacity onPress={() => this.getNews("usa-today", 'USA Today' )}>
-                       <Text style = {styles.newsLink}> </Text>
+                       <Text style = {styles.newsLink}>USA Today </Text>
                    </TouchableOpacity>
                 
                    <TouchableOpacity onPress={() => this.getNews("the-wall-street-journal", 'Wall Street Journal' )}>
