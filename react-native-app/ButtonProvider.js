@@ -15,6 +15,7 @@ class ButtonProvider extends Component {
             channelName: 'Austria',
             toggle: false,
             toggle2: false,
+            loading: 'off'
            
         }
     }
@@ -30,11 +31,13 @@ class ButtonProvider extends Component {
     }
 
     getNewsCountry = (url, name) => {  
+        this.setState({loading: 'on'})
         axios.get( `https://newsapi.org/v2/top-headlines?country=${url}&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa`)
          .then(response => {
             this.setState({
                 articles: response.data.articles,
-                channelName: name
+                channelName: name,
+                loading: 'off'
                 
             })
         })
@@ -48,11 +51,13 @@ class ButtonProvider extends Component {
     }
 
     getNewsSource= (url, name) => { 
+        this.setState({loading: 'on'})
         axios.get( `https://newsapi.org/v2/top-headlines?sources=${url}&apiKey=f64c9be83f094f43a2c3954a6c1ec8aa`)
          .then(response => {
             this.setState({
                 articles: response.data.articles,
-                channelName: name
+                channelName: name,
+                loading: 'off'
                 
             })
         })

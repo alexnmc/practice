@@ -4,6 +4,7 @@ import A from 'react-native-a'
 import {withButton} from './ButtonProvider'
 import Button1 from './Button1'
 import Button2 from './Button2'
+import Loading from './Loading'
 
 
   class Home extends Component{
@@ -55,7 +56,11 @@ render(){
            <Button2/>
         </View>
         <ScrollView contentContainerStyle = {styles.body2} ref = {this.myRef}> 
-          {article}
+        {this.props.loading === 'on' ?
+          <Loading/>
+        :
+          article
+        }
         </ScrollView>
       </View>
     )
