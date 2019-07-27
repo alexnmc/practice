@@ -32,12 +32,12 @@ messageRouter.delete('/', (req, res, next) => {
 
 messageRouter.post('/',  (req, res, next) => {   
             
-    Message.findOne({name: req.params.name, phone:req.body.phone, medication:req.body.medication}, (err, message) => {
+    Message.findOne({name: req.body.name, phone:req.body.phone, medication:req.body.medication}, (err, message) => {
         if (err) {
             res.status(500)
             return next(err)
         } if(message){ 
-            return res.status(200).send("Mesajul a fos trimis!")
+            return res.status(200).send("Mesaj dublu!")
         } else {   
             const newMessage = new Message(req.body)
             newMessage.save((err, message) => {
