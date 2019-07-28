@@ -13,15 +13,24 @@ html, body {
     height: 50pt;
     background-color:#fcfcfc; 
     display:flex;
+    position: relative;
     align-items: center;
     font-size: 17px;
     font-family:'helvetica';
     font-weight: 600;
-    border-top: 5px solid rgb(34, 253, 63);
-    border-bottom: 5px solid rgb(34, 253, 63);
+    border-bottom: 12px solid rgb(34, 253, 63);
     display:flex;
     justify-content: space-around;
+    margin-bottom: 5%;
 }
+
+.navbar::before {
+    content: " ";
+    position: absolute;
+    bottom: -25px;
+    border: 7px solid #0358f6;
+    width: 100%
+  }
 
 .link{
     text-decoration: none;
@@ -37,11 +46,21 @@ html, body {
   }
 
 
+.home{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 .bookingContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100%;
     width: 40vw;
     background-color: rgba(255, 255, 255, 0.705);
@@ -110,7 +129,7 @@ h4{
 }
 
 .admin{
-    background-color: #f0f0f0f1;
+    background-color: #ebebebf1;
     height: 100vh;
     width: 100%;
     display:flex;

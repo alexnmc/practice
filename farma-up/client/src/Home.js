@@ -57,7 +57,7 @@ class Home extends Component {
     
         render(){
             return(
-                <div>
+                <div className = 'home'>
                     <div className='bookingContainer'>
                         <form className = 'bookingForm' onSubmit={this.handleSubmit}  >
                             <input 
