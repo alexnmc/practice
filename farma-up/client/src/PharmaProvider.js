@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-const PharmaContext = React.createContext()
 
+const openGeocoder = require('node-open-geocoder');
+const PharmaContext = React.createContext()
 
 
 class PharmaProvider extends Component {
@@ -16,7 +17,9 @@ class PharmaProvider extends Component {
             username: '',
             password: '',
             password2: '',
-            pharmaCode: ''
+            pharmaCode: '',
+            city: JSON.parse(localStorage.getItem("city")) || {},
+            county: JSON.parse(localStorage.getItem("county")) || {},
 
         }
     }
@@ -47,7 +50,6 @@ class PharmaProvider extends Component {
             }))
         })
     }
-    
     
     signup = userInfo => {
         axios.post('/user/signup', userInfo).then(res => {
@@ -96,9 +98,12 @@ class PharmaProvider extends Component {
     }
 
     pharmaSignup = () => {
+        this.getLocation()
         const newUser = {
             username: this.state.username,
-            password: this.state.password
+            password: this.state.password,
+            city: this.state.city,
+            county: this.state.county
         }
         this.signup(newUser)
         this.setState({
@@ -132,6 +137,24 @@ class PharmaProvider extends Component {
         })
     }
 
+    
+    getLocation = () => {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            openGeocoder().reverse(position.coords.longitude, position.coords.latitude)
+                .end((err, res) => {       
+                        if(err){
+                            alert('Locatie necunuscuta')
+                        }  
+                        if(res){
+                            localStorage.setItem("city", JSON.stringify(res.address.city))
+                            localStorage.setItem("county", JSON.stringify(res.address.county))
+                        }
+                             
+                })
+            }
+        )
+    }
+
 
 
     
@@ -151,7 +174,8 @@ class PharmaProvider extends Component {
                     handleLogin: this.handleLogin,
                     pharmaSignup: this.pharmaSignup,
                     handleSignup: this.handleSignup,
-                    handleChange: this.handleChange
+                    handleChange: this.handleChange,
+                    getLocation: this.getLocation
                 }}>
                 {this.props.children}
             </PharmaContext.Provider>

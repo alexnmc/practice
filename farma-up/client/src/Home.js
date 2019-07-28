@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import {withPharma} from './PharmaProvider'
 
 
-const openGeocoder = require('node-open-geocoder');
 
 class Home extends Component {
     constructor(props){
@@ -31,25 +31,6 @@ class Home extends Component {
     }
 
 
-    
-    getLocation = () => {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            openGeocoder().reverse(position.coords.longitude, position.coords.latitude)
-                .end((err, res) => {       
-                        if(err){
-                            alert('Locatie necunuscuta')
-                        }  
-                        if(res){
-                            localStorage.setItem("city", JSON.stringify(res.address.city))
-                            localStorage.setItem("county", JSON.stringify(res.address.county))
-                        }
-                             
-                })
-            }
-        )
-    }
-
-    
     handleSubmit = (e) => {  // on submit we are sending a new booking object to the database
         e.preventDefault()
         const {date, name, email, phone, medication, city, county} = this.state
@@ -66,15 +47,12 @@ class Home extends Component {
             date:'',
             medication: ''
         })
-       
     }
     
     
-    
-    
-    
     componentDidMount(){
-       this.getLocation()
+       this.props.getLocation()
+       console.log(this.state.city)
     }
     
         render(){
@@ -110,7 +88,7 @@ class Home extends Component {
                             <input 
                                 type='text'
                                 name='medication'
-                                placeholder='Medicament'
+                                placeholder='Produsul dorit'
                                 value={this.state.medication}
                                 onChange={this.handleChange}
                                 required
@@ -124,4 +102,4 @@ class Home extends Component {
 }
 
        
-        export default Home
+    export default withPharma(Home)

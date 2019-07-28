@@ -18,7 +18,7 @@ const PharmaLogin = props=>  {
                                     className = "login1"
                                     type='text'
                                     name='username'
-                                    placeholder='Username'
+                                    placeholder='Adresa e-mal'
                                     value={props.username}
                                     onChange={props.handleChange}
                                 />
@@ -27,7 +27,7 @@ const PharmaLogin = props=>  {
                                     className = "login1"   
                                     type='text'
                                     name='password'
-                                    placeholder='Password'
+                                    placeholder='Parola'
                                     value={props.password}
                                     onChange={props.handleChange}
                                 />
@@ -47,7 +47,7 @@ const PharmaLogin = props=>  {
                                 className = "login1"
                                 type='text'
                                 name='pharmaCode'
-                                placeholder='enter code'
+                                placeholder='cod'
                                 value={props.pharmaCode}
                                 onChange={props.handleChange}
                             />
@@ -56,7 +56,7 @@ const PharmaLogin = props=>  {
                                 className = "login1"
                                 type='text'
                                 name='username'
-                                placeholder='enter a username'
+                                placeholder='Adresa e-mail'
                                 value={props.username}
                                 onChange={props.handleChange}
                             />
@@ -65,7 +65,7 @@ const PharmaLogin = props=>  {
                                 className = "login1"
                                 type='text'
                                 name='password'
-                                placeholder='choose your password'
+                                placeholder='alege parola'
                                 value={props.password}
                                 onChange={props.handleChange}
                             />
@@ -74,7 +74,7 @@ const PharmaLogin = props=>  {
                                 className = "login1"
                                 type='text'
                                 name='password2'
-                                placeholder='repeat password'
+                                placeholder='repeta parola'
                                 value={props.password2}
                                 onChange={props.handleChange}
                             />
