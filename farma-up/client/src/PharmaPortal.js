@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import {withPharma} from './PharmaProvider'
 
 
 
@@ -7,19 +7,19 @@ class PharmaPortal extends Component {
     constructor(props){
         super(props)
         this.state = {
-            toggle: true,
-            
+           
         }
 }
 
 
+
 render(){
     return(
-        <div>
-            
+        <div className = 'pharmaport'>
+            <button onClick = {this.props.logout}>Log out </button>
         </div>
     )
 }
 }
 
-export default PharmaPortal
+export default  withPharma(PharmaPortal)

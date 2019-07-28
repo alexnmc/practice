@@ -23,8 +23,9 @@ class PharmaProvider extends Component {
 
     logout = () => {
         this.setState({
-            admin:'',   // we logout by removing the token from state and local storage
-            token: ''
+            user:'',   // we logout by removing the token from state and local storage
+            token: '',
+            toggle: true
         })
         localStorage.removeItem("user")
         localStorage.removeItem("token")
@@ -58,6 +59,7 @@ class PharmaProvider extends Component {
         .catch(err => alert(err.response.data.errMsg))
     }
 
+    
     login = userInfo => {
         axios.post('/user/login', userInfo).then(res => {
             const { token, user } = res.data          // when the token and user comes back from the database we store it in local storage
@@ -109,7 +111,6 @@ class PharmaProvider extends Component {
     
     handleSignup = (e) => {
         e.preventDefault()
-        console.log(this.state.password, this.state.password2, this.state.pharmaCode, process.env.REACT_APP_CODE)
         this.state.password === this.state.password2 ?    
             this.state.pharmaCode === process.env.REACT_APP_CODE ?
                 this.pharmaSignup()
