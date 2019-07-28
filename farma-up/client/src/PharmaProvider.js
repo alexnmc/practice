@@ -25,13 +25,16 @@ class PharmaProvider extends Component {
     }
 
     logout = () => {
-        this.setState({
-            user:'',   // we logout by removing the token from state and local storage
-            token: '',
-            toggle: true
-        })
-        localStorage.removeItem("user")
-        localStorage.removeItem("token")
+        var answer = window.confirm("Esti sigur ca vrei sa iesi din cont?")
+            if(answer){
+                this.setState({
+                    user:'',   
+                    token: '',
+                    toggle: true
+                })
+            localStorage.removeItem("user")
+            localStorage.removeItem("token")
+        }
     }
 
     showMessages = () => {

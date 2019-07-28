@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {withPharma} from './PharmaProvider'
 
 
 const Navbar = (props) => {
@@ -7,9 +8,9 @@ const Navbar = (props) => {
         <div className="navbar">
             <Link to="/">Utilizator</Link>
             <Link to="/contact">Contact</Link>
-            <Link to = "/pharma">Farmacie</Link>
+            {!props.token ? <Link to = "/pharma">Farmacie</Link> : <p className = 'link' onClick = {props.logout} >Iesire</p>}
         </div>
     )
 }
 
-export default Navbar
+export default  withPharma(Navbar)

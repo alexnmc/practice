@@ -5,7 +5,6 @@ const Message = require("../models/message")
 
 
 messageRouter.get('/', (req, res) => {    // get all for testing with postman 
-   
     Message.find((err, data) => {
         if(err) {
             res.status(500)
@@ -18,8 +17,19 @@ messageRouter.get('/', (req, res) => {    // get all for testing with postman
 
 
 
+messageRouter.get('/:city', (req, res, next) => {    
+    Message.find({city: req.params.city}, (err, data) => {
+        if(err) {
+            res.status(500)
+            return next(err)
+        }
+        return res.status(200).send(data)
+    })
+})
+
+
+
 messageRouter.delete('/', (req, res, next) => {
-    
     Message.remove((err, data) => {      // for postman testing, deletes everything !
         if (err) {
             res.status(500)
@@ -31,8 +41,7 @@ messageRouter.delete('/', (req, res, next) => {
 
 
 messageRouter.post('/',  (req, res, next) => {   
-            
-    Message.findOne({name: req.body.name, phone:req.body.phone, medication:req.body.medication}, (err, message) => {
+    Message.findOne({name: req.body.name, phone:req.body.phone, medication:req.body.medication, city: req.body.city}, (err, message) => {
         if (err) {
             res.status(500)
             return next(err)

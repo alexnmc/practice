@@ -26,7 +26,7 @@ class App extends Component {
             
     //if there is a token in the local storage(or state) the  Admin component redirects to the AdminPortal component autoomatically
             <div>
-                <Navbar />
+                <Navbar/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route path="/contact" component={Contact}/>

@@ -93,7 +93,7 @@ authRouter.delete('/', (req, res, next) => {
             res.status(500)
             return next(err)
         }
-        return res.status(202).send(` was succesfully deleted!`)
+        return res.status(202).send(` all users were succesfully deleted!`)
     })
 })
 
