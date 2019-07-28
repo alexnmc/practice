@@ -15,7 +15,8 @@ class Home extends Component {
 
 render(){
     return(
-        <div className = "home">
+        <div className = "contact">
+            <h1 className = 'h1'>Cristian Lazar</h1>
             
         </div>
     )
