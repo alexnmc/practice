@@ -30,7 +30,7 @@ class PharmaPortal extends Component {
                 <div className = "messageContainer" key = {item._id}>
                     <p className = "p2"> {`Nume: ${item.name.toUpperCase()}`}</p>  
                     <p className = "p2"> {`Telefon: ${item.phone}`}</p>   
-                    <p className = "p2"> {`Data: ${moment(item.date).format("MMM Do YY ")}`}</p>
+                    <p className = "p2"> {`Data: ${moment(item.date).format('MMMM Do YYYY, h:mm:ss a')}`}</p>
                     <p className = "p2"> {`Oras: ${item.city}`}</p>
                     <p className = "p2"> {`Judet: ${item.county}`}</p>
                     <p className = "p2"> {`Produs: ${item.medication}`}</p>
