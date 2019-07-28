@@ -212,3 +212,10 @@ h4{
     color: rgb(0, 71, 236);
     margin: 2%
 }
+
+.h2{
+    font-family: 'arial';
+    font-size:14pt;
+    color: rgb(0, 71, 236);
+    margin-bottom: 25%
+}
