@@ -43,13 +43,15 @@ a{
 
 
 input{
-    width:200pt;
+    width:250pt;
     height: 50pt;
     margin:10pt;
+    font-size: 15pt;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid blue;
+    padding-left:5pt;
 }
 
 
@@ -58,86 +60,80 @@ button{
     display:flex;
     align-items: center;
     justify-content: center;
-    width: 200pt;
-    height: 30pt;
+    width: 250pt;
+    height: 32pt;
     background-color: rgb(0, 179, 0);
     font-size: 14pt;
     color: white
 }
 
-
-.signupButton2{
-    margin-top:5pt;
-    width:90pt;
-    height:24pt;
-    font-size:12pt;
-    background-color: blue;
- }
-
 .loginButton{
-   width:90pt;
-   height:24pt;
+   width:100pt;
+   height:27pt;
    font-size:12pt;
    background-color: blue;
-   margin-top:10pt;
+   margin-top:30pt;
 }
 
-.signUpAdmin{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   
-}
+.loginButton2{
+    width:100pt;
+    height:27pt;
+    font-size:12pt;
+    background-color: blue;
+    margin-top:10pt;
+ }
 
-.logInA{
-    border: 3px solid  rgba(0, 23, 32, 0.425);
-    border-radius: 7px;
-    background-color: rgba(5, 32, 36, 0.767);
-    height:250pt;
-    width:200pt;
-    
-}
+ h4{
+    color:blue;
+    font-family: 'arial';
+    font-size:14pt;
+     margin-bottom: 30pt;
+     text-align: center;
+ }
+
 
 .login1{
-    width: 150pt;
-    height: 30pt;
+    width: 180pt;
+    height: 32pt;
     border: 1px solid  rgba(2, 2, 2, 0.74);
     background-color:  rgb(255, 235, 209);
     color:black;
     border-radius: 3px;
     margin-top:5pt;
     padding-left:3.5pt;
+    font-size:14pt;
 }
 
 .admin{
-    background-color: #142b2bf1;
+    background-color: #fffffff1;
     height: 100vh;
     width: 100%;
     display:flex;
-    align-items: flex-start;
-    justify-content: center;
-}
-
-.adminContainer{
-    height:300pt;
-    width: 210pt;
-    border: 3px solid  rgba(0, 23, 32, 0.425);
-    border-radius: 7px;
-    background-color: rgba(5, 32, 36, 0.767);
-}
-
-.loginForm{
-    height: 90%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.login2{
-    height:auto;
+.loginContainer{
+    height:400pt;
+    width:300pt;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    border: 1px solid blue;
 }
+
+.loginForm{
+    margin:auto;
+   
+}
+
+
+
+
+
+
+
 
 .pharmaport{
     display: flex;
