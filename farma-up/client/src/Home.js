@@ -71,7 +71,7 @@ class Home extends Component {
                             <input 
                                 type='email'
                                 name='email'
-                                placeholder='Adresa e-mail'
+                                placeholder='Email'
                                 value={this.state.email}
                                 onChange={this.handleChange}
                                 required
@@ -79,7 +79,7 @@ class Home extends Component {
                             <input 
                                 type='number'
                                 name='phone'
-                                placeholder=' Telefon'
+                                placeholder='Telefon'
                                 value={this.state.phone}
                                 onChange={this.handleChange}
                                 required

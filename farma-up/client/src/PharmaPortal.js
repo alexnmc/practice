@@ -42,6 +42,7 @@ class PharmaPortal extends Component {
         return(
             <div className = 'pharmaport'>
                 {messages}
+                <button onClick = {this.props.logout}>Log out </button>
             </div>
         )
     }

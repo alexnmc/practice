@@ -23,12 +23,18 @@ html, body {
     justify-content: space-around;
 }
 
-.link,
-    a{
+.link{
     text-decoration: none;
     color: blue;
     cursor: pointer;
-    }
+    margin-left:10pt;
+}
+
+ a{
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+  }
 
 
 .bookingContainer{
@@ -36,7 +42,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 100%;
     width: 40vw;
     background-color: rgba(255, 255, 255, 0.705);
     padding-bottom: 5pt;
@@ -53,7 +59,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid blue;
+    border: 1px solid rgba(0, 0, 255, 0.562);
     border-radius: 4px;
     padding-left:5pt;
 }
@@ -64,52 +70,47 @@ button{
     display:flex;
     align-items: center;
     justify-content: center;
-    width: 250pt;
-    height: 32pt;
+    width: 220pt;
+    height: 40pt;
     background-color: rgb(0, 179, 0);
     font-size: 14pt;
-    color: white
+    color: white;
+    cursor: pointer;
+    margin-top: 50pt;
 }
 
 .loginButton{
-   width:120pt;
-   height:27pt;
+   width: 80%;
+   height: 35pt;
    font-size:12pt;
    background-color: blue;
    margin-top:30pt;
 }
 
-.loginButton2{
-    width:120pt;
-    height:27pt;
-    font-size:12pt;
-    background-color: blue;
-    margin-top:10pt;
- }
 
- h4{
+h4{
     color:blue;
     font-family: 'arial';
     font-size:14pt;
-     margin-bottom: 30pt;
-     text-align: center;
+    margin-bottom: 30pt;
+    text-align: center;
  }
 
 
 .login1{
-    width: 180pt;
+    width: 80%;
     height: 32pt;
     border: 1px solid  rgba(2, 2, 2, 0.74);
-    background-color:  rgb(255, 235, 209);
+    background-color:  rgb(253, 252, 251);
     color:black;
     border-radius: 3px;
     margin-top:5pt;
     padding-left:3.5pt;
-    font-size:14pt;
+    font-size:11pt;
 }
 
 .admin{
-    background-color: #fffffff1;
+    background-color: #f0f0f0f1;
     height: 100vh;
     width: 100%;
     display:flex;
@@ -117,19 +118,45 @@ button{
     justify-content: center;
 }
 
+.loginForm{
+    height:400pt;
+    width:300pt;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+}
+
+
 .loginContainer{
     height:400pt;
     width:300pt;
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin:auto;
-    border: 1px solid blue;
+    background-color: white;
+   
+
 }
 
-.loginForm{
-    margin:auto;
-   
+.loginWrap{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width:90%;
+    margin:20pt;
+}
+
+.cont{
+   display: flex;
+   width:auto;
+   font-family: 'arial';
+   font-size: 10pt;
+   font-weight: 900
+  
 }
 
 

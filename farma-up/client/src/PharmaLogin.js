@@ -12,13 +12,17 @@ const PharmaLogin = props=>  {
             <div className="admin">
                 <div className = "loginContainer">
                 { props.toggle ?
+                
                             <div  className='loginForm'>
-                                <h4>Intrare in cont:</h4>
+                                <div className = "loginWrap">
+                                    <p className = 'cont'>Nu ai cont?<span className = 'link' onClick={props.editToggler}>Înregistreazã-te</span></p>
+                                </div>
+                                <h4>Intrã in cont:</h4>
                                 <input
                                     className = "login1"
                                     type='text'
                                     name='username'
-                                    placeholder='Adresa e-mal'
+                                    placeholder='Email'
                                     value={props.username}
                                     onChange={props.handleChange}
                                 />
@@ -31,9 +35,10 @@ const PharmaLogin = props=>  {
                                     value={props.password}
                                     onChange={props.handleChange}
                                 />
-                                <button className = 'loginButton' onClick={props.handleLogin}>Login</button>
-                                <button className='loginButton2' onClick={props.editToggler}>Sign up</button>
+                                <button className = 'loginButton' onClick={props.handleLogin}>Autentificare</button>
+                                
                             </div>
+                   
                             
                    
                         
@@ -41,7 +46,10 @@ const PharmaLogin = props=>  {
 
                   
                         <div className='loginForm'>
-                        <h4> înregistrare farmacii:</h4>
+                                <div className = "loginWrap">
+                                    <p className = 'cont'>Ai deja cont? <div> </div> <span className = 'link' onClick={props.editToggler}>Login</span></p>
+                                </div>
+                        <h4> Creeazã cont nou:</h4>
                        
                             <input
                                 className = "login1"
@@ -78,9 +86,8 @@ const PharmaLogin = props=>  {
                                 value={props.password2}
                                 onChange={props.handleChange}
                             />
-                            <button className = 'loginButton'  onClick={props.handleSignup} >Sign up</button>
-                            <button className = 'loginButton2' onClick={props.editToggler}>Return</button>
-                    </div>
+                            <button className = 'loginButton'  onClick={props.handleSignup} >înregistare</button>
+                         </div>
                 }
                 </div>
             </div>
