@@ -14,12 +14,7 @@ function change(cash) {
   if(cash % 2 === 0){
     obj.ten = Math.floor(cash/10)
     cash = cash - obj.ten * 10
-    if(cash%5 === 0){
-      obj.five = Math.floor(cash/5)
-      cash = cash - obj.five * 5
-    }else{
-      obj.two = Math.floor(cash/2)
-    }
+    obj.two = Math.floor(cash/2)
   }else{
     cash = cash - 5
     obj.five = 1
