@@ -14,12 +14,12 @@ function find(str){
     let vow = 'aeiou'
     let arr2 = []
     let arr3 = []
-    for(let i = 0; i<arr.length; i++){
+    for(let i = 0; i < arr.length; i++){
         if(!vow.includes(arr[i])){
-            for(let j = 0; j< arr.length; j++){
+            for(let j = 0; j < arr.length; j++){
             if(vow.includes(arr[j])){
-                arr2.push(Math.abs(i-j))
-                arr3[i] = Math.min(...arr2)
+                arr2.push(Math.abs(i-j)) // I put all the distances in an array
+                arr3[i] = Math.min(...arr2)  // find the smallest distance in that array
             }   
             }
             arr2 = [] // using this array to get the minimum distance
