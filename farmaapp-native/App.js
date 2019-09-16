@@ -15,6 +15,7 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text style={styles.cauta}>Cauta produsul dorit:</Text>
         <TextInput
           style={styles.input}
           placeholder="email"
@@ -80,5 +81,10 @@ const styles = StyleSheet.create({
    },
    saveButtonText:{
      color: "white"
+   },
+   cauta:{
+     color:"blue",
+     fontWeight: "900",
+     marginBottom:30
    }
 });
