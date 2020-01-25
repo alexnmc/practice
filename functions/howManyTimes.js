@@ -15,7 +15,7 @@ function my(arr, n){
         }
        }
        if(count === n){             
-            arr3.push(arr2[j])
+         arr3.push(arr2[j])
        }
     }
        return arr3

@@ -21,14 +21,14 @@ function finalResult(arr) {
   let count = 0
 	for(let i = 0; i<arr.length; i++){
     if(arr[i] === arr[i+1]){
-     for(let j = i; j<arr.length; j++){
-       count++
-       if(arr[j] !== arr[j+1]){
-         arr.splice(i, count)
-         i -= count
-         count = 0
-         break
-       }
+      for(let j = i; j<arr.length; j++){
+        count++
+        if(arr[j] !== arr[j+1]){
+            arr.splice(i, count)
+            i -= count
+            count = 0
+            break
+        }
      }
     }
   }
