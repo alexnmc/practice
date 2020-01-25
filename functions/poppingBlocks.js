@@ -32,7 +32,7 @@ function finalResult(arr) {
      }
     }
   }
-  return arr
+    return arr
 }
 
 
