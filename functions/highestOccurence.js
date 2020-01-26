@@ -48,5 +48,5 @@ function mostFrequent2(arr){
       
     }
       arr3.forEach(item => item.length === Math.max(...arr4) ? final.push(item[0]) : null)
-      console.log(final)
+      return final
   }

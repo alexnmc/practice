@@ -3,9 +3,6 @@
 function sort(arr){
   let arr2 = []
   let arr3 = []
-  let arr4 = []
-  let final = []
-  
   for(let i = 0; i < arr.length; i++){ // pushes all elements in an array once
       if(!arr2.includes(arr[i])){
         arr2.push(arr[i])
@@ -15,12 +12,9 @@ function sort(arr){
       if(arr[i] === arr2[j]){
         arr3[j].push(arr[i])
       }
-      arr4.push(arr3[j].length)
     }
-    
   }
-    arr3.forEach(item => item.length === Math.max(...arr4) ? final.push(item[0]) : null)
-    console.log(final)
+   return arr3
 }
 
   
