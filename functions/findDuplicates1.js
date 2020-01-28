@@ -10,6 +10,6 @@ function find(str){
       }
    })
      return arr
-  }
+   }
   
   console.log(find('abbcchkk'))
