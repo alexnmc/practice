@@ -11,7 +11,7 @@ catch(err){ console.log(err)}
 var user = {username: "sam", password: "123abc"};
 
 function login(usr, passw){
-  if(user.username !== usr || user.password !==passw){
+  if(user.username !== usr || user.password !== passw){
      throw new Error ("username must match passw") 
   }else{
     console.log("login succesfull!")

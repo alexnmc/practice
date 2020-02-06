@@ -17,6 +17,26 @@ Here's a demonstration:
 
 */
 
+function finalResult(arr) {
+  let count = 0
+	for(let i = 0; i<arr.length; i++){
+    if(arr[i] === arr[i+1]){
+      for(let j = i; j<arr.length; j++){
+        count++
+        if(arr[j] !== arr[j+1]){
+            arr.splice(i, count)
+            i -= count
+            count = 0
+            break
+        }
+     }
+    }
+  }
+    return arr
+}
+
+
+/* another option..not that great
 
 function finalResult(arr) {
 	for(let i = 0; i<arr.length; i++){
@@ -35,6 +55,7 @@ function finalResult(arr) {
   }
   return arr
 }
+*/
 
 
 

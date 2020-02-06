@@ -17,10 +17,10 @@ function find(str){
     for(let i = 0; i < arr.length; i++){
         if(!vow.includes(arr[i])){
             for(let j = 0; j < arr.length; j++){
-            if(vow.includes(arr[j])){
-                arr2.push(Math.abs(i-j)) // I put all the distances in an array
-                arr3[i] = Math.min(...arr2)  // find the smallest distance in that array
-            }   
+                if(vow.includes(arr[j])){
+                    arr2.push(Math.abs(i-j)) // I put all the distances in an array
+                    arr3[i] = Math.min(...arr2)  // find the smallest distance in that array
+                }   
             }
             arr2 = [] // using this array to get the minimum distance
         }else{
