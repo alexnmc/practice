@@ -1,0 +1,26 @@
+
+
+
+ body{background-color:aliceblue;}
+
+
+
+a{color:blue;
+  font-size: 24px;}
+
+  ul{ background-color: orange;}
+
+
+p{ background-color: orange;}
+
+img{height: 500px;
+    width: 100%;}
+
+
+
+footer{color:black;}
+#box {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+}
