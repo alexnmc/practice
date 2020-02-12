@@ -4,7 +4,7 @@ function findUnique(arr){
     let arr2 = []
     let arr3 = []
     arr.forEach((item,i) => {
-        if(arr.indexOf(item) !== i && !arr2.includes(item)){                //indexOf(item) is the first index of the item in the array if the item exists under other index then it is a duplicate
+        if(arr.indexOf(item) !== i && !arr2.includes(item)){           //indexOf(item) is the first index of the item in the array if the item exists under other index then it is a duplicate
             arr2.push(item)
         }
     })
