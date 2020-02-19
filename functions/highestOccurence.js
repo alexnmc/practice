@@ -18,9 +18,7 @@ function mostFrequent(arr){
         }
       }
     }
-    
-
-    return final
+    return item
 }
 
 console.log(mostFrequent([2,2,1,1]))
