@@ -1,4 +1,7 @@
 
+
+
+
 function countCode(string) {           // this function checks if the word "code" or "co e" is in the string in the argument
         string.toUpperCase()
         var splitStr = string.split('')

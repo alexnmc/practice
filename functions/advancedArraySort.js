@@ -1,5 +1,13 @@
 
 
+
+
+// new solution
+function sort(arr){
+    return [...new Set(arr)].map(item => arr.filter(item2 => item === item2))
+}
+
+// old school 
 function sort(arr){
   let arr2 = []
   let arr3 = []
