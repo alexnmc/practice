@@ -1,5 +1,14 @@
 
 
+// using regex
+const parsing = (str) => {
+    let arr = str.split('/0+/') // str.split('0').filter(String)
+    return {name: arr[0] , last: arr[1] , id: arr[2]}
+}
+
+
+
+// without regex
 const parsing = (str) => {
     let arr = str.split('')
     let obj = {
